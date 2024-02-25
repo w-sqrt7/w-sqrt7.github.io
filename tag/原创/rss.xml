@@ -147,13 +147,13 @@
 &lt;p&gt;find &amp;#x2F; -name moonsec 2&amp;gt;&amp;#x2F;dev&amp;#x2F;null   搜索某个文件&amp;#x2F;文件夹 屏蔽出错信息&lt;/p&gt;
 &lt;p&gt;SCP命令&lt;/p&gt;
 &lt;p&gt;1.将远程服务器文件拷贝到本地服务器当前路径下&lt;br&gt;在本地服务器当前路径下，输入如下命令，回车后输入远程服务器的登录密码，即可将远程文件拷贝到本地服务器当前路径下。&lt;/p&gt;
-&lt;p&gt; scp &lt;a href=&#34;mailto:&amp;#x74;&amp;#101;&amp;#x73;&amp;#116;&amp;#x75;&amp;#x73;&amp;#x65;&amp;#x72;&amp;#x40;&amp;#52;&amp;#x37;&amp;#x2e;&amp;#49;&amp;#48;&amp;#48;&amp;#46;&amp;#50;&amp;#52;&amp;#x37;&amp;#46;&amp;#50;&amp;#x34;&amp;#48;&#34;&gt;&amp;#x74;&amp;#101;&amp;#x73;&amp;#116;&amp;#x75;&amp;#x73;&amp;#x65;&amp;#x72;&amp;#x40;&amp;#52;&amp;#x37;&amp;#x2e;&amp;#49;&amp;#48;&amp;#48;&amp;#46;&amp;#50;&amp;#52;&amp;#x37;&amp;#46;&amp;#50;&amp;#x34;&amp;#48;&lt;/a&gt;:&amp;#x2F;home&amp;#x2F;testuser&amp;#x2F;test.sql &lt;/p&gt;
+&lt;p&gt; scp &lt;a href=&#34;mailto:&amp;#x74;&amp;#x65;&amp;#115;&amp;#116;&amp;#x75;&amp;#x73;&amp;#101;&amp;#114;&amp;#x40;&amp;#x34;&amp;#55;&amp;#46;&amp;#49;&amp;#x30;&amp;#48;&amp;#x2e;&amp;#50;&amp;#52;&amp;#x37;&amp;#x2e;&amp;#x32;&amp;#x34;&amp;#48;&#34;&gt;&amp;#x74;&amp;#x65;&amp;#115;&amp;#116;&amp;#x75;&amp;#x73;&amp;#101;&amp;#114;&amp;#x40;&amp;#x34;&amp;#55;&amp;#46;&amp;#49;&amp;#x30;&amp;#48;&amp;#x2e;&amp;#50;&amp;#52;&amp;#x37;&amp;#x2e;&amp;#x32;&amp;#x34;&amp;#48;&lt;/a&gt;:&amp;#x2F;home&amp;#x2F;testuser&amp;#x2F;test.sql &lt;/p&gt;
 &lt;p&gt;2.将本地服务器文件推送到远程服务器&lt;br&gt;在本地服务器当前路径下，输入如下命令，回车后输入远程服务器的登录密码，即可将本地文件拷贝到远程服务器指定路径下。&lt;/p&gt;
-&lt;p&gt; scp test1.sql &lt;a href=&#34;mailto:&amp;#x74;&amp;#101;&amp;#x73;&amp;#x74;&amp;#117;&amp;#115;&amp;#x65;&amp;#114;&amp;#x40;&amp;#52;&amp;#x37;&amp;#46;&amp;#x31;&amp;#48;&amp;#x30;&amp;#46;&amp;#50;&amp;#x34;&amp;#55;&amp;#46;&amp;#50;&amp;#x34;&amp;#48;&#34;&gt;&amp;#x74;&amp;#101;&amp;#x73;&amp;#x74;&amp;#117;&amp;#115;&amp;#x65;&amp;#114;&amp;#x40;&amp;#52;&amp;#x37;&amp;#46;&amp;#x31;&amp;#48;&amp;#x30;&amp;#46;&amp;#50;&amp;#x34;&amp;#55;&amp;#46;&amp;#50;&amp;#x34;&amp;#48;&lt;/a&gt;:&amp;#x2F;home&amp;#x2F;testuser&amp;#x2F;&lt;/p&gt;
+&lt;p&gt; scp test1.sql &lt;a href=&#34;mailto:&amp;#116;&amp;#x65;&amp;#115;&amp;#116;&amp;#117;&amp;#115;&amp;#x65;&amp;#114;&amp;#64;&amp;#52;&amp;#x37;&amp;#46;&amp;#x31;&amp;#48;&amp;#48;&amp;#46;&amp;#x32;&amp;#52;&amp;#x37;&amp;#46;&amp;#50;&amp;#52;&amp;#48;&#34;&gt;&amp;#116;&amp;#x65;&amp;#115;&amp;#116;&amp;#117;&amp;#115;&amp;#x65;&amp;#114;&amp;#64;&amp;#52;&amp;#x37;&amp;#46;&amp;#x31;&amp;#48;&amp;#48;&amp;#46;&amp;#x32;&amp;#52;&amp;#x37;&amp;#46;&amp;#50;&amp;#52;&amp;#48;&lt;/a&gt;:&amp;#x2F;home&amp;#x2F;testuser&amp;#x2F;&lt;/p&gt;
 &lt;p&gt;3.将远程服务器文件夹全部复制到本地服务器&lt;/p&gt;
-&lt;p&gt;scp -r &lt;a href=&#34;mailto:&amp;#x74;&amp;#101;&amp;#115;&amp;#116;&amp;#117;&amp;#115;&amp;#x65;&amp;#114;&amp;#x40;&amp;#x34;&amp;#x37;&amp;#x2e;&amp;#x31;&amp;#x30;&amp;#48;&amp;#x2e;&amp;#50;&amp;#52;&amp;#55;&amp;#46;&amp;#50;&amp;#52;&amp;#48;&#34;&gt;&amp;#x74;&amp;#101;&amp;#115;&amp;#116;&amp;#117;&amp;#115;&amp;#x65;&amp;#114;&amp;#x40;&amp;#x34;&amp;#x37;&amp;#x2e;&amp;#x31;&amp;#x30;&amp;#48;&amp;#x2e;&amp;#50;&amp;#52;&amp;#55;&amp;#46;&amp;#50;&amp;#52;&amp;#48;&lt;/a&gt;:&amp;#x2F;home&amp;#x2F;testuser&amp;#x2F; &lt;/p&gt;
+&lt;p&gt;scp -r &lt;a href=&#34;mailto:&amp;#116;&amp;#101;&amp;#115;&amp;#x74;&amp;#117;&amp;#115;&amp;#x65;&amp;#114;&amp;#64;&amp;#x34;&amp;#55;&amp;#46;&amp;#49;&amp;#48;&amp;#x30;&amp;#46;&amp;#50;&amp;#52;&amp;#x37;&amp;#x2e;&amp;#x32;&amp;#52;&amp;#48;&#34;&gt;&amp;#116;&amp;#101;&amp;#115;&amp;#x74;&amp;#117;&amp;#115;&amp;#x65;&amp;#114;&amp;#64;&amp;#x34;&amp;#55;&amp;#46;&amp;#49;&amp;#48;&amp;#x30;&amp;#46;&amp;#50;&amp;#52;&amp;#x37;&amp;#x2e;&amp;#x32;&amp;#52;&amp;#48;&lt;/a&gt;:&amp;#x2F;home&amp;#x2F;testuser&amp;#x2F; &lt;/p&gt;
 &lt;p&gt;4.将本地服务器文件夹全部复制到远程服务器&lt;/p&gt;
-&lt;p&gt;scp -r &amp;#x2F;home&amp;#x2F;testuser1&amp;#x2F; &lt;a href=&#34;mailto:&amp;#x74;&amp;#101;&amp;#115;&amp;#x74;&amp;#x75;&amp;#115;&amp;#x65;&amp;#x72;&amp;#x40;&amp;#x34;&amp;#55;&amp;#x2e;&amp;#49;&amp;#48;&amp;#x30;&amp;#x2e;&amp;#50;&amp;#52;&amp;#55;&amp;#x2e;&amp;#x32;&amp;#x34;&amp;#x30;&#34;&gt;&amp;#x74;&amp;#101;&amp;#115;&amp;#x74;&amp;#x75;&amp;#115;&amp;#x65;&amp;#x72;&amp;#x40;&amp;#x34;&amp;#55;&amp;#x2e;&amp;#49;&amp;#48;&amp;#x30;&amp;#x2e;&amp;#50;&amp;#52;&amp;#55;&amp;#x2e;&amp;#x32;&amp;#x34;&amp;#x30;&lt;/a&gt;:&amp;#x2F;home&amp;#x2F;testuser&amp;#x2F;&lt;/p&gt;
+&lt;p&gt;scp -r &amp;#x2F;home&amp;#x2F;testuser1&amp;#x2F; &lt;a href=&#34;mailto:&amp;#116;&amp;#101;&amp;#x73;&amp;#x74;&amp;#x75;&amp;#115;&amp;#x65;&amp;#x72;&amp;#x40;&amp;#x34;&amp;#55;&amp;#46;&amp;#49;&amp;#x30;&amp;#48;&amp;#46;&amp;#50;&amp;#52;&amp;#55;&amp;#46;&amp;#x32;&amp;#52;&amp;#48;&#34;&gt;&amp;#116;&amp;#101;&amp;#x73;&amp;#x74;&amp;#x75;&amp;#115;&amp;#x65;&amp;#x72;&amp;#x40;&amp;#x34;&amp;#55;&amp;#46;&amp;#49;&amp;#x30;&amp;#48;&amp;#46;&amp;#50;&amp;#52;&amp;#55;&amp;#46;&amp;#x32;&amp;#52;&amp;#48;&lt;/a&gt;:&amp;#x2F;home&amp;#x2F;testuser&amp;#x2F;&lt;/p&gt;
 &lt;h2 id=&#34;6-用户和群组&#34;&gt;&lt;a href=&#34;#6-用户和群组&#34; class=&#34;headerlink&#34; title=&#34;6.用户和群组&#34;&gt;&lt;/a&gt;6.用户和群组&lt;/h2&gt;&lt;p&gt;groupadd group_name 创建一个新用户组&lt;br&gt;groupdel group_name 删除一个用户组&lt;/p&gt;
 &lt;p&gt;cat &amp;#x2F;etc&amp;#x2F;group | grep group_name &lt;/p&gt;
 &lt;p&gt;usermod -a -G moontea k1把用户k1附加其他用户组&lt;/p&gt;
@@ -253,6 +253,17 @@
  ]]></description>
         </item>
         <item>
+            <guid isPermalink="true">https://w-sqrt7.gitee.io/2024/02/19/picture/</guid>
+            <title>try picture</title>
+            <link>https://w-sqrt7.gitee.io/2024/02/19/picture/</link>
+            <category>原创</category>
+            <pubDate>Mon, 19 Feb 2024 16:35:20 +0800</pubDate>
+            <description><![CDATA[ &lt;p&gt;xin&lt;/p&gt;
+&lt;p&gt;aaa&lt;/p&gt;
+&lt;p&gt;![](&amp;#x2F;..&amp;#x2F;picture&amp;#x2F;屏幕截图 2024-02-25 213046.png)&lt;/p&gt;
+ ]]></description>
+        </item>
+        <item>
             <guid isPermalink="true">https://w-sqrt7.gitee.io/2024/02/19/CTF/CTF-show%E9%A2%98%E7%9B%AE%E6%80%BB%E7%BB%93/</guid>
             <title>CTF-show题目总结</title>
             <link>https://w-sqrt7.gitee.io/2024/02/19/CTF/CTF-show%E9%A2%98%E7%9B%AE%E6%80%BB%E7%BB%93/</link>
@@ -270,16 +281,6 @@
   &lt;/div&gt;
 &lt;/div&gt;
 &lt;script data-pjax src=&#34;/lib/hbe.js&#34;&gt;&lt;/script&gt;&lt;link href=&#34;/css/hbe.style.css&#34; rel=&#34;stylesheet&#34; type=&#34;text/css&#34;&gt; ]]></description>
-        </item>
-        <item>
-            <guid isPermalink="true">https://w-sqrt7.gitee.io/2024/02/19/picture/</guid>
-            <title>try picture</title>
-            <link>https://w-sqrt7.gitee.io/2024/02/19/picture/</link>
-            <category>原创</category>
-            <pubDate>Mon, 19 Feb 2024 16:35:20 +0800</pubDate>
-            <description><![CDATA[ &lt;p&gt;xin&lt;/p&gt;
-&lt;p&gt;![](picture&amp;#x2F;屏幕截图 2024-02-25 213046.png)&lt;/p&gt;
- ]]></description>
         </item>
     </channel>
 </rss>
