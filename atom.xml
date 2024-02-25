@@ -6,7 +6,7 @@
   <link href="https://w-sqrt7.github.io/atom.xml" rel="self"/>
   
   <link href="https://w-sqrt7.github.io/"/>
-  <updated>2024-02-20T05:54:56.566Z</updated>
+  <updated>2024-02-25T04:40:29.674Z</updated>
   <id>https://w-sqrt7.github.io/</id>
   
   <author>
@@ -15,6 +15,28 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>try pictures</title>
+    <link href="https://w-sqrt7.github.io/2024/02/25/picture/pictures/"/>
+    <id>https://w-sqrt7.github.io/2024/02/25/picture/pictures/</id>
+    <published>2024-02-25T04:40:29.674Z</published>
+    <updated>2024-02-25T04:40:29.674Z</updated>
+    
+    <content type="html"><![CDATA[<p>xxx</p><p><img src="/2024/02/25/picture/pictures/blog\hexo-blog\source_posts\picture\image-20240221184124222.png"></p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;p&gt;xxx&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;/2024/02/25/picture/pictures/blog&#92;hexo-blog&#92;source_posts&#92;picture&#92;image-20240221184124222.png&quot;&gt;&lt;/p&gt;
+</summary>
+      
+    
+    
+    
+    
+  </entry>
   
   <entry>
     <title>Hello World</title>
