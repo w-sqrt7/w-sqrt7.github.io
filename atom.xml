@@ -3,11 +3,11 @@
   <title>sqrt7</title>
   
   
-  <link href="https://w-sqrt7.github.io/atom.xml" rel="self"/>
+  <link href="https://w-sqrt7.gitee.io/atom.xml" rel="self"/>
   
-  <link href="https://w-sqrt7.github.io/"/>
+  <link href="https://w-sqrt7.gitee.io/"/>
   <updated>2024-02-20T05:54:56.566Z</updated>
-  <id>https://w-sqrt7.github.io/</id>
+  <id>https://w-sqrt7.gitee.io/</id>
   
   <author>
     <name>sqrt7</name>
@@ -18,8 +18,8 @@
   
   <entry>
     <title>Hello World</title>
-    <link href="https://w-sqrt7.github.io/2024/02/20/hello-world/"/>
-    <id>https://w-sqrt7.github.io/2024/02/20/hello-world/</id>
+    <link href="https://w-sqrt7.gitee.io/2024/02/20/hello-world/"/>
+    <id>https://w-sqrt7.gitee.io/2024/02/20/hello-world/</id>
     <published>2024-02-20T05:54:56.566Z</published>
     <updated>2024-02-20T05:54:56.566Z</updated>
     
@@ -38,8 +38,8 @@
   
   <entry>
     <title>kali的常用命令</title>
-    <link href="https://w-sqrt7.github.io/2024/02/19/kali%E7%9A%84%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4/"/>
-    <id>https://w-sqrt7.github.io/2024/02/19/kali%E7%9A%84%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4/</id>
+    <link href="https://w-sqrt7.gitee.io/2024/02/19/kali%E7%9A%84%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4/"/>
+    <id>https://w-sqrt7.gitee.io/2024/02/19/kali%E7%9A%84%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4/</id>
     <published>2024-02-19T08:35:20.000Z</published>
     <updated>2024-02-19T10:53:29.811Z</updated>
     
@@ -53,17 +53,17 @@
     
     
     
-    <category term="操作系统" scheme="https://w-sqrt7.github.io/categories/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/"/>
+    <category term="操作系统" scheme="https://w-sqrt7.gitee.io/categories/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/"/>
     
     
-    <category term="原创" scheme="https://w-sqrt7.github.io/tags/%E5%8E%9F%E5%88%9B/"/>
+    <category term="原创" scheme="https://w-sqrt7.gitee.io/tags/%E5%8E%9F%E5%88%9B/"/>
     
   </entry>
   
   <entry>
     <title>CTF-show题目总结</title>
-    <link href="https://w-sqrt7.github.io/2024/02/19/CTF/CTF-show%E9%A2%98%E7%9B%AE%E6%80%BB%E7%BB%93/"/>
-    <id>https://w-sqrt7.github.io/2024/02/19/CTF/CTF-show%E9%A2%98%E7%9B%AE%E6%80%BB%E7%BB%93/</id>
+    <link href="https://w-sqrt7.gitee.io/2024/02/19/CTF/CTF-show%E9%A2%98%E7%9B%AE%E6%80%BB%E7%BB%93/"/>
+    <id>https://w-sqrt7.gitee.io/2024/02/19/CTF/CTF-show%E9%A2%98%E7%9B%AE%E6%80%BB%E7%BB%93/</id>
     <published>2024-02-19T08:35:20.000Z</published>
     <updated>2024-02-20T12:42:33.858Z</updated>
     
@@ -74,17 +74,17 @@
     
     
     
-    <category term="CTF" scheme="https://w-sqrt7.github.io/categories/CTF/"/>
+    <category term="CTF" scheme="https://w-sqrt7.gitee.io/categories/CTF/"/>
     
     
-    <category term="原创" scheme="https://w-sqrt7.github.io/tags/%E5%8E%9F%E5%88%9B/"/>
+    <category term="原创" scheme="https://w-sqrt7.gitee.io/tags/%E5%8E%9F%E5%88%9B/"/>
     
   </entry>
   
   <entry>
     <title>try picture</title>
-    <link href="https://w-sqrt7.github.io/2024/02/19/picture/"/>
-    <id>https://w-sqrt7.github.io/2024/02/19/picture/</id>
+    <link href="https://w-sqrt7.gitee.io/2024/02/19/picture/"/>
+    <id>https://w-sqrt7.gitee.io/2024/02/19/picture/</id>
     <published>2024-02-19T08:35:20.000Z</published>
     <updated>2024-02-25T04:26:08.064Z</updated>
     
@@ -99,10 +99,10 @@
     
     
     
-    <category term="操作系统" scheme="https://w-sqrt7.github.io/categories/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/"/>
+    <category term="操作系统" scheme="https://w-sqrt7.gitee.io/categories/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/"/>
     
     
-    <category term="原创" scheme="https://w-sqrt7.github.io/tags/%E5%8E%9F%E5%88%9B/"/>
+    <category term="原创" scheme="https://w-sqrt7.gitee.io/tags/%E5%8E%9F%E5%88%9B/"/>
     
   </entry>
   

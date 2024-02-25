@@ -2,16 +2,16 @@
 <rss version="2.0">
     <channel>
         <title>sqrt7</title>
-        <link>https://w-sqrt7.github.io</link>
+        <link>https://w-sqrt7.gitee.io</link>
         <description></description>
         <language>zh-CN</language>
         <pubDate>Tue, 20 Feb 2024 13:54:56 +0800</pubDate>
         <lastBuildDate>Tue, 20 Feb 2024 13:54:56 +0800</lastBuildDate>
         <category>原创</category>
         <item>
-            <guid isPermalink="true">https://w-sqrt7.github.io/2024/02/20/hello-world/</guid>
+            <guid isPermalink="true">https://w-sqrt7.gitee.io/2024/02/20/hello-world/</guid>
             <title>Hello World</title>
-            <link>https://w-sqrt7.github.io/2024/02/20/hello-world/</link>
+            <link>https://w-sqrt7.gitee.io/2024/02/20/hello-world/</link>
             <pubDate>Tue, 20 Feb 2024 13:54:56 +0800</pubDate>
             <description><![CDATA[ &lt;p&gt;Welcome to &lt;a href=&#34;https://hexo.io/&#34;&gt;Hexo&lt;/a&gt;! This is your very first post. Check &lt;a href=&#34;https://hexo.io/docs/&#34;&gt;documentation&lt;/a&gt; for more info. If you get any problems when using Hexo, you can find the answer in &lt;a href=&#34;https://hexo.io/docs/troubleshooting.html&#34;&gt;troubleshooting&lt;/a&gt; or you can ask me on &lt;a href=&#34;https://github.com/hexojs/hexo/issues&#34;&gt;GitHub&lt;/a&gt;.&lt;/p&gt;
 &lt;h2 id=&#34;Quick-Start&#34;&gt;&lt;a href=&#34;#Quick-Start&#34; class=&#34;headerlink&#34; title=&#34;Quick Start&#34;&gt;&lt;/a&gt;Quick Start&lt;/h2&gt;&lt;h3 id=&#34;Create-a-new-post&#34;&gt;&lt;a href=&#34;#Create-a-new-post&#34; class=&#34;headerlink&#34; title=&#34;Create a new post&#34;&gt;&lt;/a&gt;Create a new post&lt;/h3&gt;&lt;figure class=&#34;highlight bash&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;$ hexo new &lt;span class=&#34;string&#34;&gt;&amp;quot;My New Post&amp;quot;&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
@@ -29,9 +29,9 @@
  ]]></description>
         </item>
         <item>
-            <guid isPermalink="true">https://w-sqrt7.github.io/2024/02/19/kali%E7%9A%84%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4/</guid>
+            <guid isPermalink="true">https://w-sqrt7.gitee.io/2024/02/19/kali%E7%9A%84%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4/</guid>
             <title>kali的常用命令</title>
-            <link>https://w-sqrt7.github.io/2024/02/19/kali%E7%9A%84%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4/</link>
+            <link>https://w-sqrt7.gitee.io/2024/02/19/kali%E7%9A%84%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4/</link>
             <category>原创</category>
             <pubDate>Mon, 19 Feb 2024 16:35:20 +0800</pubDate>
             <description><![CDATA[ &lt;h1 id=&#34;kali的常用命令&#34;&gt;&lt;a href=&#34;#kali的常用命令&#34; class=&#34;headerlink&#34; title=&#34;kali的常用命令&#34;&gt;&lt;/a&gt;kali的常用命令&lt;/h1&gt;&lt;h2 id=&#34;1-常用命令&#34;&gt;&lt;a href=&#34;#1-常用命令&#34; class=&#34;headerlink&#34; title=&#34;1.常用命令&#34;&gt;&lt;/a&gt;1.常用命令&lt;/h2&gt;&lt;p&gt;passwd 修改密码&lt;/p&gt;
@@ -273,9 +273,9 @@
  ]]></description>
         </item>
         <item>
-            <guid isPermalink="true">https://w-sqrt7.github.io/2024/02/19/CTF/CTF-show%E9%A2%98%E7%9B%AE%E6%80%BB%E7%BB%93/</guid>
+            <guid isPermalink="true">https://w-sqrt7.gitee.io/2024/02/19/CTF/CTF-show%E9%A2%98%E7%9B%AE%E6%80%BB%E7%BB%93/</guid>
             <title>CTF-show题目总结</title>
-            <link>https://w-sqrt7.github.io/2024/02/19/CTF/CTF-show%E9%A2%98%E7%9B%AE%E6%80%BB%E7%BB%93/</link>
+            <link>https://w-sqrt7.gitee.io/2024/02/19/CTF/CTF-show%E9%A2%98%E7%9B%AE%E6%80%BB%E7%BB%93/</link>
             <category>原创</category>
             <pubDate>Mon, 19 Feb 2024 16:35:20 +0800</pubDate>
             <description><![CDATA[ &lt;div class=&#34;hbe hbe-container&#34; id=&#34;hexo-blog-encrypt&#34; data-wpm=&#34;抱歉, 这个密码看着不太对, 请再试试.&#34; data-whm=&#34;抱歉, 这个文章不能被校验, 不过您还是能看看解密后的内容.&#34;&gt;
@@ -292,9 +292,9 @@
 &lt;script data-pjax src=&#34;/lib/hbe.js&#34;&gt;&lt;/script&gt;&lt;link href=&#34;/css/hbe.style.css&#34; rel=&#34;stylesheet&#34; type=&#34;text/css&#34;&gt; ]]></description>
         </item>
         <item>
-            <guid isPermalink="true">https://w-sqrt7.github.io/2024/02/19/picture/</guid>
+            <guid isPermalink="true">https://w-sqrt7.gitee.io/2024/02/19/picture/</guid>
             <title>try picture</title>
-            <link>https://w-sqrt7.github.io/2024/02/19/picture/</link>
+            <link>https://w-sqrt7.gitee.io/2024/02/19/picture/</link>
             <category>原创</category>
             <pubDate>Mon, 19 Feb 2024 16:35:20 +0800</pubDate>
             <description><![CDATA[ &lt;p&gt;xin&lt;/p&gt;
