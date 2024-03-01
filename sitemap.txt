@@ -1,3 +1,4 @@
+https://w-sqrt7.gitee.io/2024/03/01/mihao-note/%E7%B1%B3%E5%A5%BD%E4%BF%A1%E5%AE%89-%E7%B3%BB%E7%BB%9F%E5%AE%89%E5%85%A8%E7%BB%BC%E5%90%88/
 https://w-sqrt7.gitee.io/2024/02/28/mihao-note/%E7%B1%B3%E5%A5%BD%E4%BF%A1%E5%AE%89-Linux%E5%AE%89%E5%85%A8%E9%85%8D%E7%BD%AE/
 https://w-sqrt7.gitee.io/2024/02/19/CTF/CTF-show%E9%A2%98%E7%9B%AE%E6%80%BB%E7%BB%93/
 https://w-sqrt7.gitee.io/2024/02/27/eNSP/%E7%BD%91%E5%9F%BA%E5%AE%9E%E8%B7%B5%E9%A2%98-%E4%BA%A4%E6%8D%A2%E6%9C%BA%E9%85%8D%E7%BD%AE/
@@ -17,3 +18,4 @@ https://w-sqrt7.gitee.io/tags/%E4%BF%A1%E6%81%AF%E5%AE%89%E5%85%A8/
 https://w-sqrt7.gitee.io/categories/CTF/
 https://w-sqrt7.gitee.io/categories/%E4%BF%A1%E6%81%AF%E5%AE%89%E5%85%A8%E4%BA%A7%E5%93%81%E9%85%8D%E7%BD%AE%E4%B8%8E%E5%BA%94%E7%94%A8/
 https://w-sqrt7.gitee.io/categories/%E7%AC%94%E8%AE%B0/
+https://w-sqrt7.gitee.io/categories/%E7%AC%94%E8%AE%B0/%E7%B1%B3%E5%A5%BD%E4%BF%A1%E5%AE%89/

@@ -2,6 +2,15 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://w-sqrt7.gitee.io/2024/03/01/mihao-note/%E7%B1%B3%E5%A5%BD%E4%BF%A1%E5%AE%89-%E7%B3%BB%E7%BB%9F%E5%AE%89%E5%85%A8%E7%BB%BC%E5%90%88/</loc>
+    
+    <lastmod>2024-03-01</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
     <loc>https://w-sqrt7.gitee.io/2024/02/28/mihao-note/%E7%B1%B3%E5%A5%BD%E4%BF%A1%E5%AE%89-Linux%E5%AE%89%E5%85%A8%E9%85%8D%E7%BD%AE/</loc>
     
     <lastmod>2024-03-01</lastmod>
@@ -153,6 +162,13 @@
   
   <url>
     <loc>https://w-sqrt7.gitee.io/categories/%E7%AC%94%E8%AE%B0/</loc>
+    <lastmod>2024-03-01</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://w-sqrt7.gitee.io/categories/%E7%AC%94%E8%AE%B0/%E7%B1%B3%E5%A5%BD%E4%BF%A1%E5%AE%89/</loc>
     <lastmod>2024-03-01</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
