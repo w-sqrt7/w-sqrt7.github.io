@@ -1,39 +1,32 @@
 <?xml version="1.0"?>
-<rss version="2.0">
-    <channel>
-        <title>sqrt7 • Posts by &#34;ensp&#34; tag</title>
-        <link>https://w-sqrt7.gitee.io</link>
-        <description></description>
-        <language>zh-CN</language>
-        <pubDate>Fri, 01 Mar 2024 22:18:19 +0800</pubDate>
-        <lastBuildDate>Fri, 01 Mar 2024 22:18:19 +0800</lastBuildDate>
-        <category>原创</category>
-        <category>转载</category>
-        <category>网基</category>
-        <category>eNSP</category>
-        <category>信息安全</category>
-        <category>哲学</category>
-        <category>web</category>
-        <category>misc</category>
-        <item>
-            <guid isPermalink="true">https://w-sqrt7.gitee.io/2024/03/01/eNSP/%E7%BD%91%E5%9F%BA%E5%AE%9E%E8%B7%B5%E9%A2%98-OSPF/</guid>
-            <title>网基实践题-OSPF</title>
-            <link>https://w-sqrt7.gitee.io/2024/03/01/eNSP/%E7%BD%91%E5%9F%BA%E5%AE%9E%E8%B7%B5%E9%A2%98-OSPF/</link>
-            <category>原创</category>
-            <category>网基</category>
-            <category>eNSP</category>
-            <pubDate>Fri, 01 Mar 2024 22:18:19 +0800</pubDate>
-            <description><![CDATA[ &lt;h1 id=&#34;网基实践题-OSPF&#34;&gt;&lt;a href=&#34;#网基实践题-OSPF&#34; class=&#34;headerlink&#34; title=&#34;网基实践题-OSPF&#34;&gt;&lt;/a&gt;网基实践题-OSPF&lt;/h1&gt;&lt;h2 id=&#34;实验拓扑图：&#34;&gt;&lt;a href=&#34;#实验拓扑图：&#34; class=&#34;headerlink&#34; title=&#34;实验拓扑图：&#34;&gt;&lt;/a&gt;实验拓扑图：&lt;/h2&gt; ]]></description>
-        </item>
-        <item>
-            <guid isPermalink="true">https://w-sqrt7.gitee.io/2024/02/27/eNSP/%E7%BD%91%E5%9F%BA%E5%AE%9E%E8%B7%B5%E9%A2%98-%E4%BA%A4%E6%8D%A2%E6%9C%BA%E9%85%8D%E7%BD%AE/</guid>
-            <title>网基实践题-交换机配置</title>
-            <link>https://w-sqrt7.gitee.io/2024/02/27/eNSP/%E7%BD%91%E5%9F%BA%E5%AE%9E%E8%B7%B5%E9%A2%98-%E4%BA%A4%E6%8D%A2%E6%9C%BA%E9%85%8D%E7%BD%AE/</link>
-            <category>原创</category>
-            <category>网基</category>
-            <category>eNSP</category>
-            <pubDate>Tue, 27 Feb 2024 22:01:07 +0800</pubDate>
-            <description><![CDATA[ &lt;h1 id=&#34;网基实践题-交换机配置&#34;&gt;&lt;a href=&#34;#网基实践题-交换机配置&#34; class=&#34;headerlink&#34; title=&#34;网基实践题-交换机配置&#34;&gt;&lt;/a&gt;网基实践题-交换机配置&lt;/h1&gt;&lt;h2 id=&#34;二层交换机配置&#34;&gt;&lt;a href=&#34;#二层交换机配置&#34; class=&#34;headerlink&#34; title=&#34;二层交换机配置&#34;&gt;&lt;/a&gt;二层交换机配置&lt;/h2&gt;&lt;h3 id=&#34;实验拓扑图：&#34;&gt;&lt;a href=&#34;#实验拓扑图：&#34; class=&#34;headerlink&#34; title=&#34;实验拓扑图：&#34;&gt;&lt;/a&gt;实验拓扑图：&lt;/h3&gt;&lt;p&gt;&lt;img src=&#34;/2024/02/27/eNSP/%E7%BD%91%E5%9F%BA%E5%AE%9E%E8%B7%B5%E9%A2%98-%E4%BA%A4%E6%8D%A2%E6%9C%BA%E9%85%8D%E7%BD%AE/%E5%B1%8F%E5%B9%95%E6%88%AA%E5%9B%BE%202024-02-27%20220330.png&#34; alt=&#34;屏幕截图 2024-02-27 220330&#34;&gt;&lt;/p&gt;
+<feed xmlns="http://www.w3.org/2005/Atom">
+    <id>https://w-sqrt7.gitee.io</id>
+    <title>sqrt7 • Posts by &#34;ensp&#34; tag</title>
+    <link href="https://w-sqrt7.gitee.io" />
+    <updated>2024-03-01T14:18:19.595Z</updated>
+    <category term="原创" />
+    <category term="转载" />
+    <category term="网基" />
+    <category term="eNSP" />
+    <category term="信息安全" />
+    <category term="哲学" />
+    <category term="web" />
+    <category term="misc" />
+    <entry>
+        <id>https://w-sqrt7.gitee.io/2024/03/01/eNSP/%E7%BD%91%E5%9F%BA%E5%AE%9E%E8%B7%B5%E9%A2%98-OSPF/</id>
+        <title>网基实践题-OSPF</title>
+        <link rel="alternate" href="https://w-sqrt7.gitee.io/2024/03/01/eNSP/%E7%BD%91%E5%9F%BA%E5%AE%9E%E8%B7%B5%E9%A2%98-OSPF/"/>
+        <content type="html">&lt;h1 id=&#34;网基实践题-OSPF&#34;&gt;&lt;a href=&#34;#网基实践题-OSPF&#34; class=&#34;headerlink&#34; title=&#34;网基实践题-OSPF&#34;&gt;&lt;/a&gt;网基实践题-OSPF&lt;/h1&gt;&lt;h2 id=&#34;实验拓扑图：&#34;&gt;&lt;a href=&#34;#实验拓扑图：&#34; class=&#34;headerlink&#34; title=&#34;实验拓扑图：&#34;&gt;&lt;/a&gt;实验拓扑图：&lt;/h2&gt;</content>
+        <category term="原创" />
+        <category term="网基" />
+        <category term="eNSP" />
+        <updated>2024-03-01T14:18:19.595Z</updated>
+    </entry>
+    <entry>
+        <id>https://w-sqrt7.gitee.io/2024/02/27/eNSP/%E7%BD%91%E5%9F%BA%E5%AE%9E%E8%B7%B5%E9%A2%98-%E4%BA%A4%E6%8D%A2%E6%9C%BA%E9%85%8D%E7%BD%AE/</id>
+        <title>网基实践题-交换机配置</title>
+        <link rel="alternate" href="https://w-sqrt7.gitee.io/2024/02/27/eNSP/%E7%BD%91%E5%9F%BA%E5%AE%9E%E8%B7%B5%E9%A2%98-%E4%BA%A4%E6%8D%A2%E6%9C%BA%E9%85%8D%E7%BD%AE/"/>
+        <content type="html">&lt;h1 id=&#34;网基实践题-交换机配置&#34;&gt;&lt;a href=&#34;#网基实践题-交换机配置&#34; class=&#34;headerlink&#34; title=&#34;网基实践题-交换机配置&#34;&gt;&lt;/a&gt;网基实践题-交换机配置&lt;/h1&gt;&lt;h2 id=&#34;二层交换机配置&#34;&gt;&lt;a href=&#34;#二层交换机配置&#34; class=&#34;headerlink&#34; title=&#34;二层交换机配置&#34;&gt;&lt;/a&gt;二层交换机配置&lt;/h2&gt;&lt;h3 id=&#34;实验拓扑图：&#34;&gt;&lt;a href=&#34;#实验拓扑图：&#34; class=&#34;headerlink&#34; title=&#34;实验拓扑图：&#34;&gt;&lt;/a&gt;实验拓扑图：&lt;/h3&gt;&lt;p&gt;&lt;img src=&#34;/2024/02/27/eNSP/%E7%BD%91%E5%9F%BA%E5%AE%9E%E8%B7%B5%E9%A2%98-%E4%BA%A4%E6%8D%A2%E6%9C%BA%E9%85%8D%E7%BD%AE/%E5%B1%8F%E5%B9%95%E6%88%AA%E5%9B%BE%202024-02-27%20220330.png&#34; alt=&#34;屏幕截图 2024-02-27 220330&#34;&gt;&lt;/p&gt;
 &lt;h3 id=&#34;实验过程：&#34;&gt;&lt;a href=&#34;#实验过程：&#34; class=&#34;headerlink&#34; title=&#34;实验过程：&#34;&gt;&lt;/a&gt;实验过程：&lt;/h3&gt;&lt;p&gt;首先将各个主机的ip和子网掩码配置，网关这里可以不用在意&lt;/p&gt;
 &lt;p&gt;配置完成后可以发现4台主机之间是可以相互ping通的，因为是在同一网段内，我们的任务是配置两个vlan，使得vlan10的主机只和vlan10的主机相互通，vlan20的主机只和vlan20的主机相互通，进行如下配置&lt;/p&gt;
 &lt;p&gt;首先进行基础配置&lt;/p&gt;
@@ -91,17 +84,17 @@
 &lt;p&gt;LSW1的配置如下：&lt;/p&gt;
 &lt;figure class=&#34;highlight plaintext&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;5&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;6&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;[LSW 1]int vlanif 10&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;[LSW 1-Vlanif10]ip address 192.168.10.254 24&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;[LSW 1-Vlanif10]quit&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;[LSW 1]int vlanif 20&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;[LSW 1-Vlanif20]ip address 192.168.20.254 24&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;[LSW 1-Vlanif20]quit&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
 
-&lt;figure class=&#34;highlight plaintext&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt; ]]></description>
-        </item>
-        <item>
-            <guid isPermalink="true">https://w-sqrt7.gitee.io/2024/02/27/eNSP/%E7%BD%91%E5%9F%BA%E5%AE%9E%E8%B7%B5%E9%A2%98-%E9%9D%99%E6%80%81%E8%B7%AF%E7%94%B1/</guid>
-            <title>网基实践题-静态路由</title>
-            <link>https://w-sqrt7.gitee.io/2024/02/27/eNSP/%E7%BD%91%E5%9F%BA%E5%AE%9E%E8%B7%B5%E9%A2%98-%E9%9D%99%E6%80%81%E8%B7%AF%E7%94%B1/</link>
-            <category>原创</category>
-            <category>网基</category>
-            <category>eNSP</category>
-            <pubDate>Tue, 27 Feb 2024 15:18:09 +0800</pubDate>
-            <description><![CDATA[ &lt;h1 id=&#34;网基实践题-静态路由&#34;&gt;&lt;a href=&#34;#网基实践题-静态路由&#34; class=&#34;headerlink&#34; title=&#34;网基实践题-静态路由&#34;&gt;&lt;/a&gt;网基实践题-静态路由&lt;/h1&gt;&lt;h2 id=&#34;静态路由-实验一&#34;&gt;&lt;a href=&#34;#静态路由-实验一&#34; class=&#34;headerlink&#34; title=&#34;静态路由-实验一&#34;&gt;&lt;/a&gt;静态路由-实验一&lt;/h2&gt;&lt;h3 id=&#34;实验拓扑图：&#34;&gt;&lt;a href=&#34;#实验拓扑图：&#34; class=&#34;headerlink&#34; title=&#34;实验拓扑图：&#34;&gt;&lt;/a&gt;实验拓扑图：&lt;/h3&gt;&lt;p&gt;&lt;img src=&#34;/2024/02/27/eNSP/%E7%BD%91%E5%9F%BA%E5%AE%9E%E8%B7%B5%E9%A2%98-%E9%9D%99%E6%80%81%E8%B7%AF%E7%94%B1/%E5%B1%8F%E5%B9%95%E6%88%AA%E5%9B%BE%202024-02-27%20142053.png&#34;&gt;&lt;/p&gt;
+&lt;figure class=&#34;highlight plaintext&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;</content>
+        <category term="原创" />
+        <category term="网基" />
+        <category term="eNSP" />
+        <updated>2024-02-27T14:01:07.869Z</updated>
+    </entry>
+    <entry>
+        <id>https://w-sqrt7.gitee.io/2024/02/27/eNSP/%E7%BD%91%E5%9F%BA%E5%AE%9E%E8%B7%B5%E9%A2%98-%E9%9D%99%E6%80%81%E8%B7%AF%E7%94%B1/</id>
+        <title>网基实践题-静态路由</title>
+        <link rel="alternate" href="https://w-sqrt7.gitee.io/2024/02/27/eNSP/%E7%BD%91%E5%9F%BA%E5%AE%9E%E8%B7%B5%E9%A2%98-%E9%9D%99%E6%80%81%E8%B7%AF%E7%94%B1/"/>
+        <content type="html">&lt;h1 id=&#34;网基实践题-静态路由&#34;&gt;&lt;a href=&#34;#网基实践题-静态路由&#34; class=&#34;headerlink&#34; title=&#34;网基实践题-静态路由&#34;&gt;&lt;/a&gt;网基实践题-静态路由&lt;/h1&gt;&lt;h2 id=&#34;静态路由-实验一&#34;&gt;&lt;a href=&#34;#静态路由-实验一&#34; class=&#34;headerlink&#34; title=&#34;静态路由-实验一&#34;&gt;&lt;/a&gt;静态路由-实验一&lt;/h2&gt;&lt;h3 id=&#34;实验拓扑图：&#34;&gt;&lt;a href=&#34;#实验拓扑图：&#34; class=&#34;headerlink&#34; title=&#34;实验拓扑图：&#34;&gt;&lt;/a&gt;实验拓扑图：&lt;/h3&gt;&lt;p&gt;&lt;img src=&#34;/2024/02/27/eNSP/%E7%BD%91%E5%9F%BA%E5%AE%9E%E8%B7%B5%E9%A2%98-%E9%9D%99%E6%80%81%E8%B7%AF%E7%94%B1/%E5%B1%8F%E5%B9%95%E6%88%AA%E5%9B%BE%202024-02-27%20142053.png&#34;&gt;&lt;/p&gt;
 &lt;h3 id=&#34;实验过程：&#34;&gt;&lt;a href=&#34;#实验过程：&#34; class=&#34;headerlink&#34; title=&#34;实验过程：&#34;&gt;&lt;/a&gt;实验过程：&lt;/h3&gt;&lt;p&gt;首先将PC1和PC2指定的ip分别配置，留意一下网关的地址哦！&lt;/p&gt;
 &lt;p&gt;&lt;img src=&#34;/2024/02/27/eNSP/%E7%BD%91%E5%9F%BA%E5%AE%9E%E8%B7%B5%E9%A2%98-%E9%9D%99%E6%80%81%E8%B7%AF%E7%94%B1/%E5%B1%8F%E5%B9%95%E6%88%AA%E5%9B%BE%202024-02-27%20153610.png&#34; alt=&#34;屏幕截图 2024-02-27 153610&#34;&gt;&lt;/p&gt;
 &lt;p&gt;然后开始配置两个路由器&lt;/p&gt;
@@ -143,17 +136,17 @@
 &lt;figure class=&#34;highlight plaintext&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;3&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;[Huawei]ip route-static 192.168.20.0 24 10.10.10.1&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;[Huawei]ip route-static 8.8.4.1 24 10.10.10.1&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;[Huawei]ip route-static 192.168.10.0 24 10.10.10.1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
 
 &lt;p&gt;注意交换机不用管的，然后尝试ping命令发现可以成功&lt;/p&gt;
- ]]></description>
-        </item>
-        <item>
-            <guid isPermalink="true">https://w-sqrt7.gitee.io/2024/02/27/eNSP/%E7%BD%91%E5%9F%BA%E5%AE%9E%E8%B7%B5%E9%A2%98-%E5%8F%82%E8%80%83%E5%91%BD%E4%BB%A4/</guid>
-            <title>网基实践题-参考命令</title>
-            <link>https://w-sqrt7.gitee.io/2024/02/27/eNSP/%E7%BD%91%E5%9F%BA%E5%AE%9E%E8%B7%B5%E9%A2%98-%E5%8F%82%E8%80%83%E5%91%BD%E4%BB%A4/</link>
-            <category>转载</category>
-            <category>网基</category>
-            <category>eNSP</category>
-            <pubDate>Tue, 27 Feb 2024 15:18:09 +0800</pubDate>
-            <description><![CDATA[ &lt;h1 id=&#34;网基实践题-参考命令&#34;&gt;&lt;a href=&#34;#网基实践题-参考命令&#34; class=&#34;headerlink&#34; title=&#34;网基实践题-参考命令&#34;&gt;&lt;/a&gt;网基实践题-参考命令&lt;/h1&gt;&lt;h3 id=&#34;配置Access接口，并加入对应的VLAN&#34;&gt;&lt;a href=&#34;#配置Access接口，并加入对应的VLAN&#34; class=&#34;headerlink&#34; title=&#34;配置Access接口，并加入对应的VLAN&#34;&gt;&lt;/a&gt;配置Access接口，并加入对应的VLAN&lt;/h3&gt;&lt;figure class=&#34;highlight plaintext&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;3&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;[SW1]interface GigabitEthernet 0/0/1&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;[SW1-GigabitEthernet0/0/1]port link-type access&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;[SW1-GigabitEthernet0/0/1]port default vlan 10&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+</content>
+        <category term="原创" />
+        <category term="网基" />
+        <category term="eNSP" />
+        <updated>2024-02-27T07:18:09.233Z</updated>
+    </entry>
+    <entry>
+        <id>https://w-sqrt7.gitee.io/2024/02/27/eNSP/%E7%BD%91%E5%9F%BA%E5%AE%9E%E8%B7%B5%E9%A2%98-%E5%8F%82%E8%80%83%E5%91%BD%E4%BB%A4/</id>
+        <title>网基实践题-参考命令</title>
+        <link rel="alternate" href="https://w-sqrt7.gitee.io/2024/02/27/eNSP/%E7%BD%91%E5%9F%BA%E5%AE%9E%E8%B7%B5%E9%A2%98-%E5%8F%82%E8%80%83%E5%91%BD%E4%BB%A4/"/>
+        <content type="html">&lt;h1 id=&#34;网基实践题-参考命令&#34;&gt;&lt;a href=&#34;#网基实践题-参考命令&#34; class=&#34;headerlink&#34; title=&#34;网基实践题-参考命令&#34;&gt;&lt;/a&gt;网基实践题-参考命令&lt;/h1&gt;&lt;h3 id=&#34;配置Access接口，并加入对应的VLAN&#34;&gt;&lt;a href=&#34;#配置Access接口，并加入对应的VLAN&#34; class=&#34;headerlink&#34; title=&#34;配置Access接口，并加入对应的VLAN&#34;&gt;&lt;/a&gt;配置Access接口，并加入对应的VLAN&lt;/h3&gt;&lt;figure class=&#34;highlight plaintext&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;3&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;[SW1]interface GigabitEthernet 0/0/1&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;[SW1-GigabitEthernet0/0/1]port link-type access&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;[SW1-GigabitEthernet0/0/1]port default vlan 10&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
 
 
 
@@ -227,7 +220,10 @@
 &lt;p&gt;(一)接口模式的DHCP命令&lt;br&gt;[Huawei]dhcp enable 开启DHCP配置功能&lt;br&gt;[Huawei]int g0&amp;#x2F;0&amp;#x2F;1 进入相关接口进行接口模式的DHCP配置&lt;br&gt;[Huawei-GigabitEthernet0&amp;#x2F;0&amp;#x2F;1]ip address ip地址 子网掩码&lt;br&gt;[Huawei-GigabitEthernet0&amp;#x2F;0&amp;#x2F;1]dhcp select interface 开启接口的DHCP功能&lt;br&gt;[Huawei-GigabitEthernet0&amp;#x2F;0&amp;#x2F;1]dhcp server excluded-ip-address 单个要排除的ip地址或两个ip地址即范围&lt;br&gt;[Huawei-GigabitEthernet0&amp;#x2F;0&amp;#x2F;1]dhcp server lease day 天 hour 时 minute 分 设置地址池ip租用有效期&lt;br&gt;&amp;#x2F;*[Huawei- GigabitEthernet0&amp;#x2F;0&amp;#x2F;1]lease unlimited 租期无限制&lt;br&gt;[Huawei-GigabitEthernet0&amp;#x2F;0&amp;#x2F;1]dhcp server dns-list 主要DNS 备用DNS 设置DNS&lt;br&gt;[Huawei-GigabitEthernet0&amp;#x2F;0&amp;#x2F;1]dhcp select interface 开启接口的DHCP功能使其从接口地址池分配地址&lt;/p&gt;
 &lt;p&gt;(二)全局模式的DHCP命令&lt;br&gt;[Huawei]dhcp enable&lt;br&gt;[Huawei]ip pool HUAWEI 创建全局地址池，pool后跟名称，这里是HUAWEI&lt;br&gt;[Huawei-ip-pool-HUAWEI]network ip地址 mask 子网掩码 设置全局地址池的范围&lt;br&gt;[Huawei-ip-pool-HUAWEI]getway-list 网关地址 设置分配的网关地址&lt;br&gt;[Huawei-ip-pool-HUAWEI]excluded-ip-address ip地址 ip地址 设置不参与动态分配的地址，可以是一个范围&lt;br&gt;[Huawei-ip-pool-HUAWEI]dhcp server dns-list 主要DNS 备用DNS 设置DNS&lt;br&gt;[Huawei-ip-pool-HUAWEI]lease day 天 hour 时 minute 分 设置地址池ip租用有效期&lt;br&gt;&amp;#x2F;*[Huawei-ip-pool-HUAWEI]lease unlimited 租期无限制&lt;br&gt;[Huawei-ip-pool-HUAWEI]static-bind ip-address ip地址 mac-address MAC地址 option- template template1 对某个MAC地址进行绑定，给该MAC地址分配固定的IP地址&lt;br&gt;[Huawei]int g0&amp;#x2F;0&amp;#x2F;1 进入相关接口&lt;br&gt;[Huawei-GigabitEthernet0&amp;#x2F;0&amp;#x2F;1]dhcp select global 指定该接口采用全局地址池为客户端分配ip地址&lt;br&gt;&amp;lt; Huawei&amp;gt;dis ip pool name 全局地址池名称 all 查看全局地址池的分配信息&lt;/p&gt;
 &lt;p&gt;原文链接：&lt;a href=&#34;https://blog.csdn.net/qq_43085848/article/details/121679021&#34;&gt;https://blog.csdn.net/qq_43085848/article/details/121679021&lt;/a&gt;&lt;/p&gt;
- ]]></description>
-        </item>
-    </channel>
-</rss>
+</content>
+        <category term="转载" />
+        <category term="网基" />
+        <category term="eNSP" />
+        <updated>2024-02-27T07:18:09.227Z</updated>
+    </entry>
+</feed>
