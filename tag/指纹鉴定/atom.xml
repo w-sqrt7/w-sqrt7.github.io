@@ -1,30 +1,24 @@
 <?xml version="1.0"?>
-<rss version="2.0">
-    <channel>
-        <title>sqrt7 • Posts by &#34;司法技术&#34; category</title>
-        <link>https://w-sqrt7.gitee.io</link>
-        <description></description>
-        <language>zh-CN</language>
-        <pubDate>Thu, 07 Mar 2024 19:16:16 +0800</pubDate>
-        <lastBuildDate>Thu, 07 Mar 2024 19:16:16 +0800</lastBuildDate>
-        <category>原创</category>
-        <category>转载</category>
-        <category>网基</category>
-        <category>eNSP</category>
-        <category>信息安全</category>
-        <category>哲学</category>
-        <category>web</category>
-        <category>misc</category>
-        <category>司法技术</category>
-        <category>指纹鉴定</category>
-        <item>
-            <guid isPermalink="true">https://w-sqrt7.gitee.io/2024/03/07/other/Judicial%20Technology/%E5%8F%B8%E6%B3%95%E6%8A%80%E6%9C%AF-%E6%8C%87%E7%BA%B9%E9%89%B4%E5%AE%9A/</guid>
-            <title>司法技术-指纹鉴定</title>
-            <link>https://w-sqrt7.gitee.io/2024/03/07/other/Judicial%20Technology/%E5%8F%B8%E6%B3%95%E6%8A%80%E6%9C%AF-%E6%8C%87%E7%BA%B9%E9%89%B4%E5%AE%9A/</link>
-            <category>司法技术</category>
-            <category>指纹鉴定</category>
-            <pubDate>Thu, 07 Mar 2024 19:16:16 +0800</pubDate>
-            <description><![CDATA[ &lt;h1 id=&#34;司法技术-指纹鉴定&#34;&gt;&lt;a href=&#34;#司法技术-指纹鉴定&#34; class=&#34;headerlink&#34; title=&#34;司法技术-指纹鉴定&#34;&gt;&lt;/a&gt;司法技术-指纹鉴定&lt;/h1&gt;&lt;h2 id=&#34;指印纹型&#34;&gt;&lt;a href=&#34;#指印纹型&#34; class=&#34;headerlink&#34; title=&#34;指印纹型&#34;&gt;&lt;/a&gt;指印纹型&lt;/h2&gt;&lt;p&gt;​	指根据手指所留纹线的整体结构划分的指印纹线分布的基本类型的总称，通常分为&lt;code&gt;斗型纹、箕型 纹、弓型纹、混杂型纹&lt;/code&gt;四种基本纹型：&lt;/p&gt;
+<feed xmlns="http://www.w3.org/2005/Atom">
+    <id>https://w-sqrt7.gitee.io</id>
+    <title>sqrt7 • Posts by &#34;指纹鉴定&#34; tag</title>
+    <link href="https://w-sqrt7.gitee.io" />
+    <updated>2024-03-07T11:16:16.708Z</updated>
+    <category term="原创" />
+    <category term="转载" />
+    <category term="网基" />
+    <category term="eNSP" />
+    <category term="信息安全" />
+    <category term="哲学" />
+    <category term="web" />
+    <category term="misc" />
+    <category term="司法技术" />
+    <category term="指纹鉴定" />
+    <entry>
+        <id>https://w-sqrt7.gitee.io/2024/03/07/other/Judicial%20Technology/%E5%8F%B8%E6%B3%95%E6%8A%80%E6%9C%AF-%E6%8C%87%E7%BA%B9%E9%89%B4%E5%AE%9A/</id>
+        <title>司法技术-指纹鉴定</title>
+        <link rel="alternate" href="https://w-sqrt7.gitee.io/2024/03/07/other/Judicial%20Technology/%E5%8F%B8%E6%B3%95%E6%8A%80%E6%9C%AF-%E6%8C%87%E7%BA%B9%E9%89%B4%E5%AE%9A/"/>
+        <content type="html">&lt;h1 id=&#34;司法技术-指纹鉴定&#34;&gt;&lt;a href=&#34;#司法技术-指纹鉴定&#34; class=&#34;headerlink&#34; title=&#34;司法技术-指纹鉴定&#34;&gt;&lt;/a&gt;司法技术-指纹鉴定&lt;/h1&gt;&lt;h2 id=&#34;指印纹型&#34;&gt;&lt;a href=&#34;#指印纹型&#34; class=&#34;headerlink&#34; title=&#34;指印纹型&#34;&gt;&lt;/a&gt;指印纹型&lt;/h2&gt;&lt;p&gt;​	指根据手指所留纹线的整体结构划分的指印纹线分布的基本类型的总称，通常分为&lt;code&gt;斗型纹、箕型 纹、弓型纹、混杂型纹&lt;/code&gt;四种基本纹型：&lt;/p&gt;
 &lt;h3 id=&#34;斗型纹&#34;&gt;&lt;a href=&#34;#斗型纹&#34; class=&#34;headerlink&#34; title=&#34;斗型纹&#34;&gt;&lt;/a&gt;斗型纹&lt;/h3&gt;&lt;p&gt;​	内部花纹由一条以上的环形线、螺形线、曲形线组成，且有两个或两个以上三角。斗型纹根据中&lt;br&gt;心纹线结构不同，分为环形斗、螺形斗、绞形斗、双箕斗、曲形斗、囊形斗、杂形斗。&lt;/p&gt;
 &lt;p&gt;​	环形斗：右倾斗，左手所留；左倾 斗，右手所留。&lt;br&gt;​	螺形斗：顺势旋，左手正旋，左手所留；逆时旋，右手正旋，右手所留。&lt;/p&gt;
 &lt;p&gt;​	曲形斗、双箕斗：中心结构呈“S”形，内部纹线呈顺时旋，左手所留，中心结构呈“Z”形，内部纹线呈逆时旋，右手所留。&lt;br&gt;*对于箕型纹、囊形、螺形、曲形、双箕形斗，中心花纹上部两侧分、起点多的，左手所留；结合、终点多的，右手所留。&lt;br&gt;*对于箕型纹、囊形、螺形、曲形、双箕形斗， 中心花纹上部左侧纹线多的，右手所留；中心花纹上部右侧纹线多的，左手所留。&lt;/p&gt;
@@ -60,7 +54,9 @@
 &lt;p&gt;（3）中指印痕太小、纹线细密程度与食指相似，印痕两侧平直，指尖部略呈弧形，整个印痕比较完整，常出现中心花纹或某侧三角，容易出现第一组屈肌纹，很少留下半侧面形状的印痕。&lt;/p&gt;
 &lt;p&gt;（4）环指印痕略小于中指，纹线细密，呈长柱形， 指尖部呈大头弧形，三角较靠近中心。&lt;/p&gt;
 &lt;p&gt;（5）小指印痕面积最小，纹线细密，印痕外形 呈长条形，指尖部稍尖，花纹显得细长，印痕向环指方向偏斜，小指很少单独留下印痕，但小指留有印痕时其他手指印痕模糊。&lt;/p&gt;
- ]]></description>
-        </item>
-    </channel>
-</rss>
+</content>
+        <category term="司法技术" />
+        <category term="指纹鉴定" />
+        <updated>2024-03-07T11:16:16.708Z</updated>
+    </entry>
+</feed>
