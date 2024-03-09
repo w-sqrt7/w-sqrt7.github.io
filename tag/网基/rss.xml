@@ -8,15 +8,15 @@
         <pubDate>Fri, 01 Mar 2024 22:18:19 +0800</pubDate>
         <lastBuildDate>Fri, 01 Mar 2024 22:18:19 +0800</lastBuildDate>
         <category>原创</category>
-        <category>转载</category>
         <category>网基</category>
         <category>eNSP</category>
-        <category>信息安全</category>
-        <category>哲学</category>
         <category>web</category>
         <category>misc</category>
+        <category>转载</category>
+        <category>信息安全</category>
         <category>司法技术</category>
         <category>指纹鉴定</category>
+        <category>哲学</category>
         <category>基础</category>
         <item>
             <guid isPermalink="true">https://w-sqrt7.gitee.io/2024/03/01/eNSP/%E7%BD%91%E5%9F%BA%E5%AE%9E%E8%B7%B5%E9%A2%98-OSPF/</guid>
@@ -245,9 +245,9 @@
             <guid isPermalink="true">https://w-sqrt7.gitee.io/2024/02/27/eNSP/%E7%BD%91%E5%9F%BA%E5%AE%9E%E8%B7%B5%E9%A2%98-%E5%8F%82%E8%80%83%E5%91%BD%E4%BB%A4/</guid>
             <title>网基实践题-参考命令</title>
             <link>https://w-sqrt7.gitee.io/2024/02/27/eNSP/%E7%BD%91%E5%9F%BA%E5%AE%9E%E8%B7%B5%E9%A2%98-%E5%8F%82%E8%80%83%E5%91%BD%E4%BB%A4/</link>
-            <category>转载</category>
             <category>网基</category>
             <category>eNSP</category>
+            <category>转载</category>
             <pubDate>Tue, 27 Feb 2024 15:18:09 +0800</pubDate>
             <description><![CDATA[ &lt;h1 id=&#34;网基实践题-参考命令&#34;&gt;&lt;a href=&#34;#网基实践题-参考命令&#34; class=&#34;headerlink&#34; title=&#34;网基实践题-参考命令&#34;&gt;&lt;/a&gt;网基实践题-参考命令&lt;/h1&gt;&lt;h3 id=&#34;配置Access接口，并加入对应的VLAN&#34;&gt;&lt;a href=&#34;#配置Access接口，并加入对应的VLAN&#34; class=&#34;headerlink&#34; title=&#34;配置Access接口，并加入对应的VLAN&#34;&gt;&lt;/a&gt;配置Access接口，并加入对应的VLAN&lt;/h3&gt;&lt;figure class=&#34;highlight plaintext&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;4&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;[SW1]interface GigabitEthernet 0/0/1	//进入g0/0/1接口&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;[SW1-GigabitEthernet0/0/1]port link-type access	//设置连接方式为access&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;[SW1-GigabitEthernet0/0/1]port default vlan 10	//设置默认vlan10 &lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;[SW1-GigabitEthernet0/0/1]quit&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
 
