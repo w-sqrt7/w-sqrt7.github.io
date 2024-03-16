@@ -5,8 +5,8 @@
         <link>https://w-sqrt7.gitee.io</link>
         <description></description>
         <language>zh-CN</language>
-        <pubDate>Mon, 19 Feb 2024 16:35:20 +0800</pubDate>
-        <lastBuildDate>Mon, 19 Feb 2024 16:35:20 +0800</lastBuildDate>
+        <pubDate>Sat, 16 Mar 2024 16:30:04 +0800</pubDate>
+        <lastBuildDate>Sat, 16 Mar 2024 16:30:04 +0800</lastBuildDate>
         <category>原创</category>
         <category>逆向</category>
         <category>汇编</category>
@@ -19,6 +19,29 @@
         <category>哲学</category>
         <category>基础</category>
         <category>kali</category>
+        <category>Web</category>
+        <category>渗透</category>
+        <item>
+            <guid isPermalink="true">https://w-sqrt7.gitee.io/2024/03/16/web/WEB%E6%94%BB%E9%98%B2/</guid>
+            <title>WEB攻防</title>
+            <link>https://w-sqrt7.gitee.io/2024/03/16/web/WEB%E6%94%BB%E9%98%B2/</link>
+            <category>原创</category>
+            <category>Web</category>
+            <category>渗透</category>
+            <pubDate>Sat, 16 Mar 2024 16:30:04 +0800</pubDate>
+            <description><![CDATA[ &lt;div class=&#34;hbe hbe-container&#34; id=&#34;hexo-blog-encrypt&#34; data-wpm=&#34;抱歉, 这个密码看着不太对, 请再试试.&#34; data-whm=&#34;抱歉, 这个文章不能被校验, 不过您还是能看看解密后的内容.&#34;&gt;
+  &lt;script id=&#34;hbeData&#34; type=&#34;hbeData&#34; data-hmacdigest=&#34;31263f598e7fb9ab7f7cf3395892e841438c7b7bb5c7f8bf34562608d09a65bd&#34;&gt;e05d9ee6e48268b2b742c6d6f1681d6164fa5aa1dc52a0c978370e90ed17c302880c189753220d6d366cb0b202107534f7df93832ae7837c9481ea8d11ef56de293c21648b070c4d3e28e11261bf58633759dd8ad7574054e05c72884ea6a427f03ec09de739740099c545b5cc795bc6c09f6d0d50cd585503ccf7ccfab6205c&lt;/script&gt;
+  &lt;div class=&#34;hbe hbe-content&#34;&gt;
+    &lt;div class=&#34;hbe hbe-input hbe-input-default&#34;&gt;
+      &lt;input class=&#34;hbe hbe-input-field hbe-input-field-default&#34; type=&#34;password&#34; id=&#34;hbePass&#34;&gt;
+      &lt;label class=&#34;hbe hbe-input-label hbe-input-label-default&#34; for=&#34;hbePass&#34;&gt;
+        &lt;span class=&#34;hbe hbe-input-label-content hbe-input-label-content-default&#34;&gt;您好, 这里需要密码.&lt;/span&gt;
+      &lt;/label&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+&lt;script data-pjax src=&#34;/lib/hbe.js&#34;&gt;&lt;/script&gt;&lt;link href=&#34;/css/hbe.style.css&#34; rel=&#34;stylesheet&#34; type=&#34;text/css&#34;&gt; ]]></description>
+        </item>
         <item>
             <guid isPermalink="true">https://w-sqrt7.gitee.io/2024/02/19/CTF/ctfshow-web%E6%80%9D%E8%B7%AF%E6%80%BB%E7%BB%93/</guid>
             <title>CTFshow-web思路总结</title>
