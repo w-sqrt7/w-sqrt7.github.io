@@ -8,23 +8,23 @@
         <pubDate>Mon, 25 Mar 2024 16:54:17 +0800</pubDate>
         <lastBuildDate>Mon, 25 Mar 2024 16:54:17 +0800</lastBuildDate>
         <category>原创</category>
-        <category>web</category>
-        <category>misc</category>
-        <category>转载</category>
-        <category>信息安全</category>
         <category>逆向</category>
+        <category>C语言</category>
+        <category>misc</category>
         <category>汇编</category>
+        <category>web</category>
         <category>网基</category>
         <category>eNSP</category>
-        <category>哲学</category>
+        <category>转载</category>
+        <category>信息安全</category>
         <category>渗透</category>
+        <category>哲学</category>
+        <category>工具</category>
         <category>基础</category>
         <category>kali</category>
-        <category>C语言</category>
-        <category>工具</category>
         <item>
             <guid isPermalink="true">https://w-sqrt7.gitee.io/2024/03/25/tools/Volatility2.6%E7%9A%84%E4%BD%BF%E7%94%A8%E6%96%B9%E6%B3%95/</guid>
-            <title>kali的常用命令</title>
+            <title>Volatility2.6的使用方法</title>
             <link>https://w-sqrt7.gitee.io/2024/03/25/tools/Volatility2.6%E7%9A%84%E4%BD%BF%E7%94%A8%E6%96%B9%E6%B3%95/</link>
             <category>转载</category>
             <category>工具</category>
@@ -1091,13 +1091,13 @@
 &lt;p&gt;find &amp;#x2F; -name moonsec 2&amp;gt;&amp;#x2F;dev&amp;#x2F;null   搜索某个文件&amp;#x2F;文件夹 屏蔽出错信息&lt;/p&gt;
 &lt;p&gt;SCP命令&lt;/p&gt;
 &lt;p&gt;1.将远程服务器文件拷贝到本地服务器当前路径下&lt;br&gt;在本地服务器当前路径下，输入如下命令，回车后输入远程服务器的登录密码，即可将远程文件拷贝到本地服务器当前路径下。&lt;/p&gt;
-&lt;p&gt; scp &lt;a href=&#34;mailto:&amp;#x74;&amp;#x65;&amp;#x73;&amp;#116;&amp;#x75;&amp;#x73;&amp;#x65;&amp;#x72;&amp;#x40;&amp;#x34;&amp;#x37;&amp;#x2e;&amp;#49;&amp;#48;&amp;#x30;&amp;#x2e;&amp;#50;&amp;#52;&amp;#x37;&amp;#46;&amp;#50;&amp;#52;&amp;#x30;&#34;&gt;&amp;#x74;&amp;#x65;&amp;#x73;&amp;#116;&amp;#x75;&amp;#x73;&amp;#x65;&amp;#x72;&amp;#x40;&amp;#x34;&amp;#x37;&amp;#x2e;&amp;#49;&amp;#48;&amp;#x30;&amp;#x2e;&amp;#50;&amp;#52;&amp;#x37;&amp;#46;&amp;#50;&amp;#52;&amp;#x30;&lt;/a&gt;:&amp;#x2F;home&amp;#x2F;testuser&amp;#x2F;test.sql &lt;/p&gt;
+&lt;p&gt; scp &lt;a href=&#34;mailto:&amp;#x74;&amp;#101;&amp;#x73;&amp;#116;&amp;#x75;&amp;#115;&amp;#x65;&amp;#114;&amp;#x40;&amp;#52;&amp;#55;&amp;#46;&amp;#49;&amp;#48;&amp;#48;&amp;#46;&amp;#x32;&amp;#52;&amp;#55;&amp;#x2e;&amp;#x32;&amp;#52;&amp;#x30;&#34;&gt;&amp;#x74;&amp;#101;&amp;#x73;&amp;#116;&amp;#x75;&amp;#115;&amp;#x65;&amp;#114;&amp;#x40;&amp;#52;&amp;#55;&amp;#46;&amp;#49;&amp;#48;&amp;#48;&amp;#46;&amp;#x32;&amp;#52;&amp;#55;&amp;#x2e;&amp;#x32;&amp;#52;&amp;#x30;&lt;/a&gt;:&amp;#x2F;home&amp;#x2F;testuser&amp;#x2F;test.sql &lt;/p&gt;
 &lt;p&gt;2.将本地服务器文件推送到远程服务器&lt;br&gt;在本地服务器当前路径下，输入如下命令，回车后输入远程服务器的登录密码，即可将本地文件拷贝到远程服务器指定路径下。&lt;/p&gt;
-&lt;p&gt; scp test1.sql &lt;a href=&#34;mailto:&amp;#x74;&amp;#x65;&amp;#115;&amp;#116;&amp;#117;&amp;#x73;&amp;#x65;&amp;#114;&amp;#64;&amp;#x34;&amp;#55;&amp;#x2e;&amp;#x31;&amp;#x30;&amp;#x30;&amp;#46;&amp;#50;&amp;#x34;&amp;#x37;&amp;#x2e;&amp;#50;&amp;#x34;&amp;#x30;&#34;&gt;&amp;#x74;&amp;#x65;&amp;#115;&amp;#116;&amp;#117;&amp;#x73;&amp;#x65;&amp;#114;&amp;#64;&amp;#x34;&amp;#55;&amp;#x2e;&amp;#x31;&amp;#x30;&amp;#x30;&amp;#46;&amp;#50;&amp;#x34;&amp;#x37;&amp;#x2e;&amp;#50;&amp;#x34;&amp;#x30;&lt;/a&gt;:&amp;#x2F;home&amp;#x2F;testuser&amp;#x2F;&lt;/p&gt;
+&lt;p&gt; scp test1.sql &lt;a href=&#34;mailto:&amp;#116;&amp;#x65;&amp;#x73;&amp;#x74;&amp;#x75;&amp;#x73;&amp;#101;&amp;#114;&amp;#64;&amp;#52;&amp;#55;&amp;#x2e;&amp;#x31;&amp;#x30;&amp;#48;&amp;#x2e;&amp;#50;&amp;#x34;&amp;#55;&amp;#46;&amp;#x32;&amp;#x34;&amp;#x30;&#34;&gt;&amp;#116;&amp;#x65;&amp;#x73;&amp;#x74;&amp;#x75;&amp;#x73;&amp;#101;&amp;#114;&amp;#64;&amp;#52;&amp;#55;&amp;#x2e;&amp;#x31;&amp;#x30;&amp;#48;&amp;#x2e;&amp;#50;&amp;#x34;&amp;#55;&amp;#46;&amp;#x32;&amp;#x34;&amp;#x30;&lt;/a&gt;:&amp;#x2F;home&amp;#x2F;testuser&amp;#x2F;&lt;/p&gt;
 &lt;p&gt;3.将远程服务器文件夹全部复制到本地服务器&lt;/p&gt;
-&lt;p&gt;scp -r &lt;a href=&#34;mailto:&amp;#x74;&amp;#101;&amp;#x73;&amp;#116;&amp;#x75;&amp;#x73;&amp;#101;&amp;#x72;&amp;#x40;&amp;#52;&amp;#55;&amp;#46;&amp;#49;&amp;#48;&amp;#48;&amp;#46;&amp;#x32;&amp;#x34;&amp;#55;&amp;#x2e;&amp;#x32;&amp;#52;&amp;#48;&#34;&gt;&amp;#x74;&amp;#101;&amp;#x73;&amp;#116;&amp;#x75;&amp;#x73;&amp;#101;&amp;#x72;&amp;#x40;&amp;#52;&amp;#55;&amp;#46;&amp;#49;&amp;#48;&amp;#48;&amp;#46;&amp;#x32;&amp;#x34;&amp;#55;&amp;#x2e;&amp;#x32;&amp;#52;&amp;#48;&lt;/a&gt;:&amp;#x2F;home&amp;#x2F;testuser&amp;#x2F; &lt;/p&gt;
+&lt;p&gt;scp -r &lt;a href=&#34;mailto:&amp;#x74;&amp;#101;&amp;#115;&amp;#116;&amp;#x75;&amp;#115;&amp;#x65;&amp;#114;&amp;#64;&amp;#52;&amp;#x37;&amp;#x2e;&amp;#x31;&amp;#x30;&amp;#x30;&amp;#x2e;&amp;#x32;&amp;#52;&amp;#55;&amp;#x2e;&amp;#x32;&amp;#52;&amp;#x30;&#34;&gt;&amp;#x74;&amp;#101;&amp;#115;&amp;#116;&amp;#x75;&amp;#115;&amp;#x65;&amp;#114;&amp;#64;&amp;#52;&amp;#x37;&amp;#x2e;&amp;#x31;&amp;#x30;&amp;#x30;&amp;#x2e;&amp;#x32;&amp;#52;&amp;#55;&amp;#x2e;&amp;#x32;&amp;#52;&amp;#x30;&lt;/a&gt;:&amp;#x2F;home&amp;#x2F;testuser&amp;#x2F; &lt;/p&gt;
 &lt;p&gt;4.将本地服务器文件夹全部复制到远程服务器&lt;/p&gt;
-&lt;p&gt;scp -r &amp;#x2F;home&amp;#x2F;testuser1&amp;#x2F; &lt;a href=&#34;mailto:&amp;#116;&amp;#101;&amp;#115;&amp;#x74;&amp;#x75;&amp;#115;&amp;#101;&amp;#x72;&amp;#x40;&amp;#52;&amp;#x37;&amp;#x2e;&amp;#x31;&amp;#x30;&amp;#48;&amp;#x2e;&amp;#x32;&amp;#x34;&amp;#x37;&amp;#46;&amp;#x32;&amp;#x34;&amp;#48;&#34;&gt;&amp;#116;&amp;#101;&amp;#115;&amp;#x74;&amp;#x75;&amp;#115;&amp;#101;&amp;#x72;&amp;#x40;&amp;#52;&amp;#x37;&amp;#x2e;&amp;#x31;&amp;#x30;&amp;#48;&amp;#x2e;&amp;#x32;&amp;#x34;&amp;#x37;&amp;#46;&amp;#x32;&amp;#x34;&amp;#48;&lt;/a&gt;:&amp;#x2F;home&amp;#x2F;testuser&amp;#x2F;&lt;/p&gt;
+&lt;p&gt;scp -r &amp;#x2F;home&amp;#x2F;testuser1&amp;#x2F; &lt;a href=&#34;mailto:&amp;#x74;&amp;#x65;&amp;#x73;&amp;#x74;&amp;#117;&amp;#x73;&amp;#x65;&amp;#x72;&amp;#64;&amp;#x34;&amp;#55;&amp;#x2e;&amp;#49;&amp;#48;&amp;#x30;&amp;#46;&amp;#50;&amp;#52;&amp;#x37;&amp;#46;&amp;#x32;&amp;#52;&amp;#48;&#34;&gt;&amp;#x74;&amp;#x65;&amp;#x73;&amp;#x74;&amp;#117;&amp;#x73;&amp;#x65;&amp;#x72;&amp;#64;&amp;#x34;&amp;#55;&amp;#x2e;&amp;#49;&amp;#48;&amp;#x30;&amp;#46;&amp;#50;&amp;#52;&amp;#x37;&amp;#46;&amp;#x32;&amp;#52;&amp;#48;&lt;/a&gt;:&amp;#x2F;home&amp;#x2F;testuser&amp;#x2F;&lt;/p&gt;
 &lt;h2 id=&#34;6-用户和群组&#34;&gt;&lt;a href=&#34;#6-用户和群组&#34; class=&#34;headerlink&#34; title=&#34;6.用户和群组&#34;&gt;&lt;/a&gt;6.用户和群组&lt;/h2&gt;&lt;p&gt;groupadd group_name 创建一个新用户组&lt;br&gt;groupdel group_name 删除一个用户组&lt;/p&gt;
 &lt;p&gt;cat &amp;#x2F;etc&amp;#x2F;group | grep group_name &lt;/p&gt;
 &lt;p&gt;usermod -a -G moontea k1把用户k1附加其他用户组&lt;/p&gt;
@@ -3558,9 +3558,9 @@
             <guid isPermalink="true">https://w-sqrt7.gitee.io/2024/02/27/eNSP/%E7%BD%91%E5%9F%BA%E5%AE%9E%E8%B7%B5%E9%A2%98-%E5%8F%82%E8%80%83%E5%91%BD%E4%BB%A4/</guid>
             <title>网基实践题-参考命令</title>
             <link>https://w-sqrt7.gitee.io/2024/02/27/eNSP/%E7%BD%91%E5%9F%BA%E5%AE%9E%E8%B7%B5%E9%A2%98-%E5%8F%82%E8%80%83%E5%91%BD%E4%BB%A4/</link>
-            <category>转载</category>
             <category>网基</category>
             <category>eNSP</category>
+            <category>转载</category>
             <pubDate>Tue, 27 Feb 2024 15:18:09 +0800</pubDate>
             <description><![CDATA[ &lt;h1 id=&#34;网基实践题-参考命令&#34;&gt;&lt;a href=&#34;#网基实践题-参考命令&#34; class=&#34;headerlink&#34; title=&#34;网基实践题-参考命令&#34;&gt;&lt;/a&gt;网基实践题-参考命令&lt;/h1&gt;&lt;h3 id=&#34;配置Access接口，并加入对应的VLAN&#34;&gt;&lt;a href=&#34;#配置Access接口，并加入对应的VLAN&#34; class=&#34;headerlink&#34; title=&#34;配置Access接口，并加入对应的VLAN&#34;&gt;&lt;/a&gt;配置Access接口，并加入对应的VLAN&lt;/h3&gt;&lt;figure class=&#34;highlight plaintext&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;4&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;[SW1]interface GigabitEthernet 0/0/1	//进入g0/0/1接口&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;[SW1-GigabitEthernet0/0/1]port link-type access	//设置连接方式为access&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;[SW1-GigabitEthernet0/0/1]port default vlan 10	//设置默认vlan10 &lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;[SW1-GigabitEthernet0/0/1]quit&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
 
