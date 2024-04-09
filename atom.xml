@@ -6,7 +6,7 @@
   <link href="https://w-sqrt7.gitee.io/atom.xml" rel="self"/>
   
   <link href="https://w-sqrt7.gitee.io/"/>
-  <updated>2024-03-25T09:03:50.573Z</updated>
+  <updated>2024-04-09T14:58:13.274Z</updated>
   <id>https://w-sqrt7.gitee.io/</id>
   
   <author>
@@ -15,6 +15,71 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>网基实践题-NAT</title>
+    <link href="https://w-sqrt7.gitee.io/2024/04/09/eNSP/%E7%BD%91%E5%9F%BA%E5%AE%9E%E8%B7%B5%E9%A2%98-NAT/"/>
+    <id>https://w-sqrt7.gitee.io/2024/04/09/eNSP/%E7%BD%91%E5%9F%BA%E5%AE%9E%E8%B7%B5%E9%A2%98-NAT/</id>
+    <published>2024-04-09T14:56:26.651Z</published>
+    <updated>2024-04-09T14:58:13.274Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="网基实践题-NAT"><a href="#网基实践题-NAT" class="headerlink" title="网基实践题-NAT"></a>网基实践题-NAT</h1><p><a href="https://so.csdn.net/so/search?q=ensp&spm=1001.2101.3001.7020">ensp</a>中NAT种类的分类</p><table><thead><tr><th>类型</th><th>作用</th></tr></thead><tbody><tr><td>static NAT （静态NAT）</td><td>一个私网地址只能够对应一个公网IP地址</td></tr><tr><td>easy IP （动态NAT）</td><td>多个私网地址对应一个公网地址</td></tr><tr><td>NAT Server</td><td>外网客户端访问内网服务器时就会用到这个</td></tr></tbody></table><p>私网IP地址的范围</p><figure class="highlight handlebars"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="language-xml">A类地址:10.0.0.0～10.255.255.255 </span></span><br><span class="line"><span class="language-xml">B类地址:172.16.0.0 ～172.31.255.255 </span></span><br><span class="line"><span class="language-xml">C类地址:192.168.0.0～192.168.255.255</span></span><br></pre></td></tr></table></figure><h2 id="实验拓扑图："><a href="#实验拓扑图：" class="headerlink" title="实验拓扑图："></a>实验拓扑图：</h2><p><img src="/2024/04/09/eNSP/%E7%BD%91%E5%9F%BA%E5%AE%9E%E8%B7%B5%E9%A2%98-NAT/image-20240409215941199.png" alt="image-20240409215941199"></p><h2 id="实验过程："><a href="#实验过程：" class="headerlink" title="实验过程："></a>实验过程：</h2><p>1.首先按照上图将PC机以及相关的路由器各个端口进行配置</p><p>AR1配置如下</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">&lt;Huawei&gt;sys</span><br><span class="line">[Huawei]sysname AR1</span><br><span class="line">[AR1]int g0/0/0</span><br><span class="line">[AR1-GigabitEthernet0/0/0]ip address 7.7.7.7 24</span><br><span class="line">[AR1-GigabitEthernet0/0/0]quit</span><br><span class="line">[AR1]int g0/0/1</span><br><span class="line">[AR1-GigabitEthernet0/0/1]ip address 192.168.1.1 24</span><br><span class="line">[AR1-GigabitEthernet0/0/1]quit</span><br></pre></td></tr></table></figure><p>AR2配置如下</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">&lt;Huawei&gt;sys</span><br><span class="line">[Huawei]sysname AR2</span><br><span class="line">[AR2]int g0/0/0</span><br><span class="line">[AR2-GigabitEthernet0/0/0]ip address 7.7.7.1 24</span><br><span class="line">[AR2-GigabitEthernet0/0/0]int g0/0/1</span><br><span class="line">[AR2-GigabitEthernet0/0/1]ip address 8.8.8.1 24</span><br><span class="line">[AR2-GigabitEthernet0/0/1]int g0/0/2</span><br><span class="line">[AR2-GigabitEthernet0/0/2]ip address 9.9.9.1 24</span><br><span class="line">[AR2-GigabitEthernet0/0/2]quit</span><br></pre></td></tr></table></figure><p>2.然后AR1需要配置缺省路由，又叫默认路由（比较特殊的静态路由）</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">[AR1]ip route-static 0.0.0.0 0.0.0.0 7.7.7.1</span><br></pre></td></tr></table></figure><p>3.然后配置规则，配置nat</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">[AR1]acl number 2000</span><br><span class="line">[AR1-acl-basic-2000]rule 5 permit source 192.168.1.0 0.0.0.255</span><br><span class="line">[AR1-acl-basic-2000]quit</span><br></pre></td></tr></table></figure><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">[AR1-GigabitEthernet0/0/0]nat server protocol tcp global current-interface 80 inside 192.168.1.200 80</span><br><span class="line">[AR1-GigabitEthernet0/0/0]nat static global 7.7.7.2 inside 192.168.1.200#这一行命令和上面的二选一就行，不然是会覆盖的</span><br><span class="line">[AR1-GigabitEthernet0/0/0]nat outbound 2000</span><br></pre></td></tr></table></figure><p>然后就可以发现内网的pc1和pc2是可以ping通外网的外网的却无法ping内网</p><p>具体命令解析：</p><p><code>nat static global 7.7.7.2 inside 192.168.1.100 </code>     将内网IP地址为192.168.1.100的主机访问外网时，交给公网IP地址7.7.7.2去处理（注：这个公网IP地址是自己指定的）</p><p><code>nat server protocol tcp global current-interface 80 inside 192.168.1.200 80</code> 的具体解析如下：</p><p>protocol tcp: 这表示NAT服务器将使用TCP协议进行流量转发。</p><ul><li>global current-interface 80: 这部分配置定义了全局地址和端口号。<ul><li>global: 表示这是一个全局地址，即用于外部网络访问的地址。</li><li>current-interface: 表示使用当前接口（通常是连接到外部网络的接口）的IP地址作为全局地址。这通常用于动态获取接口的公网IP地址。</li><li>80: 这是外部网络访问内部服务器时所使用的端口号。在这里，它设置为HTTP服务的标准端口号80。</li></ul></li><li>inside 192.168.1.200 80: 这部分配置定义了内部服务器的地址和端口号。<ul><li>inside: 表示这是一个内部地址，即内部网络中服务器的地址。</li><li>192.168.1.200: 这是内部服务器的IP地址。</li><li>80: 这是内部服务器上运行的服务所监听的端口号。在这里，它同样设置为80，表示内部服务器正在监听HTTP服务。</li></ul></li></ul><p>综上所述，这条命令的作用是配置一个NAT服务器映射，使得外部网络可以通过当前接口的公网IP地址的80端口访问内部网络中IP地址为192.168.1.200的服务器的80端口（通常是HTTP服务）。</p><p>在配置NAT服务器之前，请确保：</p><ol><li>内部服务器已经启动并且服务（在这里是HTTP服务）正在监听指定的端口。</li><li>设备的外部接口已经配置并获得了有效的公网IP地址。</li><li>设备的路由配置允许外部流量到达NAT服务器映射。</li><li>防火墙规则允许相关的TCP流量通过。</li></ol>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;h1 id=&quot;网基实践题-NAT&quot;&gt;&lt;a href=&quot;#网基实践题-NAT&quot; class=&quot;headerlink&quot; title=&quot;网基实践题-NAT&quot;&gt;&lt;/a&gt;网基实践题-NAT&lt;/h1&gt;&lt;p&gt;&lt;a href=&quot;https://so.csdn.net/so/search?q=e</summary>
+      
+    
+    
+    
+    <category term="信息安全产品配置与应用" scheme="https://w-sqrt7.gitee.io/categories/%E4%BF%A1%E6%81%AF%E5%AE%89%E5%85%A8%E4%BA%A7%E5%93%81%E9%85%8D%E7%BD%AE%E4%B8%8E%E5%BA%94%E7%94%A8/"/>
+    
+    
+    <category term="原创" scheme="https://w-sqrt7.gitee.io/tags/%E5%8E%9F%E5%88%9B/"/>
+    
+    <category term="网基" scheme="https://w-sqrt7.gitee.io/tags/%E7%BD%91%E5%9F%BA/"/>
+    
+    <category term="eNSP" scheme="https://w-sqrt7.gitee.io/tags/eNSP/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>网基实践题-ACL</title>
+    <link href="https://w-sqrt7.gitee.io/2024/04/09/eNSP/%E7%BD%91%E5%9F%BA%E5%AE%9E%E8%B7%B5%E9%A2%98-ACL/"/>
+    <id>https://w-sqrt7.gitee.io/2024/04/09/eNSP/%E7%BD%91%E5%9F%BA%E5%AE%9E%E8%B7%B5%E9%A2%98-ACL/</id>
+    <published>2024-04-09T13:47:03.460Z</published>
+    <updated>2024-04-09T14:57:51.217Z</updated>
+    
+    <content type="html"><![CDATA[<p><strong>ACL的分类</strong></p><table><thead><tr><th>基本ACL（2000-2999）</th><th>根据源地址来进行访问控制</th></tr></thead><tbody><tr><td>高级ACL（3000-3999）</td><td>可以根据源地址、目标地址、源端口号等来进行访问控制</td></tr></tbody></table><p>注：我们在不管在配置什么ACL的时候，需先保证全网互通，然后在根据需要来进行设置ACL访问控制</p><h1 id="网基实践题-ACL"><a href="#网基实践题-ACL" class="headerlink" title="网基实践题-ACL"></a>网基实践题-ACL</h1><h2 id="实验拓扑图："><a href="#实验拓扑图：" class="headerlink" title="实验拓扑图："></a>实验拓扑图：</h2><img src="/2024/04/09/eNSP/%E7%BD%91%E5%9F%BA%E5%AE%9E%E8%B7%B5%E9%A2%98-ACL/image-20240409211406928.png" alt="image-20240409211406928" style="zoom: 33%;"><h2 id="实验过程："><a href="#实验过程：" class="headerlink" title="实验过程："></a>实验过程：</h2><p>1.首先保证PC1和PC2能够互通（具体的就不写了，基本的）</p><img src="/2024/04/09/eNSP/%E7%BD%91%E5%9F%BA%E5%AE%9E%E8%B7%B5%E9%A2%98-ACL/image-20240409211921518.png" alt="image-20240409211921518" style="zoom:50%;"><p>2.配置访问控制列表</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">[AR1]acl number 2000 [match-order auto|config] #这里我是设置的auto</span><br><span class="line">[AR1-acl-basic-2000]rule deny source 1.1.1.10 0</span><br><span class="line">[AR1-acl-basic-2000]rule permit source 1.1.1.0 0.0.0.255 #实际上这个规则是不起作用的，只是方便理解什么是‘深度优先’。上面的设置如果不是auto而是config的话，要加上id号，即rule id [deny|permit]......</span><br><span class="line">[AR1-acl-basic-2000]display this#这一步也可以忽略，这里只是列出来方便理解</span><br><span class="line">#acl number 2000  match-order auto</span><br><span class="line"># rule 5 deny source 1.1.1.10 0 </span><br><span class="line"># rule 10 permit source 1.1.1.0 0.0.0.255</span><br><span class="line">[AR1-acl-basic-2000]int g0/0/0#进入端口，引用规则</span><br><span class="line">[AR1-GigabitEthernet0/0/0]traffic-filter inbound acl 2000</span><br></pre></td></tr></table></figure><p>配置完成之后可以发现PC1的流量没法出去了</p><img src="/2024/04/09/eNSP/%E7%BD%91%E5%9F%BA%E5%AE%9E%E8%B7%B5%E9%A2%98-ACL/image-20240409214259683.png" alt="image-20240409214259683" style="zoom:50%;"><p>具体解析：</p><p><code>match-order auto</code>：这个参数设置ACL规则的匹配顺序为自动。当设置为“自动”时，系统将按照“深度优先”的顺序自动对规则进行排序。如果“深度优先”的顺序相同，则按照rule-id由小到大的顺序进行匹配。</p><p>当您在创建ACL时指定 <code>match-order config</code>，这意味着ACL规则将按照您在配置中指定的顺序进行匹配。这意味着规则的顺序对于过滤决策至关重要，因为系统会根据规则在配置中出现的顺序来依次评估它们。</p><p>需要注意的是，如果在创建ACL时没有明确指定 <code>match-order</code> 参数，那么默认的规则匹配顺序通常是 <code>config</code></p><p>ACL的inbound和outbound有什么区别：</p><p>inbound和outbound的主要区别在于它们处理网络流量的方向不同。</p><p>Inbound（入站）是指从外部网络（例如Internet）进入本地网络中的数据流量。这种方向的ACL规则主要用于保护内部网络资源免受未经授权的访问和攻击。</p><p>Outbound（出站）则是指从本地网络向外部网络发送的数据流量。这种方向的ACL规则主要用于控制内部网络向外部发送的数据，以防止敏感信息的泄露或不合规的外部访问。</p><p>Inbound方向更侧重于保护内部网络资源，而outbound方向则更侧重于控制内部网络向外部的流量。</p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;p&gt;&lt;strong&gt;ACL的分类&lt;/strong&gt;&lt;/p&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;基本ACL（2000-2999）&lt;/th&gt;
+&lt;th&gt;根据源地址来进行访问控制&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;&lt;tr&gt;
+&lt;td&gt;高级ACL（300</summary>
+      
+    
+    
+    
+    <category term="信息安全产品配置与应用" scheme="https://w-sqrt7.gitee.io/categories/%E4%BF%A1%E6%81%AF%E5%AE%89%E5%85%A8%E4%BA%A7%E5%93%81%E9%85%8D%E7%BD%AE%E4%B8%8E%E5%BA%94%E7%94%A8/"/>
+    
+    
+    <category term="原创" scheme="https://w-sqrt7.gitee.io/tags/%E5%8E%9F%E5%88%9B/"/>
+    
+    <category term="网基" scheme="https://w-sqrt7.gitee.io/tags/%E7%BD%91%E5%9F%BA/"/>
+    
+    <category term="eNSP" scheme="https://w-sqrt7.gitee.io/tags/eNSP/"/>
+    
+  </entry>
   
   <entry>
     <title>Volatility2.6的使用方法</title>
@@ -100,9 +165,9 @@
     <link href="https://w-sqrt7.gitee.io/2024/03/16/web/WEB%E6%94%BB%E9%98%B2/"/>
     <id>https://w-sqrt7.gitee.io/2024/03/16/web/WEB%E6%94%BB%E9%98%B2/</id>
     <published>2024-03-16T08:30:04.900Z</published>
-    <updated>2024-03-16T13:42:52.788Z</updated>
+    <updated>2024-03-28T14:16:47.508Z</updated>
     
-    <content type="html"><![CDATA[<div class="hbe hbe-container" id="hexo-blog-encrypt" data-wpm="抱歉, 这个密码看着不太对, 请再试试." data-whm="抱歉, 这个文章不能被校验, 不过您还是能看看解密后的内容.">  <script id="hbeData" type="hbeData" data-hmacdigest="31263f598e7fb9ab7f7cf3395892e841438c7b7bb5c7f8bf34562608d09a65bd">e05d9ee6e48268b2b742c6d6f1681d6164fa5aa1dc52a0c978370e90ed17c302880c189753220d6d366cb0b202107534f7df93832ae7837c9481ea8d11ef56de293c21648b070c4d3e28e11261bf58633759dd8ad7574054e05c72884ea6a427f03ec09de739740099c545b5cc795bc6c09f6d0d50cd585503ccf7ccfab6205c</script>  <div class="hbe hbe-content">    <div class="hbe hbe-input hbe-input-default">      <input class="hbe hbe-input-field hbe-input-field-default" type="password" id="hbePass">      <label class="hbe hbe-input-label hbe-input-label-default" for="hbePass">        <span class="hbe hbe-input-label-content hbe-input-label-content-default">您好, 这里需要密码.</span>      </label>    </div>  </div></div><script data-pjax src="/lib/hbe.js"></script><link href="/css/hbe.style.css" rel="stylesheet" type="text/css">]]></content>
+    <content type="html"><![CDATA[<div class="hbe hbe-container" id="hexo-blog-encrypt" data-wpm="抱歉, 这个密码看着不太对, 请再试试." data-whm="抱歉, 这个文章不能被校验, 不过您还是能看看解密后的内容.">  <script id="hbeData" type="hbeData" data-hmacdigest="9e4e38f1cfc751eb04464d8ac8018631ac4d8d4fede31fb8a6eb110746fb1967">e05d9ee6e48268b2b742c6d6f1681d6164fa5aa1dc52a0c978370e90ed17c302880c189753220d6d366cb0b202107534f7df93832ae7837c9481ea8d11ef56de293c21648b070c4d3e28e11261bf58633759dd8ad7574054e05c72884ea6a427f03ec09de739740099c545b5cc795bc6cd6a259696121ea68821460b98d950add84a29d4ae393693d6670f4b4fb6f98c4d002039f678df96af3680a0516a9841c19eaeee5c18dabb0a4a34ef885294556862298c9374105fa542cd23c263b49f6a2b340d198f8f11d2747373455b0aa6a066395cdde01f56436df9f631c773524a8c55122fba64fd29f9cade36e325428b9e140f9824014fa81260e542676250561d0535320fad54f1f84925eeb14051e70f4327fa01461ac8bfac09a951df44045eafd43f92d98fc39a75707f2ac494d8be9bfde894b489aa9075c35384c903c691ec9cc95c809e7b7fff1131c23bb95b5a4b340babaeedaf0c790710b44668e13bb2bfd6a482c62d177c2a5e7f01fc5147199df63a393551c0ee3dad616edfea5c9be9c7c20fcb23f9e0f0f2dfd06a65a8c2077522c4c64ca1c091f2d06fe61236fb62f5442819627a97449cff20e35d9f0e86995b27db7ef699b74f5864459fd9baeca391607e73894ee90a34317b67d1997a638979d454b9fc301f0b08bf155b15651033d026cb6a56774ffa98528075f64a7c36bba6a883b8037d72dc27c83cac4f6ba304fd510eb5e0c2d950fbee8c107b2a02f93473466fe1b3e8c43e61bacab8fe1cfebcf3f3ddc96ce56f43e02dff7af255d8884e73fe05d351d647e5f0536190f8340d8f5d6b754083dc3a6a3ef150b62ec6dd28952d467f80248f690f74fef3c692530e9337086a27c187f0095f07b38c86e1598f291b360c7c37552014f93c04eac6ed71cd3176c97c797c9a19d1821f2b96d87d2b4d1c99bb3a42e610d3da1030b752f3439afcee09c9eceec1e3af8e95bd14f29709517b6e80411f1a1dced11b58c29b9fa52c4ad926d78f788c9d6dab3a1ea021249656228a9ef5f9af6fd213ce9a934fbe28e5462efe93c8e6e156c31e800da658f5c17eaac8742584606f2db4129da989ae0ef1cc4913f6cfba3e9f6abdf309e1df15050aaf9b6a7a4ca50a79221dc4890a6d03bc40c61d9e5d3b9c65cb38f1fc17abc711a22b5810c349b241fe5a150dec1aedf2ee9fd5430f1836b2589f7ba7d32c2a50c28a507cfca3e51d68491e7fe0b89b1b6b7c04f894b8d1dc786e0ed3b9ddc0182a5c4b79b51e4577d6883e8fdaaaf13d55e015347edaff18fbc1fff820a678ec1b3c575afbe774fa679c00cdb4443dc1e6d3ab2e5520081d072b0036db2bbb6e4b2c8b5869b7d0f85196f9e3dda034015eac7fab507cd6d691cc364e5866dbeaed7ebd17a84c91c3c699bce3ce2b324f4443373baadfd438a12b6f91d49509c10ffd81d76bb23f0d3fa19a79c0439ab6</script>  <div class="hbe hbe-content">    <div class="hbe hbe-input hbe-input-default">      <input class="hbe hbe-input-field hbe-input-field-default" type="password" id="hbePass">      <label class="hbe hbe-input-label hbe-input-label-default" for="hbePass">        <span class="hbe hbe-input-label-content hbe-input-label-content-default">您好, 这里需要密码.</span>      </label>    </div>  </div></div><script data-pjax src="/lib/hbe.js"></script><link href="/css/hbe.style.css" rel="stylesheet" type="text/css">]]></content>
     
     
     <summary type="html">有东西被加密了, 请输入密码查看.</summary>

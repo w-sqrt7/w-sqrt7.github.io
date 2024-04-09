@@ -5,8 +5,8 @@
         <link>https://w-sqrt7.gitee.io</link>
         <description></description>
         <language>zh-CN</language>
-        <pubDate>Fri, 01 Mar 2024 22:18:19 +0800</pubDate>
-        <lastBuildDate>Fri, 01 Mar 2024 22:18:19 +0800</lastBuildDate>
+        <pubDate>Tue, 09 Apr 2024 22:56:26 +0800</pubDate>
+        <lastBuildDate>Tue, 09 Apr 2024 22:56:26 +0800</lastBuildDate>
         <category>原创</category>
         <category>逆向</category>
         <category>C语言</category>
@@ -22,6 +22,143 @@
         <category>工具</category>
         <category>基础</category>
         <category>kali</category>
+        <item>
+            <guid isPermalink="true">https://w-sqrt7.gitee.io/2024/04/09/eNSP/%E7%BD%91%E5%9F%BA%E5%AE%9E%E8%B7%B5%E9%A2%98-NAT/</guid>
+            <title>网基实践题-NAT</title>
+            <link>https://w-sqrt7.gitee.io/2024/04/09/eNSP/%E7%BD%91%E5%9F%BA%E5%AE%9E%E8%B7%B5%E9%A2%98-NAT/</link>
+            <category>原创</category>
+            <category>网基</category>
+            <category>eNSP</category>
+            <pubDate>Tue, 09 Apr 2024 22:56:26 +0800</pubDate>
+            <description><![CDATA[ &lt;h1 id=&#34;网基实践题-NAT&#34;&gt;&lt;a href=&#34;#网基实践题-NAT&#34; class=&#34;headerlink&#34; title=&#34;网基实践题-NAT&#34;&gt;&lt;/a&gt;网基实践题-NAT&lt;/h1&gt;&lt;p&gt;&lt;a href=&#34;https://so.csdn.net/so/search?q=ensp&amp;spm=1001.2101.3001.7020&#34;&gt;ensp&lt;/a&gt;中NAT种类的分类&lt;/p&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;类型&lt;/th&gt;
+&lt;th&gt;作用&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;&lt;tr&gt;
+&lt;td&gt;static NAT （静态NAT）&lt;/td&gt;
+&lt;td&gt;一个私网地址只能够对应一个公网IP地址&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;easy IP （动态NAT）&lt;/td&gt;
+&lt;td&gt;多个私网地址对应一个公网地址&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;NAT Server&lt;/td&gt;
+&lt;td&gt;外网客户端访问内网服务器时就会用到这个&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;&lt;/table&gt;
+&lt;p&gt;私网IP地址的范围&lt;/p&gt;
+&lt;figure class=&#34;highlight handlebars&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;3&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;language-xml&#34;&gt;A类地址:10.0.0.0～10.255.255.255 &lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;language-xml&#34;&gt;B类地址:172.16.0.0 ～172.31.255.255 &lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;language-xml&#34;&gt;C类地址:192.168.0.0～192.168.255.255&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+
+&lt;h2 id=&#34;实验拓扑图：&#34;&gt;&lt;a href=&#34;#实验拓扑图：&#34; class=&#34;headerlink&#34; title=&#34;实验拓扑图：&#34;&gt;&lt;/a&gt;实验拓扑图：&lt;/h2&gt;&lt;p&gt;&lt;img src=&#34;/2024/04/09/eNSP/%E7%BD%91%E5%9F%BA%E5%AE%9E%E8%B7%B5%E9%A2%98-NAT/image-20240409215941199.png&#34; alt=&#34;image-20240409215941199&#34;&gt;&lt;/p&gt;
+&lt;h2 id=&#34;实验过程：&#34;&gt;&lt;a href=&#34;#实验过程：&#34; class=&#34;headerlink&#34; title=&#34;实验过程：&#34;&gt;&lt;/a&gt;实验过程：&lt;/h2&gt;&lt;p&gt;1.首先按照上图将PC机以及相关的路由器各个端口进行配置&lt;/p&gt;
+&lt;p&gt;AR1配置如下&lt;/p&gt;
+&lt;figure class=&#34;highlight plaintext&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;5&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;6&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;7&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;8&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;&amp;lt;Huawei&amp;gt;sys&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;[Huawei]sysname AR1&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;[AR1]int g0/0/0&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;[AR1-GigabitEthernet0/0/0]ip address 7.7.7.7 24&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;[AR1-GigabitEthernet0/0/0]quit&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;[AR1]int g0/0/1&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;[AR1-GigabitEthernet0/0/1]ip address 192.168.1.1 24&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;[AR1-GigabitEthernet0/0/1]quit&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+
+
+
+&lt;p&gt;AR2配置如下&lt;/p&gt;
+&lt;figure class=&#34;highlight plaintext&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;5&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;6&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;7&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;8&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;9&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;&amp;lt;Huawei&amp;gt;sys&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;[Huawei]sysname AR2&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;[AR2]int g0/0/0&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;[AR2-GigabitEthernet0/0/0]ip address 7.7.7.1 24&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;[AR2-GigabitEthernet0/0/0]int g0/0/1&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;[AR2-GigabitEthernet0/0/1]ip address 8.8.8.1 24&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;[AR2-GigabitEthernet0/0/1]int g0/0/2&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;[AR2-GigabitEthernet0/0/2]ip address 9.9.9.1 24&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;[AR2-GigabitEthernet0/0/2]quit&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+
+
+
+&lt;p&gt;2.然后AR1需要配置缺省路由，又叫默认路由（比较特殊的静态路由）&lt;/p&gt;
+&lt;figure class=&#34;highlight plaintext&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;[AR1]ip route-static 0.0.0.0 0.0.0.0 7.7.7.1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+
+
+
+&lt;p&gt;3.然后配置规则，配置nat&lt;/p&gt;
+&lt;figure class=&#34;highlight plaintext&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;3&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;[AR1]acl number 2000&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;[AR1-acl-basic-2000]rule 5 permit source 192.168.1.0 0.0.0.255&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;[AR1-acl-basic-2000]quit&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+
+&lt;figure class=&#34;highlight plaintext&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;3&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;[AR1-GigabitEthernet0/0/0]nat server protocol tcp global current-interface 80 inside 192.168.1.200 80&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;[AR1-GigabitEthernet0/0/0]nat static global 7.7.7.2 inside 192.168.1.200	#这一行命令和上面的二选一就行，不然是会覆盖的&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;[AR1-GigabitEthernet0/0/0]nat outbound 2000&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+
+
+
+&lt;p&gt;然后就可以发现内网的pc1和pc2是可以ping通外网的外网的却无法ping内网&lt;/p&gt;
+&lt;p&gt;具体命令解析：&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;nat static global 7.7.7.2 inside 192.168.1.100 &lt;/code&gt;     将内网IP地址为192.168.1.100的主机访问外网时，交给公网IP地址7.7.7.2去处理（注：这个公网IP地址是自己指定的）&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;nat server protocol tcp global current-interface 80 inside 192.168.1.200 80&lt;/code&gt; 的具体解析如下：&lt;/p&gt;
+&lt;p&gt;protocol tcp: 这表示NAT服务器将使用TCP协议进行流量转发。&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;global current-interface 80: 这部分配置定义了全局地址和端口号。&lt;ul&gt;
+&lt;li&gt;global: 表示这是一个全局地址，即用于外部网络访问的地址。&lt;/li&gt;
+&lt;li&gt;current-interface: 表示使用当前接口（通常是连接到外部网络的接口）的IP地址作为全局地址。这通常用于动态获取接口的公网IP地址。&lt;/li&gt;
+&lt;li&gt;80: 这是外部网络访问内部服务器时所使用的端口号。在这里，它设置为HTTP服务的标准端口号80。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;inside 192.168.1.200 80: 这部分配置定义了内部服务器的地址和端口号。&lt;ul&gt;
+&lt;li&gt;inside: 表示这是一个内部地址，即内部网络中服务器的地址。&lt;/li&gt;
+&lt;li&gt;192.168.1.200: 这是内部服务器的IP地址。&lt;/li&gt;
+&lt;li&gt;80: 这是内部服务器上运行的服务所监听的端口号。在这里，它同样设置为80，表示内部服务器正在监听HTTP服务。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;综上所述，这条命令的作用是配置一个NAT服务器映射，使得外部网络可以通过当前接口的公网IP地址的80端口访问内部网络中IP地址为192.168.1.200的服务器的80端口（通常是HTTP服务）。&lt;/p&gt;
+&lt;p&gt;在配置NAT服务器之前，请确保：&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;内部服务器已经启动并且服务（在这里是HTTP服务）正在监听指定的端口。&lt;/li&gt;
+&lt;li&gt;设备的外部接口已经配置并获得了有效的公网IP地址。&lt;/li&gt;
+&lt;li&gt;设备的路由配置允许外部流量到达NAT服务器映射。&lt;/li&gt;
+&lt;li&gt;防火墙规则允许相关的TCP流量通过。&lt;/li&gt;
+&lt;/ol&gt;
+ ]]></description>
+        </item>
+        <item>
+            <guid isPermalink="true">https://w-sqrt7.gitee.io/2024/04/09/eNSP/%E7%BD%91%E5%9F%BA%E5%AE%9E%E8%B7%B5%E9%A2%98-ACL/</guid>
+            <title>网基实践题-ACL</title>
+            <link>https://w-sqrt7.gitee.io/2024/04/09/eNSP/%E7%BD%91%E5%9F%BA%E5%AE%9E%E8%B7%B5%E9%A2%98-ACL/</link>
+            <category>原创</category>
+            <category>网基</category>
+            <category>eNSP</category>
+            <pubDate>Tue, 09 Apr 2024 21:47:03 +0800</pubDate>
+            <description><![CDATA[ &lt;p&gt;&lt;strong&gt;ACL的分类&lt;/strong&gt;&lt;/p&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;基本ACL（2000-2999）&lt;/th&gt;
+&lt;th&gt;根据源地址来进行访问控制&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;&lt;tr&gt;
+&lt;td&gt;高级ACL（3000-3999）&lt;/td&gt;
+&lt;td&gt;可以根据源地址、目标地址、源端口号等来进行访问控制&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;&lt;/table&gt;
+&lt;p&gt;注：我们在不管在配置什么ACL的时候，需先保证全网互通，然后在根据需要来进行设置ACL访问控制&lt;/p&gt;
+&lt;h1 id=&#34;网基实践题-ACL&#34;&gt;&lt;a href=&#34;#网基实践题-ACL&#34; class=&#34;headerlink&#34; title=&#34;网基实践题-ACL&#34;&gt;&lt;/a&gt;网基实践题-ACL&lt;/h1&gt;&lt;h2 id=&#34;实验拓扑图：&#34;&gt;&lt;a href=&#34;#实验拓扑图：&#34; class=&#34;headerlink&#34; title=&#34;实验拓扑图：&#34;&gt;&lt;/a&gt;实验拓扑图：&lt;/h2&gt;&lt;img src=&#34;/2024/04/09/eNSP/%E7%BD%91%E5%9F%BA%E5%AE%9E%E8%B7%B5%E9%A2%98-ACL/image-20240409211406928.png&#34; alt=&#34;image-20240409211406928&#34; style=&#34;zoom: 33%;&#34;&gt;
+
+&lt;h2 id=&#34;实验过程：&#34;&gt;&lt;a href=&#34;#实验过程：&#34; class=&#34;headerlink&#34; title=&#34;实验过程：&#34;&gt;&lt;/a&gt;实验过程：&lt;/h2&gt;&lt;p&gt;1.首先保证PC1和PC2能够互通（具体的就不写了，基本的）&lt;/p&gt;
+&lt;img src=&#34;/2024/04/09/eNSP/%E7%BD%91%E5%9F%BA%E5%AE%9E%E8%B7%B5%E9%A2%98-ACL/image-20240409211921518.png&#34; alt=&#34;image-20240409211921518&#34; style=&#34;zoom:50%;&#34;&gt;
+
+
+
+&lt;p&gt;2.配置访问控制列表&lt;/p&gt;
+&lt;figure class=&#34;highlight plaintext&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;5&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;6&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;7&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;8&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;9&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;[AR1]acl number 2000 [match-order auto|config] #这里我是设置的auto&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;[AR1-acl-basic-2000]rule deny source 1.1.1.10 0&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;[AR1-acl-basic-2000]rule permit source 1.1.1.0 0.0.0.255 #实际上这个规则是不起作用的，只是方便理解什么是‘深度优先’。上面的设置如果不是auto而是config的话，要加上id号，即rule id [deny|permit]......&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;[AR1-acl-basic-2000]display this	#这一步也可以忽略，这里只是列出来方便理解&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;#acl number 2000  match-order auto&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;# rule 5 deny source 1.1.1.10 0 &lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;# rule 10 permit source 1.1.1.0 0.0.0.255&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;[AR1-acl-basic-2000]int g0/0/0	#进入端口，引用规则&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;[AR1-GigabitEthernet0/0/0]traffic-filter inbound acl 2000&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+
+
+
+&lt;p&gt;配置完成之后可以发现PC1的流量没法出去了&lt;/p&gt;
+&lt;img src=&#34;/2024/04/09/eNSP/%E7%BD%91%E5%9F%BA%E5%AE%9E%E8%B7%B5%E9%A2%98-ACL/image-20240409214259683.png&#34; alt=&#34;image-20240409214259683&#34; style=&#34;zoom:50%;&#34;&gt;
+
+
+
+
+
+&lt;p&gt;具体解析：&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;match-order auto&lt;/code&gt;：这个参数设置ACL规则的匹配顺序为自动。当设置为“自动”时，系统将按照“深度优先”的顺序自动对规则进行排序。如果“深度优先”的顺序相同，则按照rule-id由小到大的顺序进行匹配。&lt;/p&gt;
+&lt;p&gt;当您在创建ACL时指定 &lt;code&gt;match-order config&lt;/code&gt;，这意味着ACL规则将按照您在配置中指定的顺序进行匹配。这意味着规则的顺序对于过滤决策至关重要，因为系统会根据规则在配置中出现的顺序来依次评估它们。&lt;/p&gt;
+&lt;p&gt;需要注意的是，如果在创建ACL时没有明确指定 &lt;code&gt;match-order&lt;/code&gt; 参数，那么默认的规则匹配顺序通常是 &lt;code&gt;config&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;ACL的inbound和outbound有什么区别：&lt;/p&gt;
+&lt;p&gt;inbound和outbound的主要区别在于它们处理网络流量的方向不同。&lt;/p&gt;
+&lt;p&gt;Inbound（入站）是指从外部网络（例如Internet）进入本地网络中的数据流量。这种方向的ACL规则主要用于保护内部网络资源免受未经授权的访问和攻击。&lt;/p&gt;
+&lt;p&gt;Outbound（出站）则是指从本地网络向外部网络发送的数据流量。这种方向的ACL规则主要用于控制内部网络向外部发送的数据，以防止敏感信息的泄露或不合规的外部访问。&lt;/p&gt;
+&lt;p&gt;Inbound方向更侧重于保护内部网络资源，而outbound方向则更侧重于控制内部网络向外部的流量。&lt;/p&gt;
+ ]]></description>
+        </item>
         <item>
             <guid isPermalink="true">https://w-sqrt7.gitee.io/2024/03/01/eNSP/%E7%BD%91%E5%9F%BA%E5%AE%9E%E8%B7%B5%E9%A2%98-OSPF/</guid>
             <title>网基实践题-OSPF</title>
