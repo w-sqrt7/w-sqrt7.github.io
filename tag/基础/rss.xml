@@ -22,6 +22,8 @@
         <category>工具</category>
         <category>基础</category>
         <category>kali</category>
+        <category>靶场</category>
+        <category>vulhub</category>
         <item>
             <guid isPermalink="true">https://w-sqrt7.gitee.io/2024/03/18/other/basic/Windows%E6%B3%A8%E5%86%8C%E8%A1%A8%E5%86%85%E5%AE%B9%E8%AF%A6%E8%A7%A3/</guid>
             <title>Windows注册表内容详解</title>

