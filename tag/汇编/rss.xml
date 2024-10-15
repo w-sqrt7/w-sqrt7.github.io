@@ -24,6 +24,7 @@
         <category>kali</category>
         <category>靶场</category>
         <category>vulhub</category>
+        <category>xss-labs</category>
         <item>
             <guid isPermalink="true">https://w-sqrt7.gitee.io/2024/03/11/dishui-note/%E6%BB%B4%E6%B0%B4%E9%80%86%E5%90%91%E2%80%94%E6%B1%87%E7%BC%96%E7%AC%94%E8%AE%B0/</guid>
             <title>滴水逆向—汇编笔记</title>
