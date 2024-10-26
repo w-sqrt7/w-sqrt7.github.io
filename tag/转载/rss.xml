@@ -2,7 +2,7 @@
 <rss version="2.0">
     <channel>
         <title>sqrt7 • Posts by &#34;转载&#34; tag</title>
-        <link>https://w-sqrt7.gitee.io</link>
+        <link>https://w-sqrt7.github.io</link>
         <description></description>
         <language>zh-CN</language>
         <pubDate>Sat, 27 Apr 2024 11:00:42 +0800</pubDate>
@@ -26,9 +26,9 @@
         <category>vulhub</category>
         <category>xss-labs</category>
         <item>
-            <guid isPermalink="true">https://w-sqrt7.gitee.io/2024/04/27/other/basic/Docker%E4%BD%BF%E7%94%A8%E5%9F%BA%E7%A1%80%E8%AF%A6%E8%A7%A3/</guid>
+            <guid isPermalink="true">https://w-sqrt7.github.io/2024/04/27/other/basic/Docker%E4%BD%BF%E7%94%A8%E5%9F%BA%E7%A1%80%E8%AF%A6%E8%A7%A3/</guid>
             <title>Docker使用基础详解</title>
-            <link>https://w-sqrt7.gitee.io/2024/04/27/other/basic/Docker%E4%BD%BF%E7%94%A8%E5%9F%BA%E7%A1%80%E8%AF%A6%E8%A7%A3/</link>
+            <link>https://w-sqrt7.github.io/2024/04/27/other/basic/Docker%E4%BD%BF%E7%94%A8%E5%9F%BA%E7%A1%80%E8%AF%A6%E8%A7%A3/</link>
             <category>转载</category>
             <category>基础</category>
             <pubDate>Sat, 27 Apr 2024 11:00:42 +0800</pubDate>
@@ -67,9 +67,9 @@
  ]]></description>
         </item>
         <item>
-            <guid isPermalink="true">https://w-sqrt7.gitee.io/2024/03/25/tools/Volatility2.6%E7%9A%84%E4%BD%BF%E7%94%A8%E6%96%B9%E6%B3%95/</guid>
+            <guid isPermalink="true">https://w-sqrt7.github.io/2024/03/25/tools/Volatility2.6%E7%9A%84%E4%BD%BF%E7%94%A8%E6%96%B9%E6%B3%95/</guid>
             <title>Volatility2.6的使用方法</title>
-            <link>https://w-sqrt7.gitee.io/2024/03/25/tools/Volatility2.6%E7%9A%84%E4%BD%BF%E7%94%A8%E6%96%B9%E6%B3%95/</link>
+            <link>https://w-sqrt7.github.io/2024/03/25/tools/Volatility2.6%E7%9A%84%E4%BD%BF%E7%94%A8%E6%96%B9%E6%B3%95/</link>
             <category>转载</category>
             <category>工具</category>
             <pubDate>Mon, 25 Mar 2024 16:54:17 +0800</pubDate>
@@ -798,9 +798,9 @@
  ]]></description>
         </item>
         <item>
-            <guid isPermalink="true">https://w-sqrt7.gitee.io/2024/03/18/other/basic/Windows%E6%B3%A8%E5%86%8C%E8%A1%A8%E5%86%85%E5%AE%B9%E8%AF%A6%E8%A7%A3/</guid>
+            <guid isPermalink="true">https://w-sqrt7.github.io/2024/03/18/other/basic/Windows%E6%B3%A8%E5%86%8C%E8%A1%A8%E5%86%85%E5%AE%B9%E8%AF%A6%E8%A7%A3/</guid>
             <title>Windows注册表内容详解</title>
-            <link>https://w-sqrt7.gitee.io/2024/03/18/other/basic/Windows%E6%B3%A8%E5%86%8C%E8%A1%A8%E5%86%85%E5%AE%B9%E8%AF%A6%E8%A7%A3/</link>
+            <link>https://w-sqrt7.github.io/2024/03/18/other/basic/Windows%E6%B3%A8%E5%86%8C%E8%A1%A8%E5%86%85%E5%AE%B9%E8%AF%A6%E8%A7%A3/</link>
             <category>转载</category>
             <category>基础</category>
             <pubDate>Mon, 18 Mar 2024 11:28:52 +0800</pubDate>
@@ -985,9 +985,9 @@
  ]]></description>
         </item>
         <item>
-            <guid isPermalink="true">https://w-sqrt7.gitee.io/2024/03/09/other/basic/Windows%E7%9A%84%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4/</guid>
+            <guid isPermalink="true">https://w-sqrt7.github.io/2024/03/09/other/basic/Windows%E7%9A%84%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4/</guid>
             <title>Windows渗透测试中常用命令</title>
-            <link>https://w-sqrt7.gitee.io/2024/03/09/other/basic/Windows%E7%9A%84%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4/</link>
+            <link>https://w-sqrt7.github.io/2024/03/09/other/basic/Windows%E7%9A%84%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4/</link>
             <category>转载</category>
             <category>基础</category>
             <pubDate>Sat, 09 Mar 2024 15:58:06 +0800</pubDate>
@@ -995,9 +995,9 @@
  ]]></description>
         </item>
         <item>
-            <guid isPermalink="true">https://w-sqrt7.gitee.io/2024/03/09/other/basic/kali%E7%9A%84%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4/</guid>
+            <guid isPermalink="true">https://w-sqrt7.github.io/2024/03/09/other/basic/kali%E7%9A%84%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4/</guid>
             <title>kali的常用命令</title>
-            <link>https://w-sqrt7.gitee.io/2024/03/09/other/basic/kali%E7%9A%84%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4/</link>
+            <link>https://w-sqrt7.github.io/2024/03/09/other/basic/kali%E7%9A%84%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4/</link>
             <category>转载</category>
             <category>基础</category>
             <category>kali</category>
@@ -1241,9 +1241,9 @@
  ]]></description>
         </item>
         <item>
-            <guid isPermalink="true">https://w-sqrt7.gitee.io/2024/03/09/other/basic/%E5%B8%B8%E7%94%A8%E6%9C%8D%E5%8A%A1%E7%AB%AF%E5%8F%A3%E5%8F%B7/</guid>
+            <guid isPermalink="true">https://w-sqrt7.github.io/2024/03/09/other/basic/%E5%B8%B8%E7%94%A8%E6%9C%8D%E5%8A%A1%E7%AB%AF%E5%8F%A3%E5%8F%B7/</guid>
             <title>常用服务端口号</title>
-            <link>https://w-sqrt7.gitee.io/2024/03/09/other/basic/%E5%B8%B8%E7%94%A8%E6%9C%8D%E5%8A%A1%E7%AB%AF%E5%8F%A3%E5%8F%B7/</link>
+            <link>https://w-sqrt7.github.io/2024/03/09/other/basic/%E5%B8%B8%E7%94%A8%E6%9C%8D%E5%8A%A1%E7%AB%AF%E5%8F%A3%E5%8F%B7/</link>
             <category>转载</category>
             <category>基础</category>
             <pubDate>Sat, 09 Mar 2024 15:04:38 +0800</pubDate>
@@ -2690,9 +2690,9 @@
  ]]></description>
         </item>
         <item>
-            <guid isPermalink="true">https://w-sqrt7.gitee.io/2024/03/01/mihao-note/%E7%B1%B3%E5%A5%BD%E4%BF%A1%E5%AE%89-%E4%BF%A1%E6%81%AF%E6%94%B6%E9%9B%86/</guid>
+            <guid isPermalink="true">https://w-sqrt7.github.io/2024/03/01/mihao-note/%E7%B1%B3%E5%A5%BD%E4%BF%A1%E5%AE%89-%E4%BF%A1%E6%81%AF%E6%94%B6%E9%9B%86/</guid>
             <title>米好信安课程笔记-信息收集</title>
-            <link>https://w-sqrt7.gitee.io/2024/03/01/mihao-note/%E7%B1%B3%E5%A5%BD%E4%BF%A1%E5%AE%89-%E4%BF%A1%E6%81%AF%E6%94%B6%E9%9B%86/</link>
+            <link>https://w-sqrt7.github.io/2024/03/01/mihao-note/%E7%B1%B3%E5%A5%BD%E4%BF%A1%E5%AE%89-%E4%BF%A1%E6%81%AF%E6%94%B6%E9%9B%86/</link>
             <category>原创</category>
             <category>转载</category>
             <category>信息安全</category>
@@ -3116,9 +3116,9 @@
  ]]></description>
         </item>
         <item>
-            <guid isPermalink="true">https://w-sqrt7.gitee.io/2024/03/01/mihao-note/%E7%B1%B3%E5%A5%BD%E4%BF%A1%E5%AE%89-%E7%B3%BB%E7%BB%9F%E5%AE%89%E5%85%A8%E7%BB%BC%E5%90%88/</guid>
+            <guid isPermalink="true">https://w-sqrt7.github.io/2024/03/01/mihao-note/%E7%B1%B3%E5%A5%BD%E4%BF%A1%E5%AE%89-%E7%B3%BB%E7%BB%9F%E5%AE%89%E5%85%A8%E7%BB%BC%E5%90%88/</guid>
             <title>米好信安课程笔记-系统安全综合</title>
-            <link>https://w-sqrt7.gitee.io/2024/03/01/mihao-note/%E7%B1%B3%E5%A5%BD%E4%BF%A1%E5%AE%89-%E7%B3%BB%E7%BB%9F%E5%AE%89%E5%85%A8%E7%BB%BC%E5%90%88/</link>
+            <link>https://w-sqrt7.github.io/2024/03/01/mihao-note/%E7%B1%B3%E5%A5%BD%E4%BF%A1%E5%AE%89-%E7%B3%BB%E7%BB%9F%E5%AE%89%E5%85%A8%E7%BB%BC%E5%90%88/</link>
             <category>原创</category>
             <category>转载</category>
             <category>信息安全</category>
@@ -3137,9 +3137,9 @@
 &lt;script data-pjax src=&#34;/lib/hbe.js&#34;&gt;&lt;/script&gt;&lt;link href=&#34;/css/hbe.style.css&#34; rel=&#34;stylesheet&#34; type=&#34;text/css&#34;&gt; ]]></description>
         </item>
         <item>
-            <guid isPermalink="true">https://w-sqrt7.gitee.io/2024/02/28/mihao-note/%E7%B1%B3%E5%A5%BD%E4%BF%A1%E5%AE%89-Linux%E5%AE%89%E5%85%A8%E9%85%8D%E7%BD%AE/</guid>
+            <guid isPermalink="true">https://w-sqrt7.github.io/2024/02/28/mihao-note/%E7%B1%B3%E5%A5%BD%E4%BF%A1%E5%AE%89-Linux%E5%AE%89%E5%85%A8%E9%85%8D%E7%BD%AE/</guid>
             <title>米好信安课程笔记-Linux安全配置</title>
-            <link>https://w-sqrt7.gitee.io/2024/02/28/mihao-note/%E7%B1%B3%E5%A5%BD%E4%BF%A1%E5%AE%89-Linux%E5%AE%89%E5%85%A8%E9%85%8D%E7%BD%AE/</link>
+            <link>https://w-sqrt7.github.io/2024/02/28/mihao-note/%E7%B1%B3%E5%A5%BD%E4%BF%A1%E5%AE%89-Linux%E5%AE%89%E5%85%A8%E9%85%8D%E7%BD%AE/</link>
             <category>原创</category>
             <category>转载</category>
             <category>信息安全</category>
@@ -3599,9 +3599,9 @@
  ]]></description>
         </item>
         <item>
-            <guid isPermalink="true">https://w-sqrt7.gitee.io/2024/02/27/eNSP/%E7%BD%91%E5%9F%BA%E5%AE%9E%E8%B7%B5%E9%A2%98-%E5%8F%82%E8%80%83%E5%91%BD%E4%BB%A4/</guid>
+            <guid isPermalink="true">https://w-sqrt7.github.io/2024/02/27/eNSP/%E7%BD%91%E5%9F%BA%E5%AE%9E%E8%B7%B5%E9%A2%98-%E5%8F%82%E8%80%83%E5%91%BD%E4%BB%A4/</guid>
             <title>网基实践题-参考命令</title>
-            <link>https://w-sqrt7.gitee.io/2024/02/27/eNSP/%E7%BD%91%E5%9F%BA%E5%AE%9E%E8%B7%B5%E9%A2%98-%E5%8F%82%E8%80%83%E5%91%BD%E4%BB%A4/</link>
+            <link>https://w-sqrt7.github.io/2024/02/27/eNSP/%E7%BD%91%E5%9F%BA%E5%AE%9E%E8%B7%B5%E9%A2%98-%E5%8F%82%E8%80%83%E5%91%BD%E4%BB%A4/</link>
             <category>网基</category>
             <category>eNSP</category>
             <category>转载</category>

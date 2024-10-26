@@ -2,7 +2,7 @@
 <rss version="2.0">
     <channel>
         <title>sqrt7 • Posts by &#34;xss-labs&#34; category</title>
-        <link>https://w-sqrt7.gitee.io</link>
+        <link>https://w-sqrt7.github.io</link>
         <description></description>
         <language>zh-CN</language>
         <pubDate>Wed, 01 May 2024 13:32:35 +0800</pubDate>
@@ -26,9 +26,9 @@
         <category>vulhub</category>
         <category>xss-labs</category>
         <item>
-            <guid isPermalink="true">https://w-sqrt7.gitee.io/2024/05/01/web/xss-labs%E9%80%9A%E5%85%B3%E8%AE%B0%E5%BD%95/</guid>
+            <guid isPermalink="true">https://w-sqrt7.github.io/2024/05/01/web/xss-labs%E9%80%9A%E5%85%B3%E8%AE%B0%E5%BD%95/</guid>
             <title>XSS-labs通关记录</title>
-            <link>https://w-sqrt7.gitee.io/2024/05/01/web/xss-labs%E9%80%9A%E5%85%B3%E8%AE%B0%E5%BD%95/</link>
+            <link>https://w-sqrt7.github.io/2024/05/01/web/xss-labs%E9%80%9A%E5%85%B3%E8%AE%B0%E5%BD%95/</link>
             <category>原创</category>
             <category>靶场</category>
             <category>xss-labs</category>

@@ -2,7 +2,7 @@
 <rss version="2.0">
     <channel>
         <title>sqrt7 • Posts by &#34;渗透&#34; tag</title>
-        <link>https://w-sqrt7.gitee.io</link>
+        <link>https://w-sqrt7.github.io</link>
         <description></description>
         <language>zh-CN</language>
         <pubDate>Sat, 16 Mar 2024 16:30:04 +0800</pubDate>
@@ -26,9 +26,9 @@
         <category>vulhub</category>
         <category>xss-labs</category>
         <item>
-            <guid isPermalink="true">https://w-sqrt7.gitee.io/2024/03/16/web/WEB%E6%94%BB%E9%98%B2/</guid>
+            <guid isPermalink="true">https://w-sqrt7.github.io/2024/03/16/web/WEB%E6%94%BB%E9%98%B2/</guid>
             <title>WEB攻防</title>
-            <link>https://w-sqrt7.gitee.io/2024/03/16/web/WEB%E6%94%BB%E9%98%B2/</link>
+            <link>https://w-sqrt7.github.io/2024/03/16/web/WEB%E6%94%BB%E9%98%B2/</link>
             <category>原创</category>
             <category>web</category>
             <category>渗透</category>

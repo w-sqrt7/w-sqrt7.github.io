@@ -1,0 +1,45 @@
+<?xml version="1.0"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+    <id>https://w-sqrt7.github.io</id>
+    <title>sqrt7 • Posts by &#34;misc&#34; tag</title>
+    <link href="https://w-sqrt7.github.io" />
+    <updated>2024-02-19T08:35:20.000Z</updated>
+    <category term="原创" />
+    <category term="逆向" />
+    <category term="C语言" />
+    <category term="misc" />
+    <category term="汇编" />
+    <category term="web" />
+    <category term="网基" />
+    <category term="eNSP" />
+    <category term="转载" />
+    <category term="信息安全" />
+    <category term="渗透" />
+    <category term="哲学" />
+    <category term="工具" />
+    <category term="基础" />
+    <category term="kali" />
+    <category term="靶场" />
+    <category term="vulhub" />
+    <category term="xss-labs" />
+    <entry>
+        <id>https://w-sqrt7.github.io/2024/02/19/CTF/ctfshow-misc%E6%80%9D%E8%B7%AF%E6%80%BB%E7%BB%93/</id>
+        <title>CTFshow-misc思路总结</title>
+        <link rel="alternate" href="https://w-sqrt7.github.io/2024/02/19/CTF/ctfshow-misc%E6%80%9D%E8%B7%AF%E6%80%BB%E7%BB%93/"/>
+        <content type="html">&lt;div class=&#34;hbe hbe-container&#34; id=&#34;hexo-blog-encrypt&#34; data-wpm=&#34;抱歉, 这个密码看着不太对, 请再试试.&#34; data-whm=&#34;抱歉, 这个文章不能被校验, 不过您还是能看看解密后的内容.&#34;&gt;
+  &lt;script id=&#34;hbeData&#34; type=&#34;hbeData&#34; data-hmacdigest=&#34;37677de5476e94b33219bc7d94f604ff695f9a7642e00f758b56f9195c5a41b0&#34;&gt;e05d9ee6e48268b2b742c6d6f1681d6164fa5aa1dc52a0c978370e90ed17c30229f01987ba5d085c028dc81803e2abcdf3a7dbc2ccc393188cc674bce918557345d9ff92d252757dfc787682350b97c60a4cfa58d9534806784ac29ec51df702695cedc9ae738424414eddb07d61206a7327de8eb82166567b3eed440668a30e9054c983d8c6760d4775ddc12dc5205c1fd15dbc75a996dd0609dbbfc84fcfeb4dddc0387442582f4d39c6bb31eef526117a7f496c1a23895713a8f6b41dfc799fb0c281b29fa90ffa80e8060952a24e4d7e1ae5ffbad0179b04dd58a79061d10e1c818a87f118e2ea0487f664378aa91e699f0b5af794f47e7952b0bbe4e2b8fb2da148b8099c775d854fdc2953cb9144cd0553c20118390ad190961b265c10aa0a0d59283494ae2e94bdc3f0e64025727706aa42e07b2cbabcd8379e83a723708e37f01303cd07f7c502ea1aea576dc821197783c2c9ce41cb8d5a2a76c198b51fcafb3fb6f4456f6e54dfbf0f3382b6c88a64b927ee30583c6ef455d3a5b9d3b81471b8d838e79959fa0f99c2e4b8a55e0aedc5b0a0602e6ae4155d098dccf9fa7b8dc81f0f366511fc6bd10b5beafbe7b87de903334950ea66f84d7e6bb43ace1fa06344f66b2f09feadc5e1796a4904e75f8e2b4a6327e2205f2d67489815464976b5f202f6947f4acfb5df8d368bc9dbf568aa430d7223892eec9b843aed354fcb18619b5ee3f42fa65906c146eb00423c8c56078b10ec379d8ff550f389ad20e0a2e05b3ce534fa25b5842b8bc7dc3437ec9d112cf35b02fff4671a244609dda92a3110867cf389023bb23c35db1549527eeedbff5658a12bb8e1b545232aa1f385ee563d5e7a1bbb9646beb16b2ac04a95147585bbd505e193ded861a0a14beb4fa6a7b664fb3417af33d29ba418c72f482dc622e3500c89742890e943efd592b2cba13de814d71f39a295348c72f4e55b37344bc3f8437a67926bdceaca8d1f65343014d02b02f317984839aa6d21fdbcacc97fe81ab4d9a7dd93c2c4c72d0d438a1ec42301a2d0e3ccba2d222666b0698a016e07624735f96462ff6ac7ec3b97bae754e1505db480cc7b7a887629faa882b367041289b76d85c145416670d825cf0e5144f35f6fe45faadacc29b1794b898bc66319756ae331ee2bd390e79d1e0842f6003948a31ffaaa589122aaf6e68270030ae6a109c389cc7dc001843f25e05ddfec673e3c10906cc0c66fe6163941dad3b9e12ffca2b244b9c0191a0f1913a378dd6eeac13620fd336e7f019316fefdca145604d398d766361a9e33262f0c42ff24e9626b74da33df&lt;/script&gt;
+  &lt;div class=&#34;hbe hbe-content&#34;&gt;
+    &lt;div class=&#34;hbe hbe-input hbe-input-default&#34;&gt;
+      &lt;input class=&#34;hbe hbe-input-field hbe-input-field-default&#34; type=&#34;password&#34; id=&#34;hbePass&#34;&gt;
+      &lt;label class=&#34;hbe hbe-input-label hbe-input-label-default&#34; for=&#34;hbePass&#34;&gt;
+        &lt;span class=&#34;hbe hbe-input-label-content hbe-input-label-content-default&#34;&gt;您好, 这里需要密码.&lt;/span&gt;
+      &lt;/label&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+&lt;script data-pjax src=&#34;/lib/hbe.js&#34;&gt;&lt;/script&gt;&lt;link href=&#34;/css/hbe.style.css&#34; rel=&#34;stylesheet&#34; type=&#34;text/css&#34;&gt;</content>
+        <category term="原创" />
+        <category term="misc" />
+        <updated>2024-02-19T08:35:20.000Z</updated>
+    </entry>
+</feed>

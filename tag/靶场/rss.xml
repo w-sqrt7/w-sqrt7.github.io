@@ -2,7 +2,7 @@
 <rss version="2.0">
     <channel>
         <title>sqrt7 • Posts by &#34;靶场&#34; tag</title>
-        <link>https://w-sqrt7.gitee.io</link>
+        <link>https://w-sqrt7.github.io</link>
         <description></description>
         <language>zh-CN</language>
         <pubDate>Sun, 26 May 2024 11:14:31 +0800</pubDate>
@@ -26,9 +26,9 @@
         <category>vulhub</category>
         <category>xss-labs</category>
         <item>
-            <guid isPermalink="true">https://w-sqrt7.gitee.io/2024/05/26/vulhub/%E3%80%90vulhub%E3%80%91Log4j2%E6%BC%8F%E6%B4%9E%E5%A4%8D%E7%8E%B0/</guid>
+            <guid isPermalink="true">https://w-sqrt7.github.io/2024/05/26/vulhub/%E3%80%90vulhub%E3%80%91Log4j2%E6%BC%8F%E6%B4%9E%E5%A4%8D%E7%8E%B0/</guid>
             <title>【vulhub】Log4j2漏洞复现</title>
-            <link>https://w-sqrt7.gitee.io/2024/05/26/vulhub/%E3%80%90vulhub%E3%80%91Log4j2%E6%BC%8F%E6%B4%9E%E5%A4%8D%E7%8E%B0/</link>
+            <link>https://w-sqrt7.github.io/2024/05/26/vulhub/%E3%80%90vulhub%E3%80%91Log4j2%E6%BC%8F%E6%B4%9E%E5%A4%8D%E7%8E%B0/</link>
             <category>原创</category>
             <category>靶场</category>
             <category>vulhub</category>
@@ -141,9 +141,9 @@
  ]]></description>
         </item>
         <item>
-            <guid isPermalink="true">https://w-sqrt7.gitee.io/2024/05/01/web/xss-labs%E9%80%9A%E5%85%B3%E8%AE%B0%E5%BD%95/</guid>
+            <guid isPermalink="true">https://w-sqrt7.github.io/2024/05/01/web/xss-labs%E9%80%9A%E5%85%B3%E8%AE%B0%E5%BD%95/</guid>
             <title>XSS-labs通关记录</title>
-            <link>https://w-sqrt7.gitee.io/2024/05/01/web/xss-labs%E9%80%9A%E5%85%B3%E8%AE%B0%E5%BD%95/</link>
+            <link>https://w-sqrt7.github.io/2024/05/01/web/xss-labs%E9%80%9A%E5%85%B3%E8%AE%B0%E5%BD%95/</link>
             <category>原创</category>
             <category>靶场</category>
             <category>xss-labs</category>
@@ -283,9 +283,9 @@
  ]]></description>
         </item>
         <item>
-            <guid isPermalink="true">https://w-sqrt7.gitee.io/2024/04/25/vulhub/%E3%80%90vulhub%E3%80%91Fastjson%E6%BC%8F%E6%B4%9E%E5%A4%8D%E7%8E%B0/</guid>
+            <guid isPermalink="true">https://w-sqrt7.github.io/2024/04/25/vulhub/%E3%80%90vulhub%E3%80%91Fastjson%E6%BC%8F%E6%B4%9E%E5%A4%8D%E7%8E%B0/</guid>
             <title>【vulhub】Fastjson漏洞复现</title>
-            <link>https://w-sqrt7.gitee.io/2024/04/25/vulhub/%E3%80%90vulhub%E3%80%91Fastjson%E6%BC%8F%E6%B4%9E%E5%A4%8D%E7%8E%B0/</link>
+            <link>https://w-sqrt7.github.io/2024/04/25/vulhub/%E3%80%90vulhub%E3%80%91Fastjson%E6%BC%8F%E6%B4%9E%E5%A4%8D%E7%8E%B0/</link>
             <category>原创</category>
             <category>靶场</category>
             <category>vulhub</category>
@@ -380,9 +380,9 @@
  ]]></description>
         </item>
         <item>
-            <guid isPermalink="true">https://w-sqrt7.gitee.io/2024/04/25/vulhub/%E3%80%90vulhub%E3%80%91ThinkPHP%E6%BC%8F%E6%B4%9E%E5%A4%8D%E7%8E%B0/</guid>
+            <guid isPermalink="true">https://w-sqrt7.github.io/2024/04/25/vulhub/%E3%80%90vulhub%E3%80%91ThinkPHP%E6%BC%8F%E6%B4%9E%E5%A4%8D%E7%8E%B0/</guid>
             <title>【vulhub】ThinkPHP漏洞复现</title>
-            <link>https://w-sqrt7.gitee.io/2024/04/25/vulhub/%E3%80%90vulhub%E3%80%91ThinkPHP%E6%BC%8F%E6%B4%9E%E5%A4%8D%E7%8E%B0/</link>
+            <link>https://w-sqrt7.github.io/2024/04/25/vulhub/%E3%80%90vulhub%E3%80%91ThinkPHP%E6%BC%8F%E6%B4%9E%E5%A4%8D%E7%8E%B0/</link>
             <category>原创</category>
             <category>靶场</category>
             <category>vulhub</category>
@@ -481,9 +481,9 @@
  ]]></description>
         </item>
         <item>
-            <guid isPermalink="true">https://w-sqrt7.gitee.io/2024/04/24/vulhub/%E3%80%90vulhub%E3%80%91Tomcat%E6%BC%8F%E6%B4%9E%E5%A4%8D%E7%8E%B0/</guid>
+            <guid isPermalink="true">https://w-sqrt7.github.io/2024/04/24/vulhub/%E3%80%90vulhub%E3%80%91Tomcat%E6%BC%8F%E6%B4%9E%E5%A4%8D%E7%8E%B0/</guid>
             <title>【vulhub】Tomcat漏洞复现</title>
-            <link>https://w-sqrt7.gitee.io/2024/04/24/vulhub/%E3%80%90vulhub%E3%80%91Tomcat%E6%BC%8F%E6%B4%9E%E5%A4%8D%E7%8E%B0/</link>
+            <link>https://w-sqrt7.github.io/2024/04/24/vulhub/%E3%80%90vulhub%E3%80%91Tomcat%E6%BC%8F%E6%B4%9E%E5%A4%8D%E7%8E%B0/</link>
             <category>原创</category>
             <category>靶场</category>
             <category>vulhub</category>
@@ -533,9 +533,9 @@
  ]]></description>
         </item>
         <item>
-            <guid isPermalink="true">https://w-sqrt7.gitee.io/2024/04/18/vulhub/%E3%80%90vulhub%E3%80%91Apache%20Shiro%201.2.4%E5%8F%8D%E5%BA%8F%E5%88%97%E5%8C%96%E6%BC%8F%E6%B4%9E%EF%BC%88CVE-2016-4437%EF%BC%89/</guid>
+            <guid isPermalink="true">https://w-sqrt7.github.io/2024/04/18/vulhub/%E3%80%90vulhub%E3%80%91Apache%20Shiro%201.2.4%E5%8F%8D%E5%BA%8F%E5%88%97%E5%8C%96%E6%BC%8F%E6%B4%9E%EF%BC%88CVE-2016-4437%EF%BC%89/</guid>
             <title>【vulhub】Apache Shiro 1.2.4反序列化漏洞（CVE-2016-4437）</title>
-            <link>https://w-sqrt7.gitee.io/2024/04/18/vulhub/%E3%80%90vulhub%E3%80%91Apache%20Shiro%201.2.4%E5%8F%8D%E5%BA%8F%E5%88%97%E5%8C%96%E6%BC%8F%E6%B4%9E%EF%BC%88CVE-2016-4437%EF%BC%89/</link>
+            <link>https://w-sqrt7.github.io/2024/04/18/vulhub/%E3%80%90vulhub%E3%80%91Apache%20Shiro%201.2.4%E5%8F%8D%E5%BA%8F%E5%88%97%E5%8C%96%E6%BC%8F%E6%B4%9E%EF%BC%88CVE-2016-4437%EF%BC%89/</link>
             <category>原创</category>
             <category>靶场</category>
             <category>vulhub</category>

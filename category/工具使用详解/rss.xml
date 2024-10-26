@@ -2,7 +2,7 @@
 <rss version="2.0">
     <channel>
         <title>sqrt7 • Posts by &#34;工具使用详解&#34; category</title>
-        <link>https://w-sqrt7.gitee.io</link>
+        <link>https://w-sqrt7.github.io</link>
         <description></description>
         <language>zh-CN</language>
         <pubDate>Mon, 25 Mar 2024 16:54:17 +0800</pubDate>
@@ -26,9 +26,9 @@
         <category>vulhub</category>
         <category>xss-labs</category>
         <item>
-            <guid isPermalink="true">https://w-sqrt7.gitee.io/2024/03/25/tools/Volatility2.6%E7%9A%84%E4%BD%BF%E7%94%A8%E6%96%B9%E6%B3%95/</guid>
+            <guid isPermalink="true">https://w-sqrt7.github.io/2024/03/25/tools/Volatility2.6%E7%9A%84%E4%BD%BF%E7%94%A8%E6%96%B9%E6%B3%95/</guid>
             <title>Volatility2.6的使用方法</title>
-            <link>https://w-sqrt7.gitee.io/2024/03/25/tools/Volatility2.6%E7%9A%84%E4%BD%BF%E7%94%A8%E6%96%B9%E6%B3%95/</link>
+            <link>https://w-sqrt7.github.io/2024/03/25/tools/Volatility2.6%E7%9A%84%E4%BD%BF%E7%94%A8%E6%96%B9%E6%B3%95/</link>
             <category>转载</category>
             <category>工具</category>
             <pubDate>Mon, 25 Mar 2024 16:54:17 +0800</pubDate>
