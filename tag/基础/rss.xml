@@ -5,8 +5,8 @@
         <link>https://w-sqrt7.github.io</link>
         <description></description>
         <language>zh-CN</language>
-        <pubDate>Sat, 27 Apr 2024 11:00:42 +0800</pubDate>
-        <lastBuildDate>Sat, 27 Apr 2024 11:00:42 +0800</lastBuildDate>
+        <pubDate>Sat, 23 Nov 2024 11:29:39 +0800</pubDate>
+        <lastBuildDate>Sat, 23 Nov 2024 11:29:39 +0800</lastBuildDate>
         <category>原创</category>
         <category>逆向</category>
         <category>C语言</category>
@@ -25,6 +25,75 @@
         <category>靶场</category>
         <category>vulhub</category>
         <category>xss-labs</category>
+        <item>
+            <guid isPermalink="true">https://w-sqrt7.github.io/2024/11/23/other/basic/%E4%BA%92%E8%81%94%E7%BD%91%E6%96%87%E7%AB%A0%E4%B8%8B%E8%BD%BD/</guid>
+            <title>Windows渗透测试中常用命令</title>
+            <link>https://w-sqrt7.github.io/2024/11/23/other/basic/%E4%BA%92%E8%81%94%E7%BD%91%E6%96%87%E7%AB%A0%E4%B8%8B%E8%BD%BD/</link>
+            <category>转载</category>
+            <category>基础</category>
+            <pubDate>Sat, 23 Nov 2024 11:29:39 +0800</pubDate>
+            <description><![CDATA[ &lt;h1 id=&#34;互联网文章下载&#34;&gt;&lt;a href=&#34;#互联网文章下载&#34; class=&#34;headerlink&#34; title=&#34;互联网文章下载&#34;&gt;&lt;/a&gt;互联网文章下载&lt;/h1&gt;&lt;figure class=&#34;highlight plaintext&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;在互联网上，总会有些技术文章等，让人看得眼前一亮，想要扒下来存着，方便以后使用，但是苦恼于一直无法获取源文件，所以最开始，在我啥都不懂的时候，dump文章基本上都是靠ctrl+c和ctrl+v来操作的，但是弄下来之后排版问题基本上可以说的上是惨不忍睹，这又要自己花费大量的时间去修改整理，总之很费劲，但到了如今，对计算机的使用也是越发的熟练，也就准备写一份这样的文章，记录一下，同时纪念一下曾经那个有些蠢笨的自己。&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+
+
+
+&lt;h2 id=&#34;1-普通站点文章&#34;&gt;&lt;a href=&#34;#1-普通站点文章&#34; class=&#34;headerlink&#34; title=&#34;1.普通站点文章&#34;&gt;&lt;/a&gt;1.普通站点文章&lt;/h2&gt;&lt;p&gt;大部分网站还是比较好操作的，直接ctrl+p或浏览器右上角进行页面打印就可以，打印为pdf文件，后续在利用格式工厂或其他工具转为其他格式，看个人需求。&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;/2024/11/23/other/basic/%E4%BA%92%E8%81%94%E7%BD%91%E6%96%87%E7%AB%A0%E4%B8%8B%E8%BD%BD/image-20241123114111667.png&#34; alt=&#34;image-20241123114111667&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;/2024/11/23/other/basic/%E4%BA%92%E8%81%94%E7%BD%91%E6%96%87%E7%AB%A0%E4%B8%8B%E8%BD%BD/image-20241123113928907.png&#34; alt=&#34;image-20241123113928907&#34;&gt;&lt;/p&gt;
+&lt;h2 id=&#34;2-CSDN博客文章&#34;&gt;&lt;a href=&#34;#2-CSDN博客文章&#34; class=&#34;headerlink&#34; title=&#34;2.CSDN博客文章&#34;&gt;&lt;/a&gt;2.CSDN博客文章&lt;/h2&gt;&lt;p&gt;在CSDN上面下载文章相对麻烦一些，首先打开控制台，输入给出的代码并回车，然后会自动弹出打印窗口，有的时候会出现卡边的情况，这里要根据实际情况，修改一下纵横方向，纸张大小，缩放比例等。&lt;/p&gt;
+&lt;p&gt;当然也有一些个人博客等比较麻烦的，根据实际情况修改代码或其他设置即可。&lt;/p&gt;
+&lt;figure class=&#34;highlight js&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;5&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;6&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;7&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;8&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;9&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;10&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;11&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;12&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;13&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;14&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;15&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;(&lt;span class=&#34;keyword&#34;&gt;function&lt;/span&gt;(&lt;span class=&#34;params&#34;&gt;&lt;/span&gt;)&amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;    $(&lt;span class=&#34;string&#34;&gt;&amp;quot;#side&amp;quot;&lt;/span&gt;).&lt;span class=&#34;title function_&#34;&gt;remove&lt;/span&gt;();&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;    $(&lt;span class=&#34;string&#34;&gt;&amp;quot;#comment_title, #comment_list, #comment_bar, #comment_form, .announce, #ad_cen, #ad_bot&amp;quot;&lt;/span&gt;).&lt;span class=&#34;title function_&#34;&gt;remove&lt;/span&gt;();&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;    $(&lt;span class=&#34;string&#34;&gt;&amp;quot;.nav_top_2011, #header, #navigator&amp;quot;&lt;/span&gt;).&lt;span class=&#34;title function_&#34;&gt;remove&lt;/span&gt;();&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;    $(&lt;span class=&#34;string&#34;&gt;&amp;quot;.p4course_target, .comment-box, .recommend-box, #csdn-toolbar, #tool-box&amp;quot;&lt;/span&gt;).&lt;span class=&#34;title function_&#34;&gt;remove&lt;/span&gt;();&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;    $(&lt;span class=&#34;string&#34;&gt;&amp;quot;aside&amp;quot;&lt;/span&gt;).&lt;span class=&#34;title function_&#34;&gt;remove&lt;/span&gt;();&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;    $(&lt;span class=&#34;string&#34;&gt;&amp;quot;.tool-box&amp;quot;&lt;/span&gt;).&lt;span class=&#34;title function_&#34;&gt;remove&lt;/span&gt;();&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;    $(&lt;span class=&#34;string&#34;&gt;&amp;quot;#toolBarBox&amp;quot;&lt;/span&gt;).&lt;span class=&#34;title function_&#34;&gt;remove&lt;/span&gt;();&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;    $(&lt;span class=&#34;string&#34;&gt;&amp;quot;main&amp;quot;&lt;/span&gt;).&lt;span class=&#34;title function_&#34;&gt;css&lt;/span&gt;(&lt;span class=&#34;string&#34;&gt;&amp;#x27;display&amp;#x27;&lt;/span&gt;,&lt;span class=&#34;string&#34;&gt;&amp;#x27;content&amp;#x27;&lt;/span&gt;); &lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;    $(&lt;span class=&#34;string&#34;&gt;&amp;quot;main&amp;quot;&lt;/span&gt;).&lt;span class=&#34;title function_&#34;&gt;css&lt;/span&gt;(&lt;span class=&#34;string&#34;&gt;&amp;#x27;float&amp;#x27;&lt;/span&gt;,&lt;span class=&#34;string&#34;&gt;&amp;#x27;left&amp;#x27;&lt;/span&gt;);&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;    $(&lt;span class=&#34;string&#34;&gt;&amp;quot;.option-box&amp;quot;&lt;/span&gt;).&lt;span class=&#34;title function_&#34;&gt;remove&lt;/span&gt;();&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;    $(&lt;span class=&#34;string&#34;&gt;&amp;quot;body&amp;quot;&lt;/span&gt;).&lt;span class=&#34;title function_&#34;&gt;css&lt;/span&gt;(&lt;span class=&#34;string&#34;&gt;&amp;#x27;min-width&amp;#x27;&lt;/span&gt;,&lt;span class=&#34;number&#34;&gt;0&lt;/span&gt;);&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;    $(&lt;span class=&#34;string&#34;&gt;&amp;quot;.option-box&amp;quot;&lt;/span&gt;).&lt;span class=&#34;title function_&#34;&gt;remove&lt;/span&gt;();&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;    &lt;span class=&#34;variable language_&#34;&gt;window&lt;/span&gt;.&lt;span class=&#34;title function_&#34;&gt;print&lt;/span&gt;();&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&amp;#125;)();&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+
+&lt;p&gt;&lt;img src=&#34;/2024/11/23/other/basic/%E4%BA%92%E8%81%94%E7%BD%91%E6%96%87%E7%AB%A0%E4%B8%8B%E8%BD%BD/image-20241123115204137.png&#34; alt=&#34;image-20241123115204137&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;/2024/11/23/other/basic/%E4%BA%92%E8%81%94%E7%BD%91%E6%96%87%E7%AB%A0%E4%B8%8B%E8%BD%BD/image-20241123115138233.png&#34; alt=&#34;image-20241123115138233&#34;&gt;&lt;/p&gt;
+&lt;h2 id=&#34;3-微信公众号文章&#34;&gt;&lt;a href=&#34;#3-微信公众号文章&#34; class=&#34;headerlink&#34; title=&#34;3.微信公众号文章&#34;&gt;&lt;/a&gt;3.微信公众号文章&lt;/h2&gt;&lt;p&gt;打开公众号文章，想方设法用浏览器打开，然后就是直接页面打印就行了&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;/2024/11/23/other/basic/%E4%BA%92%E8%81%94%E7%BD%91%E6%96%87%E7%AB%A0%E4%B8%8B%E8%BD%BD/%E5%B1%8F%E5%B9%95%E6%88%AA%E5%9B%BE%202024-11-23%20115654.png&#34; alt=&#34;屏幕截图 2024-11-23 115654&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;/2024/11/23/other/basic/%E4%BA%92%E8%81%94%E7%BD%91%E6%96%87%E7%AB%A0%E4%B8%8B%E8%BD%BD/image-20241123115920720.png&#34; alt=&#34;image-20241123115920720&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;/2024/11/23/other/basic/%E4%BA%92%E8%81%94%E7%BD%91%E6%96%87%E7%AB%A0%E4%B8%8B%E8%BD%BD/image-20241123120008767.png&#34; alt=&#34;image-20241123120008767&#34;&gt;&lt;/p&gt;
+ ]]></description>
+        </item>
+        <item>
+            <guid isPermalink="true">https://w-sqrt7.github.io/2024/09/21/other/basic/kali%E4%BD%BF%E7%94%A8%E5%8D%95%E7%94%A8%E6%88%B7%E6%A8%A1%E5%BC%8F/</guid>
+            <title>Windows渗透测试中常用命令</title>
+            <link>https://w-sqrt7.github.io/2024/09/21/other/basic/kali%E4%BD%BF%E7%94%A8%E5%8D%95%E7%94%A8%E6%88%B7%E6%A8%A1%E5%BC%8F/</link>
+            <category>转载</category>
+            <category>基础</category>
+            <pubDate>Sat, 21 Sep 2024 19:40:45 +0800</pubDate>
+            <description><![CDATA[ &lt;h3 id=&#34;使用单用户模式&#34;&gt;&lt;a href=&#34;#使用单用户模式&#34; class=&#34;headerlink&#34; title=&#34;使用单用户模式&#34;&gt;&lt;/a&gt;使用单用户模式&lt;/h3&gt;&lt;p&gt;如果你可以以单用户模式登录，可以尝试从单用户模式恢复文件。&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;&lt;p&gt;&lt;strong&gt;重启系统&lt;/strong&gt;： 重启你的计算机。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;&lt;strong&gt;进入 GRUB 菜单&lt;/strong&gt;： 在启动过程中，当GRUB菜单出现时，选择 “Advanced options for Kali Linux”。在启动过程中，当GRUB（GRand Unified Bootloader）菜单出现时，选择你通常启动的Kali Linux内核条目，但不要按回车键进入。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;&lt;strong&gt;编辑启动选项&lt;/strong&gt;： 在高亮显示的内核条目上，按&lt;code&gt;e&lt;/code&gt;键编辑启动选项。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;&lt;strong&gt;修改内核启动行&lt;/strong&gt;： 使用上下箭头键找到以&lt;code&gt;linux&lt;/code&gt;开头的那一行。在这一行的末尾，添加以下参数：&lt;/p&gt;
+&lt;figure class=&#34;highlight text&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;init=/bin/bash&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+
+&lt;p&gt;确保不要添加任何前缀空格，但要在现有的&lt;code&gt;ro&lt;/code&gt;或其他参数后添加一个空格，然后再添加&lt;code&gt;init=/bin/bash&lt;/code&gt;。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;&lt;strong&gt;进入单用户模式&lt;/strong&gt;： 完成上述配置后按下&lt;code&gt;ctrl + X&lt;/code&gt;或&lt;code&gt;F10&lt;/code&gt;启动系统系统将启动到一个单用户模式的root shell。，。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;&lt;strong&gt;挂载文件系统为读写模式&lt;/strong&gt;： 在单用户模式下，文件系统默认是只读的，需要重新挂载为读写模式：&lt;/p&gt;
+&lt;figure class=&#34;highlight bash&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;mount -o remount,rw /&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;&lt;strong&gt;恢复原始文件或重置密码&lt;/strong&gt;： 使用Live CD&amp;#x2F;USB或其他方式获取原始文件，并替换更改的文件。你可以使用 &lt;code&gt;cp&lt;/code&gt; 命令从Live环境复制文件到系统中。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;&lt;strong&gt;重启系统&lt;/strong&gt;： 执行 &lt;code&gt;reboot -f&lt;/code&gt; 命令重启系统。&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h3 id=&#34;检查文件系统状态&#34;&gt;&lt;a href=&#34;#检查文件系统状态&#34; class=&#34;headerlink&#34; title=&#34;检查文件系统状态&#34;&gt;&lt;/a&gt;检查文件系统状态&lt;/h3&gt;&lt;p&gt;首先，你需要检查文件系统的状态。运行以下命令来查看文件系统的挂载状态：&lt;/p&gt;
+&lt;p&gt;bash&lt;/p&gt;
+&lt;figure class=&#34;highlight bash&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;mount | grep &lt;span class=&#34;string&#34;&gt;&amp;quot; on / &amp;quot;&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+
+&lt;h3 id=&#34;重新挂载文件系统为读写模式&#34;&gt;&lt;a href=&#34;#重新挂载文件系统为读写模式&#34; class=&#34;headerlink&#34; title=&#34;重新挂载文件系统为读写模式&#34;&gt;&lt;/a&gt;重新挂载文件系统为读写模式&lt;/h3&gt;&lt;p&gt;如果文件系统被挂载为只读，你可以尝试重新挂载为读写模式。使用以下命令：&lt;/p&gt;
+&lt;p&gt;bash&lt;/p&gt;
+&lt;figure class=&#34;highlight bash&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;sudo mount -o remount,rw /&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+
+&lt;p&gt;这条命令会尝试重新挂载根文件系统为读写模式。如果成功，你可以再次尝试更改权限。&lt;/p&gt;
+&lt;h3 id=&#34;检查文件系统错误&#34;&gt;&lt;a href=&#34;#检查文件系统错误&#34; class=&#34;headerlink&#34; title=&#34;检查文件系统错误&#34;&gt;&lt;/a&gt;检查文件系统错误&lt;/h3&gt;&lt;p&gt;如果文件系统被挂载为只读，可能是因为有未处理的错误。运行文件系统检查：&lt;/p&gt;
+&lt;p&gt;bash复制&lt;/p&gt;
+&lt;figure class=&#34;highlight bash&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;sudo fsck -f /&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt; ]]></description>
+        </item>
         <item>
             <guid isPermalink="true">https://w-sqrt7.github.io/2024/04/27/other/basic/Docker%E4%BD%BF%E7%94%A8%E5%9F%BA%E7%A1%80%E8%AF%A6%E8%A7%A3/</guid>
             <title>Docker使用基础详解</title>
